@@ -1,4 +1,4 @@
-import Gallery from "@/components/Gallery/GallerySection";
+import Gallery from "@/components/HomeComponents/Gallery/GallerySection";
 import NewsSection from "@/components/HomeComponents/NewsComponents/NewsSection";
 import ParallaxImageComponent from "@/components/HomeComponents/ParallaxSection/ParallaxImageComponent";
 import TeamSection from "@/components/HomeComponents/TeamSection/Section";
