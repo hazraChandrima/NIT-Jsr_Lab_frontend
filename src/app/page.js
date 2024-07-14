@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Navbar/>
-      <div className="h-dvh bg-slate-800"></div>
+      <div className="h-dvh w-dvw bg-slate-800"></div>
       <NewsSection />
       <ParallaxImageComponent />
       <TeamSection />
