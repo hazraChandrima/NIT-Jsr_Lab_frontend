@@ -4,6 +4,7 @@ import ParallaxImageComponent from "@/components/HomeCompPritam/ParallaxSection/
 import TeamSection from "@/components/HomeCompPritam/TeamSection/Section";
 import Gallery from "@/components/HomeCompPritam/Gallery/GallerySection";
 import Navbar from "@/components/Navbar/Navbar";
+import Footer from "@/components/Footer/Footer";
 import Image from "next/image";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <ParallaxImageComponent />
       <TeamSection />
       <Gallery />
+      <Footer/>
     </>
   );
 }
