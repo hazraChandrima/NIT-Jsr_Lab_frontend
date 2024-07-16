@@ -45,6 +45,7 @@ export default function Navbar() {
 
 
   return (
+
     <div className=" bg-white flex flex-row fixed h-16 w-full z-40 text-black bg-opacity-70">
 
       <div className="relative">
@@ -56,7 +57,7 @@ export default function Navbar() {
 
       {/* Research  */}
       <div className="relative">
-        <div className="p-4 flex items-center justify-center md:ml-32" onMouseEnter={() => handleMouseEnter('Research')} onMouseLeave={handleMouseLeave} >
+        <div className="p-4 flex items-center justify-center md:ml-32" onMouseEnter={() => handleMouseEnter('Research')} >
           <Link href="/Research">Research</Link>
         </div>
       </div>
@@ -72,20 +73,20 @@ export default function Navbar() {
           ease: easeInOut
         }}
       >
-        <ResearchHoverDropdown />
+        <ResearchHoverDropdown onMouseEnter={() => handleMouseEnter('Research')} onMouseLeave={handleMouseLeave} />
       </motion.div>
 
 
       {/* Members  */}
       <div className="relative">
-        <div className="p-4 flex items-center justify-center md:left-1/4 cursor-pointer" onMouseEnter={() => handleMouseEnter('Members')} onMouseLeave={handleMouseLeave}>
+        <div className="p-4 flex items-center justify-center md:left-1/4 cursor-pointer" onMouseEnter={() => handleMouseEnter('Members')} >
           Members
         </div>
       </div>
       <motion.div
         className="absolute top-full left-0 right-0"
         initial="hidden"
-        animate={hoveredItem === 'Members' ? 'visible' : 'hidden'}
+        animate={hoveredItem === 'Members' || hoveredItem === 'MemberDropdown' ? 'visible' : 'hidden'}
         exit="exit"
         variants={dropdownVariants}
         transition={{
@@ -94,7 +95,7 @@ export default function Navbar() {
           ease: easeInOut
         }}
       >
-        <MemberHoverDropdown />
+        <MemberHoverDropdown onMouseEnter={() => handleMouseEnter('Members')} onMouseLeave={handleMouseLeave} />
       </motion.div>
 
 
@@ -144,7 +145,7 @@ export default function Navbar() {
 
       {/* Information  */}
       <div className="relative">
-        <div className="p-4 flex items-center justify-center">
+        <div className="p-4 flex items-center justify-center" onMouseEnter={()=>handleMouseEnter('Info')}  onMouseLeave={handleMouseLeave}>
           <Link href="/Information">Information</Link>
         </div>
       </div>

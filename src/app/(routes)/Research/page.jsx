@@ -1,7 +1,7 @@
 export default function Page() {
     return (
       <div>
-        Research Content
+        Research Main page
       </div>
     )
   }
