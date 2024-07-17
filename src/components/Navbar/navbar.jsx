@@ -4,7 +4,7 @@ import { easeInOut, motion } from "framer-motion"
 import React, { useState } from "react"
 import AboutHoverDropdown from "./components/AboutHoverDropdown"
 import AchievementsHoverDropdown from "./components/AchievementsHoverDropdown"
-import MemberHoverDropdown from "./components/MembersHoverDropdown"
+import MembersHoverDropdown from "./components/MembersHoverDropdown"
 import ResearchHoverDropdown from "./components/ResearchHoverDropdown"
 
 export default function Navbar() {
@@ -57,7 +57,7 @@ export default function Navbar() {
 
       {/* Research  */}
       <div className="relative">
-        <div className="p-4 flex items-center justify-center md:ml-32" onMouseEnter={() => handleMouseEnter('Research')} >
+        <div className="p-4 flex items-center justify-center md:ml-32" onMouseEnter={() => handleMouseEnter('Research')} onMouseLeave={handleMouseLeave}>
           <Link href="/Research">Research</Link>
         </div>
       </div>
@@ -73,20 +73,20 @@ export default function Navbar() {
           ease: easeInOut
         }}
       >
-        <ResearchHoverDropdown onMouseEnter={() => handleMouseEnter('Research')} onMouseLeave={handleMouseLeave} />
+        <ResearchHoverDropdown />
       </motion.div>
 
 
       {/* Members  */}
       <div className="relative">
-        <div className="p-4 flex items-center justify-center md:left-1/4 cursor-pointer" onMouseEnter={() => handleMouseEnter('Members')} >
+        <div className="p-4 flex items-center justify-center md:left-1/4 " onMouseEnter={() => handleMouseEnter('Members')} onMouseLeave={handleMouseLeave}>
           Members
         </div>
       </div>
       <motion.div
         className="absolute top-full left-0 right-0"
         initial="hidden"
-        animate={hoveredItem === 'Members' || hoveredItem === 'MemberDropdown' ? 'visible' : 'hidden'}
+        animate={hoveredItem === 'Members' ? 'visible' : 'hidden'}
         exit="exit"
         variants={dropdownVariants}
         transition={{
@@ -95,7 +95,7 @@ export default function Navbar() {
           ease: easeInOut
         }}
       >
-        <MemberHoverDropdown onMouseEnter={() => handleMouseEnter('Members')} onMouseLeave={handleMouseLeave} />
+        <MembersHoverDropdown />
       </motion.div>
 
 
@@ -145,7 +145,7 @@ export default function Navbar() {
 
       {/* Information  */}
       <div className="relative">
-        <div className="p-4 flex items-center justify-center" onMouseEnter={()=>handleMouseEnter('Info')}  onMouseLeave={handleMouseLeave}>
+        <div className="p-4 flex items-center justify-center" onMouseEnter={() => handleMouseEnter('Info')} onMouseLeave={handleMouseLeave}>
           <Link href="/Information">Information</Link>
         </div>
       </div>
