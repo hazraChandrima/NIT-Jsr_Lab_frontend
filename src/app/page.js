@@ -3,7 +3,7 @@ import NewsSection from "@/components/HomeComponents/NewsComponents/NewsSection"
 import ParallaxImageComponent from "@/components/HomeComponents/ParallaxSection/ParallaxImageComponent";
 import TeamSection from "@/components/HomeComponents/TeamSection/Section";
 import Gallery from "@/components/HomeComponents/Gallery/GallerySection";
-import Navbar from "@/components/Navbar/Navbar";
+import Navbar from "@/components/Navbar/navbar";
 import Footer from "@/components/Footer/Footer";
 import Image from "next/image";
 import Hero from "@/components/Hero/hero";
