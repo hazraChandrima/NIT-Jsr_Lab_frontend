@@ -6,12 +6,13 @@ import Gallery from "@/components/HomeComponents/Gallery/GallerySection";
 import Navbar from "@/components/Navbar/navbar";
 import Footer from "@/components/Footer/Footer";
 import Image from "next/image";
+import Hero from "@/components/Hero/hero";
 
 export default function Home() {
   return (
     <>
       <Navbar/>
-      <div className="h-dvh w-dvw bg-slate-800"></div>
+      <Hero/>
       <NewsSection />
       <ParallaxImageComponent />
       <TeamSection />
