@@ -4,7 +4,7 @@ import { easeInOut, motion } from "framer-motion"
 import React, { useState } from "react"
 import AboutHoverDropdown from "./components/AboutHoverDropdown"
 import AchievementsHoverDropdown from "./components/AchievementsHoverDropdown"
-import MemberHoverDropdown from "./components/MembersHoverDropdown"
+import MembersHoverDropdown from "./components/MembersHoverDropdown"
 import ResearchHoverDropdown from "./components/ResearchHoverDropdown"
 import './styles.css'
 
@@ -101,7 +101,7 @@ export default function Navbar() {
         }}
       >
         <div onMouseEnter={() => handleMouseEnter('Members')} onMouseLeave={handleMouseLeave}>
-          <MemberHoverDropdown />
+          <MembersHoverDropdown />
         </div>
       </motion.div>
 
