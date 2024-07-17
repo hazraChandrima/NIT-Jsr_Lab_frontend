@@ -6,6 +6,7 @@ import AboutHoverDropdown from "./components/AboutHoverDropdown"
 import AchievementsHoverDropdown from "./components/AchievementsHoverDropdown"
 import MemberHoverDropdown from "./components/MembersHoverDropdown"
 import ResearchHoverDropdown from "./components/ResearchHoverDropdown"
+import './styles.css'
 
 export default function Navbar() {
 
@@ -48,18 +49,19 @@ export default function Navbar() {
 
     <div className=" bg-white flex flex-row fixed h-16 w-full z-40 text-black bg-opacity-70">
 
-      <div className="relative">
-        <div className="p-4 flex items-center justify-center">
-          <Link href="/">NIT Jsr Lab</Link>
-        </div>
+      <div className="relative" >
+        <span className="p-4 flex items-center justify-center">
+          <span><Link href="/">NIT Jsr Lab</Link></span>
+        </span>
       </div>
+
 
 
       {/* Research  */}
       <div className="relative">
-        <div className="p-4 flex items-center justify-center md:ml-32" onMouseEnter={() => handleMouseEnter('Research')} >
-          <Link href="/Research">Research</Link>
-        </div>
+        <span className="p-4 flex items-center justify-center md:ml-32" onMouseEnter={() => handleMouseEnter('Research')} onMouseLeave={handleMouseLeave}>
+          <span className="navbar-option"><Link href="/Research">Research</Link></span>
+        </span>
       </div>
       <motion.div
         className="absolute top-full left-0 right-0"
@@ -73,20 +75,23 @@ export default function Navbar() {
           ease: easeInOut
         }}
       >
-        <ResearchHoverDropdown onMouseEnter={() => handleMouseEnter('Research')} onMouseLeave={handleMouseLeave} />
+        <div onMouseEnter={() => handleMouseEnter('Research')} onMouseLeave={handleMouseLeave}>
+          <ResearchHoverDropdown />
+        </div>
       </motion.div>
+
 
 
       {/* Members  */}
       <div className="relative">
-        <div className="p-4 flex items-center justify-center md:left-1/4 cursor-pointer" onMouseEnter={() => handleMouseEnter('Members')} >
-          Members
-        </div>
+        <span className="p-4 flex items-center justify-center md:left-1/4 cursor-pointer" onMouseEnter={() => handleMouseEnter('Members')} onMouseLeave={handleMouseLeave}>
+          <span className="navbar-option">Members</span>
+        </span>
       </div>
       <motion.div
         className="absolute top-full left-0 right-0"
         initial="hidden"
-        animate={hoveredItem === 'Members' || hoveredItem === 'MemberDropdown' ? 'visible' : 'hidden'}
+        animate={hoveredItem === 'Members' ? 'visible' : 'hidden'}
         exit="exit"
         variants={dropdownVariants}
         transition={{
@@ -95,15 +100,18 @@ export default function Navbar() {
           ease: easeInOut
         }}
       >
-        <MemberHoverDropdown onMouseEnter={() => handleMouseEnter('Members')} onMouseLeave={handleMouseLeave} />
+        <div onMouseEnter={() => handleMouseEnter('Members')} onMouseLeave={handleMouseLeave}>
+          <MemberHoverDropdown />
+        </div>
       </motion.div>
+
 
 
       {/* Achievements  */}
       <div className="relative">
-        <div className="p-4 flex items-center justify-center md:left-1/2" onMouseEnter={() => handleMouseEnter('Achievements')} onMouseLeave={handleMouseLeave}>
-          <Link href="/Achievements">Achievements</Link>
-        </div>
+        <span className="p-4 flex items-center justify-center md:left-1/2" onMouseEnter={() => handleMouseEnter('Achievements')} onMouseLeave={handleMouseLeave}>
+          <span className="navbar-option"><Link href="/Achievements">Achievements</Link></span>
+        </span>
       </div>
       <motion.div
         className="absolute top-full left-0 right-0"
@@ -117,15 +125,18 @@ export default function Navbar() {
           ease: easeInOut
         }}
       >
-        <AchievementsHoverDropdown />
+        <div onMouseEnter={() => handleMouseEnter('Achievements')} onMouseLeave={handleMouseLeave}>
+          <AchievementsHoverDropdown />
+        </div>
       </motion.div>
+
 
 
       {/* About  */}
       <div className="relative">
-        <div className="p-4 flex items-center justify-center md:left-3/4 cursor-pointer" onMouseEnter={() => handleMouseEnter('About')} onMouseLeave={handleMouseLeave}>
-          About
-        </div>
+        <span className="p-4 flex items-center justify-center md:left-3/4 cursor-pointer" onMouseEnter={() => handleMouseEnter('About')} onMouseLeave={handleMouseLeave}>
+          <span className="navbar-option">About</span>
+        </span>
       </div>
       <motion.div
         className="absolute top-full left-0 right-0"
@@ -139,23 +150,26 @@ export default function Navbar() {
           ease: easeInOut
         }}
       >
-        <AboutHoverDropdown />
+        <div onMouseEnter={() => handleMouseEnter('About')} onMouseLeave={handleMouseLeave}>
+          <AboutHoverDropdown />
+        </div>
       </motion.div>
+
 
 
       {/* Information  */}
       <div className="relative">
-        <div className="p-4 flex items-center justify-center" onMouseEnter={()=>handleMouseEnter('Info')}  onMouseLeave={handleMouseLeave}>
-          <Link href="/Information">Information</Link>
-        </div>
+        <span className="p-4 flex items-center justify-center" onMouseLeave={handleMouseLeave}>
+          <span className="navbar-option"><Link href="/Information">Information</Link></span>
+        </span>
       </div>
 
 
       {/* News  */}
       <div className="relative">
-        <div className="relative p-4 flex items-center justify-center">
-          <Link href="/News">News</Link>
-        </div>
+        <span className="relative p-4 flex items-center justify-center">
+          <span className="navbar-option"><Link href="/News">News</Link></span>
+        </span>
       </div>
 
     </div>
