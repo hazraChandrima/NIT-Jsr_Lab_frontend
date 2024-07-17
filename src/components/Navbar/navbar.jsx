@@ -103,7 +103,7 @@ export default function Navbar() {
         }}
       >
         <div onMouseEnter={() => handleMouseEnter('Members')} onMouseLeave={handleMouseLeave}>
-          <MemberHoverDropdown />
+          <MembersHoverDropdown />
         </div>
 
       </motion.div>
