@@ -1,0 +1,25 @@
+ .navbar-option {
+    color: black;
+    /* background-color: #01063300; */
+    display: inline-block;
+    position: relative;
+}
+
+ .navbar-option::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #070707; 
+    box-shadow: 0 2px 5px #606060;
+    transform-origin: bottom center;
+    transition: transform 0.25s ease-out;
+}
+
+ .navbar-option:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom center;
+}
