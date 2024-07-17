@@ -5,26 +5,12 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import useAnimationHook from '@/hooks/AnimationHooks/moveUp';
+
 
 function NewsCard() {
 
-  const controls = useAnimation();
-  const [ref, inView] = useInView({
-    triggerOnce: true, // Only trigger once
-    threshold: 0.3, // Trigger when 50% of the component is in view
-  });
-
-  useEffect(() => {
-    if (inView) {
-      controls.start({
-        opacity: 1,
-        y: 0,
-        transition: { duration: 0.5 },
-      });
-    }
-  }, [controls, inView]);
-
-
+  const{ref, controls}= useAnimationHook();
 
 
   return (
@@ -33,7 +19,7 @@ function NewsCard() {
     initial={{ opacity: 0, y: 50 }} // Start slightly below with 0 opacity
     animate={controls}
     className='px-5'>
-    <div className='flex flex-col sm:flex-row p-4 gap-4 bg-slate-9900 rounded-lg shadow-md text-white'>
+    <div className='flex flex-col sm:flex-row p-4 gap-4 items-center bg-slate-900 rounded-lg shadow-md text-white'>
       <div className='flex gap-4 items-center'>
         <p>7/12/2024</p>
         <div className='flex flex-col gap-2'>

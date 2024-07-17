@@ -4,7 +4,7 @@ import { easeInOut, motion } from "framer-motion"
 import React, { useState } from "react"
 import AboutHoverDropdown from "./components/AboutHoverDropdown"
 import AchievementsHoverDropdown from "./components/AchievementsHoverDropdown"
-import MemberHoverDropdown from "./components/MembersHoverDropdown"
+import MembersHoverDropdown from "./components/MembersHoverDropdown"
 import ResearchHoverDropdown from "./components/ResearchHoverDropdown"
 import './styles.css'
 
@@ -78,6 +78,7 @@ export default function Navbar() {
         <div onMouseEnter={() => handleMouseEnter('Research')} onMouseLeave={handleMouseLeave}>
           <ResearchHoverDropdown />
         </div>
+
       </motion.div>
 
 
@@ -87,6 +88,7 @@ export default function Navbar() {
         <span className="p-4 flex items-center justify-center md:left-1/4 cursor-pointer" onMouseEnter={() => handleMouseEnter('Members')} onMouseLeave={handleMouseLeave}>
           <span className="navbar-option">Members</span>
         </span>
+
       </div>
       <motion.div
         className="absolute top-full left-0 right-0"
@@ -103,6 +105,7 @@ export default function Navbar() {
         <div onMouseEnter={() => handleMouseEnter('Members')} onMouseLeave={handleMouseLeave}>
           <MemberHoverDropdown />
         </div>
+
       </motion.div>
 
 
@@ -162,6 +165,7 @@ export default function Navbar() {
         <span className="p-4 flex items-center justify-center" onMouseLeave={handleMouseLeave}>
           <span className="navbar-option"><Link href="/Information">Information</Link></span>
         </span>
+
       </div>
 
 
