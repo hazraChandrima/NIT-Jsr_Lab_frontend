@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import ViewMore from '../ViewMoreComponent/ViewMoreComponent';
 
 const TeamComponent = ({ title, description, imageUrl }) => {
   const controls = useAnimation();
@@ -35,7 +36,8 @@ const TeamComponent = ({ title, description, imageUrl }) => {
         <h2 className="text-lg font-bold">{title}</h2>
       </div>
       <div className="absolute bottom-0 left-0 p-4">
-        <button className="bg-blue-500 text-white px-4 py-2 rounded">View More</button>
+        {/* <button className="bg-blue-500 text-white px-4 py-2 rounded">View More</button> */}
+        <ViewMore width={90}/>
       </div>
     </motion.div>
   );

@@ -1,9 +1,8 @@
 // pages/Members.js
 "use client"
-
-import ProgramWiseCard from '@/components/MemberComponents/ProgramWiseMemberComponent';
-import StaffCard from '@/components/MemberComponents/StaffComponents/StaffCard';
 import React from 'react';
+import ProgramWiseCard from '../../_components/ProgramWiseCards';
+import StaffCard from '../../_components/StaffCard';
 
 const members = [
   {
