@@ -19,7 +19,7 @@ const Breadcrumbs = () => {
         {crumbs.map((crumb, index) => (
           <li key={index} className="mr-2">
             {index === crumbs.length - 1 ? (
-              <span className="text-gray-700 font-semibold text-base sm:text-sm ">
+              <span className="text-gray-600 font-semibold text-base sm:text-sm ">
                 {crumb}
               </span>
             ) : (
