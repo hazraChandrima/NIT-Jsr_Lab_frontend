@@ -46,8 +46,8 @@ const teamMembers = [
 
 export default function TeamSection() {
   return (
-    <main className="min-h-screen w-full bg-gray-800">
-    <div className="min-h-dvh bg-slate-900 text-white px-10  py-5">
+    <main className="min-h-screen w-full ">
+    <div className="min-h-dvh text-white px-10  py-5">
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
         {teamMembers.map((member, index) => (
