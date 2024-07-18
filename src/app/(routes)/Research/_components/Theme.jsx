@@ -1,6 +1,6 @@
 const Theme = () => {
   return (
-    <div className="mb-24 box-border">
+    <div className="mb-16 box-border bg-blue-200">
       <div className="w-11/12 max-w-screen-xl mx-auto box-border text-center">
         <div className="font-serif text-sm box-border">
           <h2 className="mb-10">
