@@ -36,7 +36,7 @@ const members = [
 
 const Members = () => {
   return (
-    <main className="min-h-screen w-full flex flex-col items-center bg-gray-800 py-10 px-5">
+    <main className="min-h-screen w-full flex flex-col items-center bg-gray-800 py-20 px-5">
       <div className='flex flex-col items-start max-w-[1256px]'>
         {/* //Faculty */}
       <div className=' mb-20'>

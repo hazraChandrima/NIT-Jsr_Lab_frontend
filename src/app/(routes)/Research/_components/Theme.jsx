@@ -2,7 +2,7 @@ const Theme = () => {
   return (
     <div className="mb-24 box-border">
       <div className="w-11/12 max-w-screen-xl mx-auto box-border text-center">
-        <div className="font-serif text-sm box-border">
+        <div className="font-serif text-md box-border">
           <h2 className="mb-10">
             Development of a portable Lab-on-a-CD impedance analyzer for
             label-free early diagnosis of malaria in resource-limited settings
