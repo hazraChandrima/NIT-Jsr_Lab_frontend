@@ -7,7 +7,7 @@ const BreadCrumbs = () => {
   const crumbs = pathname.split("/").filter(Boolean);
 
   return (
-    <nav aria-label="breadcrumbs " className="p-4 w-fit bg-white rounded-lg">
+    <nav aria-label="breadcrumbs " className="px-4 py-2 w-fit bg-blue-200 rounded-md">
       <ol className="flex flex-wrap ">
         <li className="mr-2">
           <Link href="/">
