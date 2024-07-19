@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import NewsCard from '@/components/HomeComponents/NewsComponents/NewsCard';
+import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
 
 const newsData = [
   {
@@ -248,6 +249,9 @@ function NewsPage() {
 
   return (
     <div className='flex flex-col bg-slate-400 py-5 min-h-dvh text-white text-right items-center'>
+      <div className='pt-6 text-left flex justify-start max-w-[1256px] w-full px-9'>
+      <BreadCrumbs/>
+      </div>
       <div>
       <h1 className='text-3xl relative right-6 text-slate-800'>NEWS</h1>
       <div className="py-6 text-left flex flex-col items-center max-w-[1256px] w-full px-4">
