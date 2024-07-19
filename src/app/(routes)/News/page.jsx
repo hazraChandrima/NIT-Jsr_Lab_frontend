@@ -247,8 +247,9 @@ function NewsPage() {
   };
 
   return (
-    <div className='flex flex-col py-5 h-dvh text-white text-right items-center'>
-      <h1 className='text-3xl relative right-3'>NEWS</h1>
+    <div className='flex flex-col bg-slate-400 py-5 min-h-dvh text-white text-right items-center'>
+      <div>
+      <h1 className='text-3xl relative right-6 text-slate-800'>NEWS</h1>
       <div className="py-6 text-left flex flex-col items-center max-w-[1256px] w-full px-4">
         {getCurrentPageData().map((newsItem, index) => (
           <NewsCard
@@ -261,7 +262,9 @@ function NewsPage() {
           />
         ))}
       </div>
-      <div className="flex space-x-2">
+      
+      </div>
+      <div className="flex flex-wrap gap-2 justify-center space-x-2">
         {Array.from({ length: totalPages }, (_, index) => (
           <button
             key={index}
@@ -272,6 +275,7 @@ function NewsPage() {
           </button>
         ))}
       </div>
+      
     </div>
   );
 }

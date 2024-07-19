@@ -1,6 +1,7 @@
 import React from "react";
 import NewsCard from "./NewsCard";
 import ViewMore from "../ViewMoreComponent/ViewMoreComponent";
+import Link from "next/link";
 
 function NewsSection() {
   const newsData = [
@@ -62,7 +63,9 @@ function NewsSection() {
         ))}
       </div>
       <div className="relative right-3 mb-32">
+        <Link href={'/News'}>
         <ViewMore width={200} />
+        </Link>
       </div>
     </div>
   );
