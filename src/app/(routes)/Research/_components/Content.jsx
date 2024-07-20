@@ -13,7 +13,7 @@ const Content = () => {
       ref={ref}
       initial={{ opacity: 0, y: 50 }} // Start slightly below with 0 opacity
       animate={controls}
-      className="flex flex-wrap justify-around items-start bg-blue-100"
+      className="flex flex-wrap justify-around items-start "
     >
       <div className="flex-[1_1_330px] h-full text-white p-4 m-2 max-width-[600px] relative">
         <div className="w-full h-[20rem] mb-5">

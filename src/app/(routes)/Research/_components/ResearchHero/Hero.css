@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+
+.img{
+   
+    height: 100%;
+    opacity: 0.5;
+}
+.heroText{
+    position:absolute;
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+    font-size: 2rem;
+    top:40%;
+    color:black;
+    
+}
+.textContainer {
+    font-family: 'Lato', sans-serif;   
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 2rem;
+  }
+  
+  .subtext {
+    color: #666;
+  }
+  
+  .subtextSmall {
+    font-size: 18px;
+    color: #666;
+  }
+@keyframes zoom{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.1);
+    }
+}
