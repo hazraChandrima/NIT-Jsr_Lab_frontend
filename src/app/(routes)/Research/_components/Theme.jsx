@@ -1,6 +1,16 @@
+"use client";
+import { motion } from "framer-motion";
+import useAnimationHook from "@/hooks/AnimationHooks/moveUp";
+
 const Theme = () => {
+  const { ref, controls } = useAnimationHook();
   return (
-    <div className="mb-24 box-border">
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 50 }} // Start slightly below with 0 opacity
+      animate={controls}
+      className="mb-16 box-border"
+    >
       <div className="w-11/12 max-w-screen-xl mx-auto box-border text-center">
         <div className="font-serif text-md box-border">
           <h2 className="mb-10">
@@ -27,7 +37,7 @@ const Theme = () => {
           <br />
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
