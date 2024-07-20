@@ -1,7 +1,4 @@
 export default function Page() {
-    return (
-      <div>
-        Research Content
-      </div>
-    )
-  }
+  return <div>Research Content</div>;
+}
+//testing
