@@ -1,6 +1,6 @@
 
 import BreadCrumbs from "@/components/BreadCrumbs/BreadCrumbs";
-import ResearchHero from "../Research/_components/ResearchHero";
+import ResearchHero from "../Research/_components/ResearchHero/ResearchHero";
 import Footer from "@/components/Footer/Footer";
 
 
