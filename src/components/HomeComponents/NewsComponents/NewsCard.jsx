@@ -15,7 +15,7 @@ function NewsCard({ date, title, description, viewMoreLink, galleryLink }) {
       animate={controls}
       className='px-5'
     >
-      <Link href={`/News/${title}`}>
+     
       <div className='flex flex-col sm:flex-row p-4 gap-4 items-center bg-slate-900 rounded-lg shadow-md text-white'>
         <div className='flex gap-4 items-center'>
           <p>{date}</p>
@@ -24,15 +24,17 @@ function NewsCard({ date, title, description, viewMoreLink, galleryLink }) {
             <Link href={galleryLink} className="bg-blue-500 text-white px-4 py-2 rounded">Gallery</Link>
           </div>
         </div>
+        <Link href={`/News/${title}`}>
         <div className='flex-grow'>
           <h2 className='text-lg font-bold'>{title}</h2>
           <p className='line-clamp-6 sm:line-clamp-4 overflow-hidden'>
             {description}
           </p>
         </div>
+        </Link>
       </div>
       <hr className='h-[3px] w-full bg-black text-red-100' />
-      </Link>
+    
     </motion.div>
   );
 }

@@ -1,14 +1,16 @@
 "use client"
 
 import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import NewsCard from '@/components/HomeComponents/NewsComponents/NewsCard';
+import { useNews } from '@/contexts/NewsContext';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
 
 const newsData = [
   {
     date: '7/12/2024',
     title: 'News Title 1',
-    description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur saepe non, eaque fugiat quod eveniet quaerat quam, sit ratione tenetur quo aliquam.',
+    description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur saepe non, eaque fugiat quod eveniet quaerat quam, sit ratione tenetur quo aliquam.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur saepe non, eaque fugiat quod eveniet quaerat quam, sit ratione tenetur quo aliquam.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur saepe non, eaque fugiat quod eveniet quaerat quam, sit ratione tenetur quo aliquam.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur saepe non, eaque fugiat quod eveniet quaerat quam, sit ratione tenetur quo aliquam.',
     viewMoreLink: '/#',
     galleryLink: '/#'
   },
@@ -234,6 +236,14 @@ const newsData = [
 const ITEMS_PER_PAGE = 5;
 
 function NewsPage() {
+
+  const router = useRouter();
+  const { setNews } = useNews();
+
+  const handleCardClick = (newsItem) => {
+    setNews(newsItem);
+    router.push('/News/Details');
+  };
   const [currentPage, setCurrentPage] = useState(1);
 
   const totalPages = Math.ceil(newsData.length / ITEMS_PER_PAGE);
@@ -256,14 +266,15 @@ function NewsPage() {
       <h1 className='text-3xl relative right-6 text-slate-800'>NEWS</h1>
       <div className="py-6 text-left flex flex-col items-center max-w-[1256px] w-full px-4">
         {getCurrentPageData().map((newsItem, index) => (
-          <NewsCard
-            key={index}
-            date={newsItem.date}
-            title={newsItem.title}
-            description={newsItem.description}
-            viewMoreLink={newsItem.viewMoreLink}
-            galleryLink={newsItem.galleryLink}
-          />
+           <div key={index} onClick={() => handleCardClick(newsItem)}>
+           <NewsCard
+             date={newsItem.date}
+             title={newsItem.title}
+             description={newsItem.description}
+             viewMoreLink={newsItem.viewMoreLink}
+             galleryLink={newsItem.galleryLink}
+           />
+         </div>
         ))}
       </div>
       
