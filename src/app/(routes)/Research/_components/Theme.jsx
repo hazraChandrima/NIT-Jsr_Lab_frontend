@@ -1,3 +1,4 @@
+"use client";
 import { motion } from "framer-motion";
 import useAnimationHook from "@/hooks/AnimationHooks/moveUp";
 
@@ -8,7 +9,7 @@ const Theme = () => {
       ref={ref}
       initial={{ opacity: 0, y: 50 }} // Start slightly below with 0 opacity
       animate={controls}
-      className="mb-16 box-border bg-blue-200"
+      className="mb-16 box-border"
     >
       <div className="w-11/12 max-w-screen-xl mx-auto box-border text-center">
         <div className="font-serif text-md box-border">
