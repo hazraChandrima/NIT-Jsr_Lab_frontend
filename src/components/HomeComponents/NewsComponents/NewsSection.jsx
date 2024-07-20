@@ -1,9 +1,21 @@
+"use client"
 import React from "react";
-import NewsCard from "./NewsCard";
+import { useRouter } from 'next/navigation';
+import NewsCard from '@/components/HomeComponents/NewsComponents/NewsCard';
+import { useNews } from '@/contexts/NewsContext';
 import ViewMore from "../ViewMoreComponent/ViewMoreComponent";
 import Link from "next/link";
 
 function NewsSection() {
+
+  const router = useRouter();
+  const { setNews } = useNews();
+
+  const handleCardClick = (newsItem) => {
+    setNews(newsItem);
+    router.push('/News/Details');
+  };
+
   const newsData = [
     {
       date: "7/12/2024",
@@ -52,6 +64,7 @@ function NewsSection() {
       <h1 className="text-3xl relative right-3">NEWS</h1>
       <div className="py-6 text-left flex flex-col items-center">
         {newsData.map((newsItem, index) => (
+          <div key={index} onClick={() => handleCardClick(newsItem)}>
           <NewsCard
             key={index}
             date={newsItem.date}
@@ -60,6 +73,7 @@ function NewsSection() {
             viewMoreLink={newsItem.viewMoreLink}
             galleryLink={newsItem.galleryLink}
           />
+          </div>
         ))}
       </div>
       <div className="relative right-3 mb-32">
