@@ -1,40 +1,38 @@
-"use client"
+'use client';
 
 import React from 'react';
-
-import { useEffect, useState } from 'react';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import { motion } from 'framer-motion';
 import useAnimationHook from '@/hooks/AnimationHooks/moveUp';
+import Link from 'next/link';
 
-
-function NewsCard() {
-
-  const{ref, controls}= useAnimationHook();
-
+function NewsCard({ date, title, description, viewMoreLink, galleryLink }) {
+  const { ref, controls } = useAnimationHook();
 
   return (
     <motion.div
-    ref={ref}
-    initial={{ opacity: 0, y: 50 }} // Start slightly below with 0 opacity
-    animate={controls}
-    className='px-5'>
-    <div className='flex flex-col sm:flex-row p-4 gap-4 items-center bg-slate-900 rounded-lg shadow-md text-white'>
-      <div className='flex gap-4 items-center'>
-        <p>7/12/2024</p>
-        <div className='flex flex-col gap-2'>
-          <button className="bg-blue-500 text-white px-4 py-2 rounded w-max">View More</button>
-          <button className="bg-blue-500 text-white px-4 py-2 rounded">Gallery</button>
+      ref={ref}
+      initial={{ opacity: 0, y: 50 }} // Start slightly below with 0 opacity
+      animate={controls}
+      className='px-5'
+    >
+      <Link href={`/News/${title}`}>
+      <div className='flex flex-col sm:flex-row p-4 gap-4 items-center bg-slate-900 rounded-lg shadow-md text-white'>
+        <div className='flex gap-4 items-center'>
+          <p>{date}</p>
+          <div className='flex flex-col gap-2'>
+            <Link href={viewMoreLink} className="bg-blue-500 text-white px-4 py-2 rounded w-max">View More</Link>
+            <Link href={galleryLink} className="bg-blue-500 text-white px-4 py-2 rounded">Gallery</Link>
+          </div>
+        </div>
+        <div className='flex-grow'>
+          <h2 className='text-lg font-bold'>{title}</h2>
+          <p className='line-clamp-6 sm:line-clamp-4 overflow-hidden'>
+            {description}
+          </p>
         </div>
       </div>
-      <div className='flex-grow '>
-        <p className='line-clamp-6 sm:line-clamp-4 overflow-hidden'>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur saepe non, eaque fugiat quod eveniet quaerat quam, sit ratione tenetur quo aliquam. Corporis dolores dolor neque inventore, a optio veritatis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt in, et rem sunt provident neque accusamus vitae esse similique quod harum quae tenetur, optio reiciendis iusto perspiciatis debitis tempora deserunt!
-        </p>
-      </div>
-     
-    </div>
-    <hr className='h-[3px] w-full bg-black text-red-100' />
+      <hr className='h-[3px] w-full bg-black text-red-100' />
+      </Link>
     </motion.div>
   );
 }

@@ -1,0 +1,27 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Titan+One&display=swap');
+
+.img{
+   
+    height: 100%;
+}
+.heroText{
+    position:absolute;
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+    font-family: "Bungee Inline", sans-serif;
+    font-size: 3rem;
+    top:50%;
+    color:white;
+    
+}
+@keyframes zoom{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.1);
+    }
+}
