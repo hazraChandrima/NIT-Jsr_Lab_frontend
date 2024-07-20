@@ -6,6 +6,9 @@ import Image from "next/image";
 
 function ResearchMembers() {
   const { ref, controls } = useAnimationHook();
+  console.log(ref);
+  const { ref: ref2, controls: controls2 } = useAnimationHook();
+  console.log(ref2);
   return (
     <motion.div
       ref={ref}
@@ -13,9 +16,9 @@ function ResearchMembers() {
       animate={controls}
       className="w-full pt-4"
     >
-      <div className="text-center w-[90vw] mx-auto mb-16">
+      <div className="text-center w-[90vw] mx-auto  border-2 border-transparent border-b-slate-200 pb-16">
         <h3 className=" text-xl font-bold mb-6 opacity-65 ">MEMBER</h3>
-        <p classname=" ">
+        <p className="mb-6">
           <span className=" opacity-50  text-sm sm:text-base md:text-sm lg:text-sm">
             Marlin Ramadhan BAIDILLAH Ph.D (Leader, Postdoctoral Researcher)
           </span>{" "}
@@ -37,35 +40,17 @@ function ResearchMembers() {
           <br />
           <br />
         </p>
-        <div className="flex justify-center">
+        <motion.div
+          ref={ref2}
+          initial={{ opacity: 0, y: 50 }} // Start slightly below with 0 opacity
+          animate={controls2}
+          className="flex justify-center"
+        >
           <Image src={image_2} alt="Image 2" />
-        </div>
+        </motion.div>
       </div>
     </motion.div>
   );
 }
-//   return (
-//     <div className="container mx-auto px-4">
-//       <h2 className="text-2xl font-bold text-gray-800 mb-4">MEMBER</h2>
-//       <ul className="list-disc pl-5">
-//         <li className="mb-2">
-//           <span className="font-medium">Marlin Ramadhan BAIDILLAH Ph.D</span>{" "}
-//           (Leader, Postdoctoral Researcher)
-//         </li>
-//         <li className="mb-2">
-//           <span className="font-medium">Ridwan WICAKSONO, Ph.D</span>{" "}
-//           (Co-Leader, Postdoctoral Researcher)
-//         </li>
-//         <li className="mb-2">
-//           <span className="font-medium">Isnan Nur RIFAI</span> (D3),{" "}
-//           <span className="font-medium">Kiagus Aufa IBRAHIM</span> (D3)
-//         </li>
-//         <li>
-//           <span className="font-medium">Daichi FURUKAWA</span> (B4)
-//         </li>
-//       </ul>
-//     </div>
-//   );
-// }
 
 export default ResearchMembers;
