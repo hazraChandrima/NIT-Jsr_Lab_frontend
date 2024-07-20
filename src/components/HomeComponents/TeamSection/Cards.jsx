@@ -4,8 +4,9 @@ import { useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import ViewMore from '../ViewMoreComponent/ViewMoreComponent';
+import Link from 'next/link';
 
-const TeamComponent = ({ title, description, imageUrl }) => {
+const TeamComponent = ({ title, description, imageUrl,link }) => {
   const controls = useAnimation();
   const [ref, inView] = useInView({
     triggerOnce: true, // Only trigger once
@@ -23,7 +24,7 @@ const TeamComponent = ({ title, description, imageUrl }) => {
   }, [controls, inView]);
 
   return (
-    
+    <Link href={link}>
     <motion.div
       ref={ref}
       initial={{ opacity: 0, y: 50 }} // Start slightly below with 0 opacity
@@ -40,6 +41,7 @@ const TeamComponent = ({ title, description, imageUrl }) => {
         <ViewMore width={90}/>
       </div>
     </motion.div>
+    </Link>
   );
 };
 
