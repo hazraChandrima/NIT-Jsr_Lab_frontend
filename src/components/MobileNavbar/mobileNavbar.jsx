@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Squash as Hamburger } from "hamburger-react";
 import MobileNavDropdown from './components/mobileNavDropdown';
 import Link from "next/link"
-import { AnimatePresence, motion, easeInOut } from "framer-motion";
+import { motion, easeInOut } from "framer-motion";
 
 
 export const MobileNavbar = () => {
