@@ -45,7 +45,7 @@ const Content = () => {
         <Button text={"Research Contents PDF"} href={"/"} />
       </div>
 
-      <div className="w-full h-[40vw] bg-blue-500 relative lg:max-h-[400px] lg:max-h-[400px] xl:max-h-[400px] py-4 my-4">
+      <div className="w-full h-[40vw] bg-blue-500 relative  lg:max-h-[400px] xl:max-h-[400px] py-4 my-4">
         <Image
           src={image_2}
           alt="Image 2"
