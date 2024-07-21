@@ -11,7 +11,7 @@ const ViewMore = ({ width }) => {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <div className="relative mt-2 text-center text-white">
+      <div className="relative mt-2 text-center">
         <span className="mr-2">View More</span>
         <span className="text-xl font-bold">{hovered ? '-' : '+'}</span>
       </div>
