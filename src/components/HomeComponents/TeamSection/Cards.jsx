@@ -32,7 +32,7 @@ const TeamComponent = ({ title, description, imageUrl,link }) => {
       className="relative h-[345px] w-full"
       
     >
-      <img src={imageUrl} className='h-full w-full filter grayscale hover:filter-none transition-all duration-400'  />
+      <img src={imageUrl} className='h-full object-cover w-full filter grayscale hover:filter-none transition-all duration-400'  />
       <div className="absolute top-0 right-0 p-4 text-slate-900">
         <h2 className="text-lg font-bold">{title}</h2>
       </div>

@@ -9,44 +9,44 @@ const teamMembers = [
     title: 'Research Item 1',
     description: 'Description 1',
     link:"/Research/ResearchItem1",
-    imageUrl: 'https://images.squarespace-cdn.com/content/v1/530806bbe4b01885d314f575/1425441723794-480XZ60GYSYM6HMFO61D/image-asset.jpeg',
+    imageUrl: 'https://as2.ftcdn.net/v2/jpg/04/16/53/43/1000_F_416534332_NsxeQl4UlyjsUs80Tx0pYIJU7PrO8A3M.jpg',
   },
   {
     title: 'Research Item 2',
     description: 'Description 2',
     link:"/Research/ResearchItem2",
-    imageUrl: 'https://images.squarespace-cdn.com/content/v1/530806bbe4b01885d314f575/1425441723794-480XZ60GYSYM6HMFO61D/image-asset.jpeg',
+    imageUrl: 'https://as2.ftcdn.net/v2/jpg/04/16/53/43/1000_F_416534332_NsxeQl4UlyjsUs80Tx0pYIJU7PrO8A3M.jpg',
   },
   {
     title: 'Research Item 3',
     description: 'Description 3',
     link:"/Research/ResearchItem3",
-    imageUrl: 'https://images.squarespace-cdn.com/content/v1/530806bbe4b01885d314f575/1425441723794-480XZ60GYSYM6HMFO61D/image-asset.jpeg',
+    imageUrl: 'https://as2.ftcdn.net/v2/jpg/04/16/53/43/1000_F_416534332_NsxeQl4UlyjsUs80Tx0pYIJU7PrO8A3M.jpg',
   },
   {
     title: 'Research Item 4',
     description: 'Description 4',
     link:"/Research/ResearchItem4",
-    imageUrl: 'https://tse2.mm.bing.net/th?id=OIP.Z_PIeIRDajXPmZHROt-T_QHaEK&pid=Api&P=0&h=180',
+    imageUrl: 'https://as2.ftcdn.net/v2/jpg/04/16/53/43/1000_F_416534332_NsxeQl4UlyjsUs80Tx0pYIJU7PrO8A3M.jpg',
     
   },
   {
     title: 'Research Item 2',
     description: 'Description 2',
     link:"/Research/ResearchItem5",
-    imageUrl: 'https://tse2.mm.bing.net/th?id=OIP.Z_PIeIRDajXPmZHROt-T_QHaEK&pid=Api&P=0&h=180',
+    imageUrl: 'https://as2.ftcdn.net/v2/jpg/04/16/53/43/1000_F_416534332_NsxeQl4UlyjsUs80Tx0pYIJU7PrO8A3M.jpg',
   },
   {
     title: 'Research Item 3',
     description: 'Description 3',
     link:"/Research/ResearchItem1",
-    imageUrl: 'https://tse2.mm.bing.net/th?id=OIP.Z_PIeIRDajXPmZHROt-T_QHaEK&pid=Api&P=0&h=180',
+    imageUrl: 'https://as2.ftcdn.net/v2/jpg/04/16/53/43/1000_F_416534332_NsxeQl4UlyjsUs80Tx0pYIJU7PrO8A3M.jpg',
   },
   {
     title: 'Research Item 4',
     description: 'Description 4',
     link:"/Research/ResearchItem2",
-    imageUrl: 'https://tse2.mm.bing.net/th?id=OIP.Z_PIeIRDajXPmZHROt-T_QHaEK&pid=Api&P=0&h=180',
+    imageUrl: 'https://as2.ftcdn.net/v2/jpg/04/16/53/43/1000_F_416534332_NsxeQl4UlyjsUs80Tx0pYIJU7PrO8A3M.jpg',
     
   },
 ];
