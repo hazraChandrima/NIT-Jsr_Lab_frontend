@@ -50,7 +50,7 @@ export default function Navbar() {
     <div className="lg:visible xl:visible invisible bg-white flex flex-row fixed h-16 w-full z-40 text-black bg-opacity-70">
 
       <div className="relative" >
-        <span className="p-4 flex items-center justify-center">
+        <span className="p-4 font-semibold text-xl flex items-center justify-center">
           <span><Link href="/">NIT Jsr Lab</Link></span>
         </span>
       </div>
