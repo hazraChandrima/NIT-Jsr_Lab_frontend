@@ -60,7 +60,7 @@ function NewsSection() {
   ];
 
   return (
-    <div className="flex flex-col py-5 min-h-dvh  text-white text-right items-end ">
+    <div className="flex flex-col py-5 text-black min-h-dvh text-right items-end ">
       <h1 className="text-3xl relative right-3">NEWS</h1>
       <div className="py-6 text-left flex flex-col items-center">
         {newsData.map((newsItem, index) => (
@@ -78,7 +78,7 @@ function NewsSection() {
       </div>
       <div className="relative right-3 mb-32">
         <Link href={'/News'}>
-        <ViewMore width={200} />
+        <ViewMore className="text-black" width={200} />
         </Link>
       </div>
     </div>

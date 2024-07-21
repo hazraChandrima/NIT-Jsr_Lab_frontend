@@ -47,10 +47,10 @@ export default function Navbar() {
 
   return (
 
-    <div className="lg:visible font-sans xl:visible invisible bg-white flex flex-row fixed h-16 w-full z-40 text-black bg-opacity-70">
+    <div className="lg:visible font-sans xl:visible invisible bg-white flex flex-row fixed h-20 w-full z-40 text-black bg-opacity-70">
 
-      <div className="relative" >
-        <span className="p-4 font-semibold text-xl flex items-center justify-center">
+      <div className="relative flex items-center justify-center" >
+        <span className="p-4 font-semibold text-xl">
           <span><Link href="/">NIT Jsr Lab</Link></span>
         </span>
       </div>
@@ -58,9 +58,9 @@ export default function Navbar() {
 
 
       {/* Research  */}
-      <div className="relative">
-        <span className="p-4 flex items-center justify-center md:ml-32" onMouseEnter={() => handleMouseEnter('Research')} onMouseLeave={handleMouseLeave}>
-          <span className="navbar-option"><Link href="/Research">RESEARCH</Link></span>
+      <div className="relative px-3 flex items-center justify-center">
+        <span className="p-4 md:ml-32" onMouseEnter={() => handleMouseEnter('Research')} onMouseLeave={handleMouseLeave}>
+          <span className="navbar-option "><Link href="/Research">RESEARCH</Link></span>
         </span>
       </div>
       <motion.div
@@ -84,8 +84,8 @@ export default function Navbar() {
 
 
       {/* Members  */}
-      <div className="relative">
-        <span className="p-4 flex items-center justify-center md:left-1/4 cursor-pointer" onMouseEnter={() => handleMouseEnter('Members')} onMouseLeave={handleMouseLeave}>
+      <div className="relative px-4 flex items-center justify-center">
+        <span className="p-4 md:left-1/4 cursor-pointer" onMouseEnter={() => handleMouseEnter('Members')} onMouseLeave={handleMouseLeave}>
           <span className="navbar-option">MEMBERS</span>
         </span>
 
@@ -111,8 +111,8 @@ export default function Navbar() {
 
 
       {/* Achievements  */}
-      <div className="relative">
-        <span className="p-4 flex items-center justify-center md:left-1/2" onMouseEnter={() => handleMouseEnter('Achievements')} onMouseLeave={handleMouseLeave}>
+      <div className="relative px-4 flex items-center justify-center">
+        <span className="p-4 md:left-1/2" onMouseEnter={() => handleMouseEnter('Achievements')} onMouseLeave={handleMouseLeave}>
           <span className="navbar-option"><Link href="/Achievements">ACHIEVEMENTS</Link></span>
         </span>
       </div>
@@ -136,8 +136,8 @@ export default function Navbar() {
 
 
       {/* About  */}
-      <div className="relative">
-        <span className="p-4 flex items-center justify-center md:left-3/4 cursor-pointer" onMouseEnter={() => handleMouseEnter('About')} onMouseLeave={handleMouseLeave}>
+      <div className="relative px-4 flex items-center justify-center">
+        <span className="p-4 md:left-3/4 cursor-pointer" onMouseEnter={() => handleMouseEnter('About')} onMouseLeave={handleMouseLeave}>
           <span className="navbar-option">ABOUT</span>
         </span>
       </div>
@@ -161,8 +161,8 @@ export default function Navbar() {
 
 
       {/* Information  */}
-      <div className="relative">
-        <span className="p-4 flex items-center justify-center" onMouseLeave={handleMouseLeave}>
+      <div className="relative px-4 flex items-center justify-center">
+        <span className="p-4 " onMouseLeave={handleMouseLeave}>
           <span className="navbar-option"><Link href="/Information">INFORMATION</Link></span>
         </span>
 
@@ -170,8 +170,8 @@ export default function Navbar() {
 
 
       {/* News  */}
-      <div className="relative">
-        <span className="relative p-4 flex items-center justify-center">
+      <div className="relative px-4 flex items-center justify-center">
+        <span className="relative p-4 ">
           <span className="navbar-option"><Link href="/News">NEWS</Link></span>
         </span>
       </div>
