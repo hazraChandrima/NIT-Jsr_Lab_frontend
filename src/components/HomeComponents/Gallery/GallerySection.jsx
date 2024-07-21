@@ -10,14 +10,15 @@ function Gallery() {
   });
   const distance = useTransform(scrollYProgress, [0, 1], [1500, 0]);
   const imageUrl =
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9iUPkM7IZsO0SlLhwTEpXljGj2BFhjVcCbQ&s";
+    "https://images.shiksha.com/mediadata/images/1510723257phpsJ0m1c.jpeg";
   const imageUrl2 =
-    "https://img.freepik.com/free-photo/modern-entranceway-with-furniture-home-decor_23-2150831922.jpg?t=st=1720859169~exp=1720862769~hmac=8eca53ee5fb6fa3cb6a25d62bc73c4b7d0c7fc4e5560f79bfafae3f4751d1e2b&w=360";
+    "https://nitjsr.ac.in/backend/uploads/banner/add/ecb12f68-a5cb-4cec-aa33-c0ac7d622791-1.jpg";
   return (
     <div ref={ref} className="w-screen h-[125vw] bg-white relative">
       <ImageCard height={35} width={24} left={20} top={12} imgSrc={imageUrl} />
       <ImageCard height={33} width={24} left={10} top={75} imgSrc={imageUrl} />
       <ImageCard height={50} width={35} left={60} top={50} imgSrc={imageUrl} />
+
       <motion.div
         className="w-screen h-[120vh] bg-transparent"
         style={{
@@ -25,7 +26,7 @@ function Gallery() {
           opacity: 1,
         }}
       >
-        <div className="w-screen  relative">
+        <div className="w-screen relative">
           <ImageCard
             height={15}
             width={20}

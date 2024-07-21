@@ -9,9 +9,9 @@ function ParallaxImageComponent() {
       
       <section
         className="h-[65vh] w-full flex items-center justify-center bg-cover relative bg-fixed"
-        style={{ backgroundImage: "url('https://tse2.mm.bing.net/th?id=OIP.Z_PIeIRDajXPmZHROt-T_QHaEK&pid=Api&P=0&h=180')" }}
+        style={{ backgroundImage: "url('https://nitjsr.ac.in/backend/uploads/banner/add/ecb12f68-a5cb-4cec-aa33-c0ac7d622791-1.jpg')" }}
       >
-        <img src={"https://tse2.mm.bing.net/th?id=OIP.Z_PIeIRDajXPmZHROt-T_QHaEK&pid=Api&P=0&h=180"} className='absolute left-0 top-[-50px] w-[223px] sm-[350px] md:w-[30vw]'/>
+        <img src={"https://nitjsr.ac.in/backend/uploads/banner/add/ecb12f68-a5cb-4cec-aa33-c0ac7d622791-1.jpg"} className='absolute left-0 top-[-50px] w-[223px] sm-[350px] md:w-[30vw]'/>
         
       </section>
     </div>

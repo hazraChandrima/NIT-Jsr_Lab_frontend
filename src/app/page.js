@@ -23,7 +23,7 @@ export default function Home() {
           className="w-full h-auto flex items-center justify-center bg-cover relative "
           style={{
             backgroundImage:
-              "url('https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg')",
+              "url('https://www.labnetinternational.com/sites/www.labnetinternational.com/files/blogsies/header-images/iStock-949946968.jpg')",
           }}
         >
           <div className="max-w-[1256px] w-full px-4">
@@ -35,7 +35,7 @@ export default function Home() {
           className="w-full h-auto flex items-center justify-center bg-cover relative"
           style={{
             backgroundImage:
-              "url('https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg')",
+              "url('https://www.labnetinternational.com/sites/www.labnetinternational.com/files/blogsies/header-images/iStock-949946968.jpg')",
           }}
         >
           <div className="max-w-[1256px] w-full px-4">
