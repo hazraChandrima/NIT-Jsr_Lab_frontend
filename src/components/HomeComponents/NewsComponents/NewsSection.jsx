@@ -60,25 +60,26 @@ function NewsSection() {
   ];
 
   return (
+
     <div className="flex flex-col py-5 text-black min-h-dvh text-right items-end ">
-      <h1 className="text-3xl relative right-3">NEWS</h1>
+      <h1 className="text-7xl font-sans text-sky-900 font-light relative my-10 right-3">NEWS</h1>
       <div className="py-6 text-left flex flex-col items-center">
         {newsData.map((newsItem, index) => (
           <div key={index} onClick={() => handleCardClick(newsItem)}>
-          <NewsCard
-            key={index}
-            date={newsItem.date}
-            title={newsItem.title}
-            description={newsItem.description}
-            viewMoreLink={newsItem.viewMoreLink}
-            galleryLink={newsItem.galleryLink}
-          />
+            <NewsCard
+              key={index}
+              date={newsItem.date}
+              title={newsItem.title}
+              description={newsItem.description}
+              viewMoreLink={newsItem.viewMoreLink}
+              galleryLink={newsItem.galleryLink}
+            />
           </div>
         ))}
       </div>
       <div className="relative right-3 mb-32">
         <Link href={'/News'}>
-        <ViewMore className="text-black" width={200} />
+          <ViewMore className="text-black" width={200} />
         </Link>
       </div>
     </div>

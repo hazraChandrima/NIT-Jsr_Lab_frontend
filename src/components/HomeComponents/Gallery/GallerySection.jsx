@@ -10,11 +10,11 @@ function Gallery() {
   });
   const distance = useTransform(scrollYProgress, [0, 1], [1500, 0]);
   const imageUrl =
-    "https://images.shiksha.com/mediadata/images/1510723257phpsJ0m1c.jpeg";
+    "https://tomocloud.xsrv.jp/takei-lab/wp-content/uploads/2023/01/img_03.jpg";
   const imageUrl2 =
-    "https://nitjsr.ac.in/backend/uploads/banner/add/ecb12f68-a5cb-4cec-aa33-c0ac7d622791-1.jpg";
+    "https://pbs.twimg.com/media/GMFspXnasAAFGXs?format=jpg&name=large";
   return (
-    <div ref={ref} className="w-screen h-[125vw] bg-white relative">
+    <div ref={ref} className="w-screen h-[125vw] bg-sky-50 relative">
       <ImageCard height={35} width={24} left={20} top={12} imgSrc={imageUrl} />
       <ImageCard height={33} width={24} left={10} top={75} imgSrc={imageUrl} />
       <ImageCard height={50} width={35} left={60} top={50} imgSrc={imageUrl} />

@@ -11,12 +11,12 @@ const ViewMore = ({ width }) => {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <div className="relative mt-2 text-center">
-        <span className="mr-2">View More</span>
-        <span className="text-xl font-bold">{hovered ? '-' : '+'}</span>
+      <div className="relative font-sans text-2xl mt-5 font-light text-right">
+        <span className="mr-2 ">View More</span>
+        <span className="text-3xl ">{hovered ? '-' : '+'}</span>
       </div>
       <div
-        className="relative h-1 rounded-xl overflow-hidden  bg-white mt-4 "
+        className="relative h-1 rounded-xl overflow-hidden bg-slate-600 mt-4 mb-7 lg:mb-3 "
         style={{ width: `${width}px` }}
       >
         

@@ -8,9 +8,9 @@ function ResearchHoverDropdown() {
 
   return (
 
-    <div className='research-dropdown text-white bg-black h-lvh w-screen fixed left-0 p-4'>
+    <div className='research-dropdown text-white bg-black h-80 w-screen fixed left-0 p-4 px-5'>
 
-      <div className='grid grid-cols-1  md:grid-cols-3 lg:grid-cols-5 gap-7'>
+      <div className='grid grid-cols-1 mt-10 md:grid-cols-3 lg:grid-cols-5 gap-5'>
         {researchSubroutes.map((route, index) => (
           
           <Link key={index} href={route.href}>

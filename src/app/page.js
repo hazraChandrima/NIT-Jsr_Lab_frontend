@@ -4,7 +4,7 @@ import ParallaxImageComponent from "@/components/HomeComponents/ParallaxSection/
 import TeamSection from "@/components/HomeComponents/TeamSection/Section";
 import Gallery from "@/components/HomeComponents/Gallery/GallerySection";
 import Navbar from "@/components/Navbar/navbar";
-import {MobileNavbar} from "@/components/MobileNavbar/mobileNavbar";
+import { MobileNavbar } from "@/components/MobileNavbar/mobileNavbar";
 import Footer from "@/components/Footer/Footer";
 import Image from "next/image";
 import Hero from "@/components/Hero/hero";
@@ -13,14 +13,16 @@ import img2 from "../assets/images/lab2.png";
 
 export default function Home() {
   return (
-    <>
-      
+    <div className="w-full overflow-hidden">
+
       <MobileNavbar />
-        <Navbar />
-        <Hero images={[img1, img2]} transition={true} height="600px">
-          <div className="font-sans px-5 text-5xl lg:text-7xl ">NIT JAMSHEDPUR</div>
-        </Hero>
-        <div className="bg-slate-700 flex flex-col items-center w-full">
+      <Navbar />
+      <Hero images={[img1, img2]} transition={true} height="600px">
+        <div className="font-sans px-5 lg:text-8xl md:text-7xl text-6xl ">NIT JAMSHEDPUR</div>
+      </Hero>
+
+      <div className="bg-sky-100 flex flex-col items-center w-full overflow-hidden">
+
         <div
           className="w-full h-auto flex items-center justify-center bg-cover relative "
           style={{
@@ -32,13 +34,15 @@ export default function Home() {
             <NewsSection />
           </div>
         </div>
+
         <ParallaxImageComponent />
+        
         <div
           className="w-full h-auto flex items-center justify-center bg-cover relative"
-          style={{
-            backgroundImage:
-              "url('https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-08.jpg')",
-          }}
+          // style={{
+          //   backgroundImage:
+          //     "url('https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-08.jpg')",
+          // }}
         >
           <div className="max-w-[1256px] w-full px-4">
             <TeamSection />
@@ -48,6 +52,6 @@ export default function Home() {
         <Gallery />
         <Footer />
       </div>
-    </>
+    </div>
   );
 }

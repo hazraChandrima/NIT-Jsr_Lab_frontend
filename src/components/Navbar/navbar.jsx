@@ -20,7 +20,6 @@ export default function Navbar() {
     setHoveredItem(null);
   }
 
-
   // for dropdown animations
 
   const dropdownVariants = {
@@ -59,8 +58,8 @@ export default function Navbar() {
 
       {/* Research  */}
       <div className="relative px-3 flex items-center justify-center">
-        <span className="p-4 md:ml-32" onMouseEnter={() => handleMouseEnter('Research')} onMouseLeave={handleMouseLeave}>
-          <span className="navbar-option "><Link href="/Research">RESEARCH</Link></span>
+        <span className="test p-4 md:ml-32" onMouseEnter={() => handleMouseEnter('Research')} onMouseLeave={handleMouseLeave}>
+          <span className="navbar-option font-semibold"><Link href="/Research">RESEARCH</Link></span>
         </span>
       </div>
       <motion.div
@@ -70,7 +69,7 @@ export default function Navbar() {
         exit="exit"
         variants={dropdownVariants}
         transition={{
-          duration: 0.4,
+          duration: 0.3,
           delay: 0.1,
           ease: easeInOut
         }}
@@ -85,8 +84,8 @@ export default function Navbar() {
 
       {/* Members  */}
       <div className="relative px-4 flex items-center justify-center">
-        <span className="p-4 md:left-1/4 cursor-pointer" onMouseEnter={() => handleMouseEnter('Members')} onMouseLeave={handleMouseLeave}>
-          <span className="navbar-option">MEMBERS</span>
+        <span className="test p-4 md:left-1/4 cursor-pointer" onMouseEnter={() => handleMouseEnter('Members')} onMouseLeave={handleMouseLeave}>
+          <span className="navbar-option font-semibold">MEMBERS</span>
         </span>
 
       </div>
@@ -97,7 +96,7 @@ export default function Navbar() {
         exit="exit"
         variants={dropdownVariants}
         transition={{
-          duration: 0.4,
+          duration: 0.3,
           delay: 0.1,
           ease: easeInOut
         }}
@@ -112,8 +111,8 @@ export default function Navbar() {
 
       {/* Achievements  */}
       <div className="relative px-4 flex items-center justify-center">
-        <span className="p-4 md:left-1/2" onMouseEnter={() => handleMouseEnter('Achievements')} onMouseLeave={handleMouseLeave}>
-          <span className="navbar-option"><Link href="/Achievements">ACHIEVEMENTS</Link></span>
+        <span className="test p-4 md:left-1/2" onMouseEnter={() => handleMouseEnter('Achievements')} onMouseLeave={handleMouseLeave}>
+          <span className="navbar-option font-semibold"><Link href="/Achievements">ACHIEVEMENTS</Link></span>
         </span>
       </div>
       <motion.div
@@ -123,7 +122,7 @@ export default function Navbar() {
         exit="exit"
         variants={dropdownVariants}
         transition={{
-          duration: 0.4,
+          duration: 0.3,
           delay: 0.1,
           ease: easeInOut
         }}
@@ -137,8 +136,8 @@ export default function Navbar() {
 
       {/* About  */}
       <div className="relative px-4 flex items-center justify-center">
-        <span className="p-4 md:left-3/4 cursor-pointer" onMouseEnter={() => handleMouseEnter('About')} onMouseLeave={handleMouseLeave}>
-          <span className="navbar-option">ABOUT</span>
+        <span className="test p-4 md:left-3/4 cursor-pointer" onMouseEnter={() => handleMouseEnter('About')} onMouseLeave={handleMouseLeave}>
+          <span className="navbar-option font-semibold">ABOUT</span>
         </span>
       </div>
       <motion.div
@@ -148,7 +147,7 @@ export default function Navbar() {
         exit="exit"
         variants={dropdownVariants}
         transition={{
-          duration: 0.4,
+          duration: 0.3,
           delay: 0.1,
           ease: easeInOut
         }}
@@ -162,8 +161,8 @@ export default function Navbar() {
 
       {/* Information  */}
       <div className="relative px-4 flex items-center justify-center">
-        <span className="p-4 " onMouseLeave={handleMouseLeave}>
-          <span className="navbar-option"><Link href="/Information">INFORMATION</Link></span>
+        <span className="test p-4 " onMouseLeave={handleMouseLeave}>
+          <span className="navbar-option font-semibold"><Link href="/Information">INFORMATION</Link></span>
         </span>
 
       </div>
@@ -171,8 +170,8 @@ export default function Navbar() {
 
       {/* News  */}
       <div className="relative px-4 flex items-center justify-center">
-        <span className="relative p-4 ">
-          <span className="navbar-option"><Link href="/News">NEWS</Link></span>
+        <span className="test relative p-4 ">
+          <span className="navbar-option font-semibold"><Link href="/News">NEWS</Link></span>
         </span>
       </div>
 
