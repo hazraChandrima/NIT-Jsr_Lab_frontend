@@ -6,7 +6,7 @@ import logo from '@/assets/images/nitlogo.png';
 function Footer() {
   return (
     <div className="bg-sky-50 border-t-2 border-slate-200 w-full font-sans ">
-      <div className="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <nav className=" flex flex-wrap justify-center space-x-4" aria-label="Footer">
           <div className="px-5 py-2">
             <Link href="/Research" className="text-lg text-gray-500 hover:text-sky-500 transition duration-300">Research Contents</Link>
