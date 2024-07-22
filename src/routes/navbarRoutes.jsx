@@ -32,7 +32,7 @@ export const researchSubroutes = [
 
 export const membersSubroutes = [
     {
-        name: "Staff",
+        name: "Staff Members",
         href: "/Members/Staff"
     },
     {

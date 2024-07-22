@@ -18,7 +18,7 @@
     transition: transform 0.25s ease-out;
 }
 
- .navbar-option:hover::after{
+ .test:hover .navbar-option::after{
     transform: scaleX(1);
     transform-origin: bottom center;
 }
