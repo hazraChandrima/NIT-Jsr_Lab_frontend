@@ -18,7 +18,7 @@ export default function Home() {
       <MobileNavbar />
       <Navbar />
       <Hero images={[img1, img2]} transition={true} height="600px">
-        <div className="font-sans px-5 lg:text-8xl md:text-7xl text-6xl ">NIT JAMSHEDPUR</div>
+        <div className="font-sans px-5 lg:text-8xl md:text-7xl text-5xl ">NIT JAMSHEDPUR</div>
       </Hero>
 
       <div className="bg-sky-100 flex flex-col items-center w-full overflow-hidden">
