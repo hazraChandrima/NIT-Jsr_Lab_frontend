@@ -52,6 +52,11 @@ export const MobileNavbar = () => {
 
     const [isOpen, setOpen] = useState(false);
 
+    const handleLinkClick =() => {
+        setOpen(false);
+    }
+
+
     return (
 
         <div className="lg:invisible xl:invisible sm:visible md:visible fixed flex flex-row justify-between top-0 left-0 h-20 z-50 w-screen bg-white bg-opacity-70">
@@ -87,7 +92,7 @@ export const MobileNavbar = () => {
                                                 className="mb-2"
                                                 variants={itemVariants}>
 
-                                                <Link href={route.href}>
+                                                <Link href={route.href} onClick={handleLinkClick}>
                                                     <div className="block p-1 text-xl hover:text-2xl hover:text-blue-400 rounded transition duration-200 ease-in-out transform hover:scale-105 font-light ">
                                                         {route.name}
                                                     </div>
@@ -101,9 +106,9 @@ export const MobileNavbar = () => {
                                 </motion.div>
                             ))}
 
-                            <h2 className='text-3xl text-sky-200 mb-5'><Link href="/Information">Information</Link></h2>
+                            <h2 className='text-3xl text-sky-200 mb-5'><Link href="/Information" onClick={handleLinkClick}>Information</Link></h2>
 
-                            <h2 className='text-3xl text-sky-200 mb-2'><Link href="/News">News</Link></h2>
+                            <h2 className='text-3xl text-sky-200 mb-2'><Link href="/News" onClick={handleLinkClick}>News</Link></h2>
 
                         </div>
                     </motion.div>
