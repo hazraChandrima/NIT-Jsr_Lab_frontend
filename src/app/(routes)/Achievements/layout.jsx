@@ -1,3 +1,17 @@
-export default function AchievementsLayout({children}){
-    return <div> {children} </div>
+import Navbar from "@/components/Navbar/navbar"
+import { MobileNavbar } from "@/components/MobileNavbar/mobileNavbar"
+import Footer from "@/components/Footer/Footer"
+import ResearchHero from "../Research/_components/ResearchHero/ResearchHero";
+
+
+export default function AchievementsLayout({ children }) {
+    return (
+        <div>
+            <MobileNavbar />
+            <Navbar />
+            <ResearchHero />
+            {children}
+            <Footer />
+        </div>
+    )
 }

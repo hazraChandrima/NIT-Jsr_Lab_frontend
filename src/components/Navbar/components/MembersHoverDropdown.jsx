@@ -4,8 +4,8 @@ import { membersSubroutes } from '@/routes/navbarRoutes';
 
 function MembersHoverDropdown() {
   return (
-    <div className='text-white bg-black h-52 w-screen fixed left-0'>
-      <div className='grid grid-cols-1 text-xl text-center mt-14 lg:grid-cols-2 gap-7'>
+    <div className='text-white bg-black h-52 w-screen fixed left-0 z-50'>
+      <div className='grid grid-cols-1 text-xl text-center mt-14 lg:grid-cols-3 gap-7'>
         {membersSubroutes.map((route, index) => (
 
           <Link key={index} href={route.href}>

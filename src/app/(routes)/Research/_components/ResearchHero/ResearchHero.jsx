@@ -2,7 +2,7 @@
 import Image from "next/image";
 import "./Hero.css";
 import { useEffect, useState } from "react";
-import img from "../../assests/HeroImg/bg.jpg";
+import img from "../../assests/HeroImg/bg2.png";
 import useAnimationHook from "@/hooks/AnimationHooks/moveUp";
 import { motion } from "framer-motion";
 
@@ -25,9 +25,9 @@ export default function Hero() {
         animate={controls}
         className="textContainer heroText"
       >
-        <div className="subtext">Body Visualization Unit</div>
-        Dermis
-        <div className="subtextSmall">Skin</div>
+        <div className="subtext">Hero Title here</div>
+        Something
+        <div className="subtextSmall">Subtitle</div>
       </motion.div>
       <Image
         src={img}
