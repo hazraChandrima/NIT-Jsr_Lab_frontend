@@ -1,8 +1,8 @@
-import { Inter } from "next/font/google";
+import { Inter, Noto_Sans_Display } from "next/font/google";
 import "./globals.css";
 import { NewsProvider } from "@/contexts/NewsContext";
 
-const inter = Inter({ subsets: ["latin"] });
+const sans = Noto_Sans_Display({ subsets: ["latin"] });
 
 export const metadata = {
   title: "NIT Jamshedpur Lab",
@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <NewsProvider>
     <html lang="en">
-      <body className={inter.className}>
+      <body className={sans.className}>
         {children}
         </body>
     </html>
