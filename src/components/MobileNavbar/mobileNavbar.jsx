@@ -38,7 +38,7 @@ export const MobileNavbar = () => {
         exit: {
             opacity: 0,
             transition: {
-                delay: 0.2,
+                delay: 0.3,
                 duration: 0.5
             },
         }
@@ -72,7 +72,7 @@ export const MobileNavbar = () => {
                         exit="exit"
                         variants={containerVariants}
                     >
-                        <div className="overflow-y-scroll font-sans mt-48 mb-10 pb-8 text-white text-center h-auto w-full max-w-3xl">
+                        <div className="overflow-y-scroll font-sans pt-10 mt-auto mb-10 pb-8 text-white text-center h-auto w-full max-w-3xl">
                             {subroutes.map((section, index) => (
                                 <motion.div key={index}
                                     className="mb-6"
