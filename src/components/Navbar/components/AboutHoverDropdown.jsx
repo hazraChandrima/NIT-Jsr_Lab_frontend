@@ -4,7 +4,7 @@ import { aboutSubroutes } from '@/routes/navbarRoutes';
 
 function AboutHoverDropdown({ children }) {
   return (
-    <div className='text-white bg-black h-56 w-lvw fixed left-0'>
+    <div className='text-white bg-black h-56 w-lvw fixed left-0 z-50'>
       <div className='grid grid-cols-1 text-xl text-center mt-14 lg:grid-cols-4 gap-7'>
         {aboutSubroutes.map((route, index) => (
 
