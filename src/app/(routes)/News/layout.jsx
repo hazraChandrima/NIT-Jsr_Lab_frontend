@@ -5,7 +5,7 @@ import Footer from "@/components/Footer/Footer";
 
 
 export default function NewsLayout({children}) {
-    return <div>
+    return <div className="overflow-x-hidden">
         <ResearchHero/>
         {children}
         <Footer/>
