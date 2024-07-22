@@ -62,7 +62,7 @@ function NewsSection() {
   return (
 
     <div className="flex flex-col py-5 text-black min-h-dvh text-right items-end ">
-      <h1 className="text-6xl font-sans text-sky-900 font-light relative my-10 right-3">NEWS</h1>
+      <h1 className="text-6xl font-sans text-sky-950 font-light relative my-10 right-3">NEWS</h1>
       <div className="py-6 text-left flex flex-col items-center">
         {newsData.map((newsItem, index) => (
           <div key={index} onClick={() => handleCardClick(newsItem)}>

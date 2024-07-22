@@ -1,7 +1,7 @@
 export default function Page() {
     return (
       <div>
-        Information
+        Informations Page
       </div>
     )
   }

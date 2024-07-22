@@ -38,6 +38,10 @@ export const membersSubroutes = [
     {
         name: "Students",
         href: "/Members/Students"
+    },
+    {
+        name: "Affiliated Researchers",
+        href: "/Members/AffiliatedResearchers"
     }
 ]
 

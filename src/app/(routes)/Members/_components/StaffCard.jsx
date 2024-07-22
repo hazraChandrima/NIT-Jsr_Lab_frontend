@@ -13,26 +13,24 @@ const StaffCard = ({ name, role, imageUrl }) => {
       ref={ref}
       initial={{ opacity: 0, y: 50 }}
       animate={controls}
-      className='bg-slate-300 rounded-lg shadow-lg overflow-hidden'
+      className='bg-white rounded-sm shadow-lg overflow-hidden'
     >
       {/* //image */}
       {/* <div className='h-[288px] sm:h-[324px] md:h-[216px] overflow-hidden'>
         <img src={imageUrl} alt={name} className='h-full w-full object-cover' />
       </div> */}
-      <div className='h-[288px] sm:h-[324px] md:h-[216px] overflow-hidden flex items-center justify-center'>
+      <div className='overflow-hidden flex items-center justify-center'>
         <img src={imageUrl} alt={name} className='h-full w-auto' />
       </div>
-      {/* //info */}
-      <div className='p-3 bg-blue-500 w-[85%] relative bottom-4 text-white'>
-        <p className='text-lg font-semibold  truncate'>{role}</p>
+      <div className='p-3 bg-sky-500 w-[85%] relative bottom-4 text-white'>
+        <p className='text-lg font-light truncate'>{role}</p>
       </div>
       <div className='px-3'>
-        <hr className='bg-slate-800 h-[2px]' />
+        <hr className='bg-slate-500 h-[1px]' />
       </div>
-      {/* //name */}
       <div className='px-4 py-2 '>
-      <div className='border-l-4 border-blue-500 px-2'>
-      <p className='text-black text-left text-xl font-bold truncate'>{name}</p>
+      <div className='border-l-4 border-sky-500 px-2'>
+      <p className='text-black font-sans text-left text-xl truncate'>{name}</p>
       </div>
       </div>
     </motion.div>

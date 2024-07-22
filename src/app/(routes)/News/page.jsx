@@ -305,7 +305,7 @@ function NewsPage() {
         <button
           key={i}
           onClick={() => handlePageChange(i)}
-          className={`px-4 py-2 rounded-md ${currentPage === i ? 'bg-gray-500' : 'bg-gray-300'} text-black`}
+          className={`px-4 py-2 rounded-md ${currentPage === i ? 'bg-sky-400' : 'bg-gray-300'} text-black`}
         >
           {i}
         </button>
@@ -316,12 +316,12 @@ function NewsPage() {
   };
 
   return (
-    <div className='flex flex-col bg-slate-400 py-5 min-h-dvh text-white text-right items-center'>
+    <div className='flex flex-col bg-white py-5 min-h-dvh text-slate-600 text-right items-center'>
       <div className='pt-6 text-left flex justify-start max-w-[1256px] w-full px-9'>
         <BreadCrumbs/>
       </div>
       <div>
-        <h1 className='text-3xl relative right-6 text-slate-800'>NEWS</h1>
+        <h1 className='text-5xl font-sans font-light relative right-6 text-sky-950'>NEWS</h1>
         <div className="py-6 text-left flex flex-col items-center max-w-[1256px] w-full px-4">
           {getCurrentPageData().map((newsItem, index) => (
             <div key={index} onClick={() => handleCardClick(newsItem)}>
@@ -336,10 +336,10 @@ function NewsPage() {
           ))}
         </div>
       </div>
-      <div className="flex flex-wrap gap-2 justify-center space-x-2">
+      <div className="flex flex-wrap gap-2 justify-center space-x-2 mb-10">
         <button
           onClick={() => handlePageChange(currentPage - 1)}
-          className={`px-4 py-2 rounded-md ${currentPage === 1 ? 'bg-gray-100' : 'bg-gray-500'} text-black`}
+          className={`px-4 py-2 rounded-md ${currentPage === 1 ? 'bg-gray-100' : 'bg-sky-300'} text-black`}
           disabled={currentPage === 1}
         >
           {`<<`}
@@ -347,7 +347,7 @@ function NewsPage() {
         {renderPageNumbers()}
         <button
           onClick={() => handlePageChange(currentPage + 1)}
-          className={`px-4 py-2 rounded-md ${currentPage === totalPages ? 'bg-gray-100' : 'bg-gray-500'} text-black`}
+          className={`px-4 py-2 rounded-md ${currentPage === totalPages ? 'bg-gray-100' : 'bg-sky-300'} text-black`}
           disabled={currentPage === totalPages}
         >
            {`>>`}
