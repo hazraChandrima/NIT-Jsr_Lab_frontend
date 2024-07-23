@@ -162,7 +162,7 @@ export default function Navbar() {
       {/* Information  */}
       <div className="relative px-4 flex items-center justify-center">
         <span className="test p-4 " onMouseLeave={handleMouseLeave}>
-          <span className="navbar-option font-semibold"><Link href="/Information">INFORMATION</Link></span>
+          <span className="navbar-option font-semibold"><Link className="text-sky-800" href="/Information">INFORMATION</Link></span>
         </span>
 
       </div>
@@ -171,7 +171,7 @@ export default function Navbar() {
       {/* News  */}
       <div className="relative px-4 flex items-center justify-center">
         <span className="test relative p-4 ">
-          <span className="navbar-option font-semibold"><Link href="/News">NEWS</Link></span>
+          <span className="navbar-option font-semibold"><Link className="text-sky-800" href="/News">NEWS</Link></span>
         </span>
       </div>
 
