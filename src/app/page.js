@@ -3,9 +3,6 @@ import NewsSection from "@/components/HomeComponents/NewsComponents/NewsSection"
 import ParallaxImageComponent from "@/components/HomeComponents/ParallaxSection/ParallaxImageComponent";
 import TeamSection from "@/components/HomeComponents/TeamSection/Section";
 import Gallery from "@/components/HomeComponents/Gallery/GallerySection";
-import Navbar from "@/components/Navbar/navbar";
-import { MobileNavbar } from "@/components/MobileNavbar/mobileNavbar";
-import Footer from "@/components/Footer/Footer";
 import Image from "next/image";
 import Hero from "@/components/Hero/hero";
 import img1 from "../assets/images/lab1.png";
@@ -15,8 +12,6 @@ export default function Home() {
   return (
     <div className="w-full overflow-hidden">
 
-      <MobileNavbar />
-      <Navbar />
       <Hero images={[img1, img2]} transition={true} height="100vh">
         <div className="font-sans px-5 lg:text-8xl md:text-7xl text-5xl ">NIT JAMSHEDPUR</div>
       </Hero>
@@ -50,7 +45,6 @@ export default function Home() {
         </div>
 
         <Gallery />
-        <Footer />
       </div>
     </div>
   );
