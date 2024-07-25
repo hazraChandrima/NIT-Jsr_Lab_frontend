@@ -36,15 +36,16 @@ function NewsDetailsPage() {
             {news.description}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <Link  href={news.viewMoreLink} target="_blank" rel="noopener noreferrer">
             <div
               class="transition duration-500 border-2 rounded-sm max-w-[300px] border-sky-500 ease-in-out bg-sky-500 text-white hover:bg-gray-100 hover:text-sky-500 py-2 px-4 "
               style={{"opacity":"1","transform":"none","willChange":"auto"}}
             >
-              <Link  href={news.viewMoreLink} target="_blank" rel="noopener noreferrer">
+              
               Click for more details
-              </Link>
-            </div>
             
+            </div>
+            </Link>
           </div>
         </div>
         {news.image && (
