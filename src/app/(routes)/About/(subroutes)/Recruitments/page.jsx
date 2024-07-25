@@ -66,7 +66,7 @@ function Recruitments() {
             {/* //item1 */}
 
             <div className='flex flex-col items-start gap-3'>
-              <p className='font-bold text-blue-400 text-lg'>1. Electrical, Electronic and Information Engineering and PT</p>
+              <p className='font-bold text-sky-500 text-lg'>1. Electrical, Electronic and Information Engineering and PT</p>
               <p className='font-light text-lg'>
                 Research and development of hardware (circuit design, sensors, etc.) and software (inverse problems, etc.) related to process tomography (PT) Research
                 and development of IoT hardware, software, information and communications, and big data software for industrial machinery, medical equipment, and bioengineering equipment equipped with PT.
@@ -75,7 +75,7 @@ function Recruitments() {
             {/* //item1 */}
 
             <div className='flex flex-col items-start gap-3'>
-              <p className='font-bold text-blue-400 text-lg'>1. Electrical, Electronic and Information Engineering and PT</p>
+              <p className='font-bold text-sky-500 text-lg'>1. Electrical, Electronic and Information Engineering and PT</p>
               <p className='font-light text-lg'>
                 Research and development of hardware (circuit design, sensors, etc.) and software (inverse problems, etc.) related to process tomography (PT) Research
                 and development of IoT hardware, software, information and communications, and big data software for industrial machinery, medical equipment, and bioengineering equipment equipped with PT.
@@ -84,7 +84,7 @@ function Recruitments() {
             {/* //item1 */}
 
             <div className='flex flex-col items-start gap-3'>
-              <p className='font-bold text-blue-400 text-lg'>1. Electrical, Electronic and Information Engineering and PT</p>
+              <p className='font-bold text-sky-500 text-lg'>1. Electrical, Electronic and Information Engineering and PT</p>
               <p className='font-light text-lg'>
                 Research and development of hardware (circuit design, sensors, etc.) and software (inverse problems, etc.) related to process tomography (PT) Research
                 and development of IoT hardware, software, information and communications, and big data software for industrial machinery, medical equipment, and bioengineering equipment equipped with PT.
