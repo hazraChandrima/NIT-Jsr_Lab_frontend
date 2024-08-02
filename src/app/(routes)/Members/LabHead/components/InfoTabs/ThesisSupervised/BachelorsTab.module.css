@@ -1,0 +1,23 @@
+.bachelorsTab {
+  padding: 20px;
+}
+
+.bachelorsTab h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.bachelorsTab table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.bachelorsTab table th, .bachelorsTab table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.bachelorsTab table th {
+  background-color: #f2f2f2;
+}

@@ -1,0 +1,20 @@
+.responsibilitiesTab {
+  padding: 20px;
+}
+
+.responsibilitiesTab h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.responsibilitiesTab ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.responsibilitiesTab ul li {
+  background: #f9f9f9;
+  margin-bottom: 5px;
+  padding: 10px;
+  border-radius: 4px;
+}
