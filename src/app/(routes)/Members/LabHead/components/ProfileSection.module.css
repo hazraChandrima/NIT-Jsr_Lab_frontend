@@ -1,0 +1,22 @@
+.profilePage {
+  padding: 20px;
+}
+
+.profileHeader {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profileHeader img {
+  border-radius: 50%;
+}
+
+.profileHeader h1 {
+  margin: 10px 0;
+  font-size: 24px;
+}
+
+.profileHeader p {
+  font-size: 16px;
+  color: #666;
+}

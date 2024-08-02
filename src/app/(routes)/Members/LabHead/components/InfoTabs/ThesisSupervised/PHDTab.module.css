@@ -1,0 +1,23 @@
+.phdTab {
+  padding: 20px;
+}
+
+.phdTab h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.phdTab table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.phdTab table th, .phdTab table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.phdTab table th {
+  background-color: #f2f2f2;
+}

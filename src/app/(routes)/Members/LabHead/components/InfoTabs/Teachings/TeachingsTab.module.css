@@ -1,0 +1,20 @@
+.teachingsTab {
+  padding: 20px;
+}
+
+.teachingsTab h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.teachingsTab ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.teachingsTab ul li {
+  background: #f9f9f9;
+  margin-bottom: 5px;
+  padding: 10px;
+  border-radius: 4px;
+}

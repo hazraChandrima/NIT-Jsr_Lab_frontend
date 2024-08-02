@@ -1,0 +1,29 @@
+.internationalConference {
+  padding: 20px;
+}
+
+.internationalConference h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.internationalConference ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.internationalConference ul li {
+  background: #f9f9f9;
+  margin-bottom: 5px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.internationalConference ul li a {
+  text-decoration: none;
+  color: #0070f3;
+}
+
+.internationalConference ul li a:hover {
+  text-decoration: underline;
+}
