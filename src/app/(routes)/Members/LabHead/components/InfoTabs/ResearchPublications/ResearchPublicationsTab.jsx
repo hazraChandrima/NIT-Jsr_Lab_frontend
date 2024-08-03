@@ -44,12 +44,10 @@ const ResearchPublicationsTab = () => {
   }, []);
 
 
-
-
   return (
     <div className={styles.researchPublicationsTab}>
-      <div className="relative overflow-scroll">
-        <div className="flex space-x-4 mb-4 whitespace-nowrap">
+      <div className="relative overflow-scroll sm:overflow-hidden my-5">
+        <div className="flex space-x-5 mb-4 whitespace-nowrap sm:justify-center">
           {pubTypes.map((subTab, index) => (
             <button
               key={index}
