@@ -12,16 +12,10 @@ function Footer() {
             <Link href="/Research" className="text-lg text-gray-500 hover:text-sky-500 transition duration-300">Research Contents</Link>
           </div>
           <div className="px-5 py-2">
-            <Link href="/About/Gallery" className="text-lg text-gray-500 hover:text-sky-500 transition duration-300">Gallery</Link>
+            <Link href="/Gallery" className="text-lg text-gray-500 hover:text-sky-500 transition duration-300">Gallery</Link>
           </div>
           <div className="px-5 py-2">
             <Link href="/Achievements/Awards" className="text-lg text-gray-500 hover:text-sky-500 transition duration-300">Achievements</Link>
-          </div>
-          <div className="px-5 py-2">
-            <Link href="/About/Recruitments" className="text-lg text-gray-500 hover:text-sky-500 transition duration-300">Recruitments</Link>
-          </div>
-          <div className="px-5 py-2">
-            <Link href="/About/LectureMaterial" className="text-lg text-gray-500 hover:text-sky-500 transition duration-300">Lecture Materials</Link>
           </div>
           <div className="px-5 py-2">
             <Link href="/Information" className="text-lg text-gray-500 hover:text-sky-500 transition duration-300">Information</Link>
