@@ -134,28 +134,13 @@ export default function Navbar() {
 
 
 
-      {/* About  */}
+      {/* Gallery */}
       <div className="relative px-4 flex items-center justify-center">
-        <span className="test p-4 md:left-3/4 cursor-pointer" onMouseEnter={() => handleMouseEnter('About')} onMouseLeave={handleMouseLeave}>
-          <span className="navbar-option font-semibold">ABOUT</span>
+        <span className="test p-4 " onMouseLeave={handleMouseLeave}>
+          <span className="navbar-option font-semibold"><Link className="text-sky-800" href="/Gallery">GALLERY</Link></span>
         </span>
+
       </div>
-      <motion.div
-        className="absolute top-full left-0 right-0"
-        initial="hidden"
-        animate={hoveredItem === 'About' ? 'visible' : 'hidden'}
-        exit="exit"
-        variants={dropdownVariants}
-        transition={{
-          duration: 0.3,
-          delay: 0.1,
-          ease: easeInOut
-        }}
-      >
-        <div onMouseEnter={() => handleMouseEnter('About')} onMouseLeave={handleMouseLeave}>
-          <AboutHoverDropdown />
-        </div>
-      </motion.div>
 
 
 
