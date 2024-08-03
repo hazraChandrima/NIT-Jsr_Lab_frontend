@@ -1,20 +1,70 @@
 .teachingsTab {
-  padding: 20px;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .teachingsTab h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #333;
 }
 
-.teachingsTab ul {
-  list-style-type: none;
+.loading {
+  font-size: 1.2rem;
+  color: #666;
+  text-align: center;
+  padding: 2rem;
+}
+
+.courseList {
+  list-style: none;
   padding: 0;
+  margin: 0;
 }
 
-.teachingsTab ul li {
-  background: #f9f9f9;
-  margin-bottom: 5px;
-  padding: 10px;
+.courseItem {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
   border-radius: 4px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.courseItem:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.courseLink {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.courseHeader {
+  font-weight: bold;
+  color: #0070f3;
+  margin-bottom: 0.5rem;
+}
+
+.courseId {
+  color: #555;
+}
+
+.courseFooter {
+  font-size: 0.9rem;
+  color: #999;
+}
+
+.semester {
+  background-color: #3288ea;
+  color: #fff;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  font-size: 0.9rem;
 }
