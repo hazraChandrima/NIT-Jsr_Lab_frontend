@@ -31,6 +31,7 @@ const InfoTabs = () => {
   return (
     <div className="w-full px-5 p-4 pt-10">
       <div className="w-[90dvw] pr-7"> 
+
         <div className="flex overflow-scroll md:overflow-hidden md:justify-center space-x-5 mb-4 ">
           {TABS.map((tab, index) => (
             <button
