@@ -13,7 +13,6 @@ export default function ResearchLayout({ children }) {
       <Navbar />
       <ResearchHero />
       <Breadcrumbs />
-
       {children}
       <Footer />
     </div>
