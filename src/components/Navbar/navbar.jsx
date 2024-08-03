@@ -20,7 +20,6 @@ export default function Navbar() {
     setHoveredItem(null);
   }
 
-
   // for dropdown animations
 
   const dropdownVariants = {
@@ -47,10 +46,10 @@ export default function Navbar() {
 
   return (
 
-    <div className=" bg-white flex flex-row fixed h-16 w-full z-40 text-black bg-opacity-70">
+    <div className="lg:visible font-sans xl:visible invisible bg-white flex flex-row fixed h-20 w-full z-40 text-black bg-opacity-70">
 
-      <div className="relative" >
-        <span className="p-4 flex items-center justify-center">
+      <div className="relative flex items-center justify-center" >
+        <span className="p-4 font-semibold text-xl">
           <span><Link href="/">NIT Jsr Lab</Link></span>
         </span>
       </div>
@@ -58,9 +57,9 @@ export default function Navbar() {
 
 
       {/* Research  */}
-      <div className="relative">
-        <span className="p-4 flex items-center justify-center md:ml-32" onMouseEnter={() => handleMouseEnter('Research')} onMouseLeave={handleMouseLeave}>
-          <span className="navbar-option"><Link href="/Research">Research</Link></span>
+      <div className="relative px-3 flex items-center justify-center">
+        <span className="test p-4 md:ml-32" onMouseEnter={() => handleMouseEnter('Research')} onMouseLeave={handleMouseLeave}>
+          <span className="navbar-option font-semibold"><Link href="/Research">RESEARCH</Link></span>
         </span>
       </div>
       <motion.div
@@ -70,7 +69,7 @@ export default function Navbar() {
         exit="exit"
         variants={dropdownVariants}
         transition={{
-          duration: 0.4,
+          duration: 0.3,
           delay: 0.1,
           ease: easeInOut
         }}
@@ -84,9 +83,9 @@ export default function Navbar() {
 
 
       {/* Members  */}
-      <div className="relative">
-        <span className="p-4 flex items-center justify-center md:left-1/4 cursor-pointer" onMouseEnter={() => handleMouseEnter('Members')} onMouseLeave={handleMouseLeave}>
-          <span className="navbar-option">Members</span>
+      <div className="relative px-4 flex items-center justify-center">
+        <span className="test p-4 md:left-1/4 cursor-pointer" onMouseEnter={() => handleMouseEnter('Members')} onMouseLeave={handleMouseLeave}>
+          <span className="navbar-option font-semibold">MEMBERS</span>
         </span>
 
       </div>
@@ -97,7 +96,7 @@ export default function Navbar() {
         exit="exit"
         variants={dropdownVariants}
         transition={{
-          duration: 0.4,
+          duration: 0.3,
           delay: 0.1,
           ease: easeInOut
         }}
@@ -111,9 +110,9 @@ export default function Navbar() {
 
 
       {/* Achievements  */}
-      <div className="relative">
-        <span className="p-4 flex items-center justify-center md:left-1/2" onMouseEnter={() => handleMouseEnter('Achievements')} onMouseLeave={handleMouseLeave}>
-          <span className="navbar-option"><Link href="/Achievements">Achievements</Link></span>
+      <div className="relative px-4 flex items-center justify-center">
+        <span className="test p-4 md:left-1/2" onMouseEnter={() => handleMouseEnter('Achievements')} onMouseLeave={handleMouseLeave}>
+          <span className="navbar-option font-semibold"><Link href="/Achievements">ACHIEVEMENTS</Link></span>
         </span>
       </div>
       <motion.div
@@ -123,7 +122,7 @@ export default function Navbar() {
         exit="exit"
         variants={dropdownVariants}
         transition={{
-          duration: 0.4,
+          duration: 0.3,
           delay: 0.1,
           ease: easeInOut
         }}
@@ -136,9 +135,9 @@ export default function Navbar() {
 
 
       {/* About  */}
-      <div className="relative">
-        <span className="p-4 flex items-center justify-center md:left-3/4 cursor-pointer" onMouseEnter={() => handleMouseEnter('About')} onMouseLeave={handleMouseLeave}>
-          <span className="navbar-option">About</span>
+      <div className="relative px-4 flex items-center justify-center">
+        <span className="test p-4 md:left-3/4 cursor-pointer" onMouseEnter={() => handleMouseEnter('About')} onMouseLeave={handleMouseLeave}>
+          <span className="navbar-option font-semibold">ABOUT</span>
         </span>
       </div>
       <motion.div
@@ -148,7 +147,7 @@ export default function Navbar() {
         exit="exit"
         variants={dropdownVariants}
         transition={{
-          duration: 0.4,
+          duration: 0.3,
           delay: 0.1,
           ease: easeInOut
         }}
@@ -161,18 +160,18 @@ export default function Navbar() {
 
 
       {/* Information  */}
-      <div className="relative">
-        <span className="p-4 flex items-center justify-center" onMouseLeave={handleMouseLeave}>
-          <span className="navbar-option"><Link href="/Information">Information</Link></span>
+      <div className="relative px-4 flex items-center justify-center">
+        <span className="test p-4 " onMouseLeave={handleMouseLeave}>
+          <span className="navbar-option font-semibold"><Link className="text-sky-800" href="/Information">INFORMATION</Link></span>
         </span>
 
       </div>
 
 
       {/* News  */}
-      <div className="relative">
-        <span className="relative p-4 flex items-center justify-center">
-          <span className="navbar-option"><Link href="/News">News</Link></span>
+      <div className="relative px-4 flex items-center justify-center">
+        <span className="test relative p-4 ">
+          <span className="navbar-option font-semibold"><Link className="text-sky-800" href="/News">NEWS</Link></span>
         </span>
       </div>
 

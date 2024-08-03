@@ -13,7 +13,7 @@ function ImageCard({ height, width, left, top, imgSrc }) {
       <img
         src={imgSrc}
         alt="Image Card"
-        className="w-full h-full object-fill"
+        className="w-full h-full object-cover"
       />
     </div>
   );

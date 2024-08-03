@@ -1,0 +1,29 @@
+.internationalJournal {
+  padding: 20px;
+}
+
+.internationalJournal h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.internationalJournal ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.internationalJournal ul li {
+  background: #f9f9f9;
+  margin-bottom: 5px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.internationalJournal ul li a {
+  text-decoration: none;
+  color: #0070f3;
+}
+
+.internationalJournal ul li a:hover {
+  text-decoration: underline;
+}

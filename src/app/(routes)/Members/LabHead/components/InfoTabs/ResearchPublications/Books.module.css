@@ -1,0 +1,29 @@
+.books {
+  padding: 20px;
+}
+
+.books h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.books ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.books ul li {
+  background: #f9f9f9;
+  margin-bottom: 5px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.books ul li a {
+  text-decoration: none;
+  color: #0070f3;
+}
+
+.books ul li a:hover {
+  text-decoration: underline;
+}

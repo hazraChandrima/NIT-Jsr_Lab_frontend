@@ -1,7 +1,11 @@
-import { Inter } from "next/font/google";
+import { Inter, Noto_Sans_Display } from "next/font/google";
 import "./globals.css";
+import { NewsProvider } from "@/contexts/NewsContext";
+import Navbar from "@/components/Navbar/navbar";
+import { MobileNavbar } from "@/components/MobileNavbar/mobileNavbar";
+import Footer from "@/components/Footer/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const sans = Noto_Sans_Display({ subsets: ["latin"] });
 
 export const metadata = {
   title: "NIT Jamshedpur Lab",
@@ -10,8 +14,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
+    <NewsProvider>
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={sans.className}>
+        <MobileNavbar/>
+        <Navbar/>
+        {children}
+        <Footer/>
+        </body>
     </html>
+    </NewsProvider>
   );
 }

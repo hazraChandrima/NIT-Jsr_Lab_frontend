@@ -1,0 +1,23 @@
+.mastersTab {
+  padding: 20px;
+}
+
+.mastersTab h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.mastersTab table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.mastersTab table th, .mastersTab table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.mastersTab table th {
+  background-color: #f2f2f2;
+}

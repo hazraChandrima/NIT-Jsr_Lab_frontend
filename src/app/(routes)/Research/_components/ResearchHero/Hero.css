@@ -1,11 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
 
 .img{
-   
     height: 100%;
-    opacity: 0.5;
+    opacity: 0.3;
 }
 .heroText{
     position:absolute;
@@ -13,7 +9,7 @@
     text-align: center;
     width: 100%;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 3rem;
     top:40%;
     color:black;
     
@@ -21,7 +17,7 @@
 .textContainer {
     font-family: 'Lato', sans-serif;   
     text-align: center;
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: bold;
     color: #333;
     margin-bottom: 2rem;
@@ -33,7 +29,7 @@
   
   .subtextSmall {
     font-size: 18px;
-    color: #666;
+    color: #0f0f0f;
   }
 @keyframes zoom{
     from{

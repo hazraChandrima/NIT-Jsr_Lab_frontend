@@ -1,0 +1,29 @@
+.bookChapters {
+  padding: 20px;
+}
+
+.bookChapters h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.bookChapters ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.bookChapters ul li {
+  background: #f9f9f9;
+  margin-bottom: 5px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.bookChapters ul li a {
+  text-decoration: none;
+  color: #0070f3;
+}
+
+.bookChapters ul li a:hover {
+  text-decoration: underline;
+}

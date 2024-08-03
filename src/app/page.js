@@ -3,46 +3,49 @@ import NewsSection from "@/components/HomeComponents/NewsComponents/NewsSection"
 import ParallaxImageComponent from "@/components/HomeComponents/ParallaxSection/ParallaxImageComponent";
 import TeamSection from "@/components/HomeComponents/TeamSection/Section";
 import Gallery from "@/components/HomeComponents/Gallery/GallerySection";
-import Navbar from "@/components/Navbar/navbar";
-import Footer from "@/components/Footer/Footer";
 import Image from "next/image";
 import Hero from "@/components/Hero/hero";
-import img1 from "../assets/images/nit_jsr.jpeg";
-import img2 from "../assets/images/old_acad.jpg";
+import img1 from "../assets/images/lab1.png";
+import img2 from "../assets/images/lab2.png";
+
 export default function Home() {
   return (
-    <div className="bg-slate-700 flex flex-col items-center w-full">
-      <Navbar />
+    <div className="w-full overflow-hidden">
 
-      <Hero images={[img1, img2]} transition={true} height="600px">
-        NIT Jamshedpur
+      <Hero images={[img1, img2]} transition={true} height="100vh">
+        <div className="font-sans px-5 lg:text-8xl md:text-7xl text-5xl ">NIT JAMSHEDPUR</div>
       </Hero>
-      <div
-        className="w-full h-auto flex items-center justify-center bg-cover relative "
-        style={{
-          backgroundImage:
-            "url('https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg')",
-        }}
-      >
-        <div className="max-w-[1256px] w-full px-4">
-          <NewsSection />
-        </div>
-      </div>
-      <ParallaxImageComponent />
-      <div
-        className="w-full h-auto flex items-center justify-center bg-cover relative"
-        style={{
-          backgroundImage:
-            "url('https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg')",
-        }}
-      >
-        <div className="max-w-[1256px] w-full px-4">
-          <TeamSection />
-        </div>
-      </div>
 
-      <Gallery />
-      <Footer />
+      <div className="bg-sky-100 flex flex-col items-center w-full overflow-hidden">
+
+        <div
+          className="w-full h-auto flex items-center justify-center bg-cover relative "
+          style={{
+            backgroundImage:
+              "url('https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-08.jpg')"
+          }}
+        >
+          <div className="max-w-[1256px] w-full px-4">
+            <NewsSection />
+          </div>
+        </div>
+
+        <ParallaxImageComponent />
+        
+        <div
+          className="w-full h-auto flex items-center justify-center bg-cover relative"
+          // style={{
+          //   backgroundImage:
+          //     "url('https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-08.jpg')",
+          // }}
+        >
+          <div className="max-w-[1256px] w-full px-4">
+            <TeamSection />
+          </div>
+        </div>
+
+        <Gallery />
+      </div>
     </div>
   );
 }

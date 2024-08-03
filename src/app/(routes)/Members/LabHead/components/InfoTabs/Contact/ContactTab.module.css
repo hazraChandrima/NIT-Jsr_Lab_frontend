@@ -1,0 +1,20 @@
+.contactTab {
+  padding: 20px;
+}
+
+.contactTab h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.contactTab ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.contactTab ul li {
+  background: #f9f9f9;
+  margin-bottom: 5px;
+  padding: 10px;
+  border-radius: 4px;
+}
