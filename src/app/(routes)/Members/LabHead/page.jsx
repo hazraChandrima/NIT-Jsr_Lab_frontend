@@ -3,7 +3,7 @@ import ProfilePage from './components/ProfileSection'
 
 function SirPage() {
   return (
-    <div className='py-2'>
+    <div className='py-5'>
       <ProfilePage/>
     </div>
   )
