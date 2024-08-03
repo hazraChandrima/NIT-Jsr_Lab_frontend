@@ -9,13 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.13.0",
+    "@emotion/styled": "^11.13.0",
+    "@mui/material": "^5.16.6",
     "framer-motion": "^11.3.0",
     "hamburger-react": "^2.5.1",
     "next": "14.2.4",
     "react": "^18",
+    "react-bootstrap": "^2.10.4",
     "react-dom": "^18",
     "react-icons": "^5.2.1",
     "react-intersection-observer": "^9.10.3",
+    "react-paginate": "^8.2.0",
     "react-use": "^17.5.0"
   },
   "devDependencies": {

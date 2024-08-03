@@ -7,7 +7,7 @@ const SocietyList = ({ societies }) => {
       <h3>Societies</h3>
       <ul>
         {societies.map((society, index) => (
-          <li key={index}>{society}</li>
+          <li key={index}>{society.member}</li>
         ))}
       </ul>
     </div>

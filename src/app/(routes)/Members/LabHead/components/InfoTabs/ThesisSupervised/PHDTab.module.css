@@ -21,3 +21,30 @@
 .phdTab table th {
   background-color: #f2f2f2;
 }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  list-style: none;
+}
+
+.pagination li {
+  margin: 0 0.5rem;
+}
+
+.pagination li a {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.pagination li.active a {
+  background-color: #0070f3;
+  color: white;
+  border: 1px solid #0070f3;
+}
+
+.pagination li a:hover {
+  background-color: #ddd;
+}
