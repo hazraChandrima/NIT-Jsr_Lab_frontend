@@ -3,7 +3,7 @@ import ProfilePage from './components/ProfileSection'
 
 function SirPage() {
   return (
-    <div className=' py-2  flex justify-center'>
+    <div className='py-2'>
       <ProfilePage/>
     </div>
   )

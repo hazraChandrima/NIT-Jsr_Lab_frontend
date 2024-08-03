@@ -32,7 +32,7 @@ const ResearchPublicationsTab = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const publicationsData = await fetch(`https://www.nitjsr.ac.in/backend/api/publications?id=CS115`);
+      const publicationsData = await fetch(`https://www.nitjsr.ac.in/backend/api/publications?id=CS103`);
       let a = await publicationsData.json();
       a=a.result;
       a.sort((a, b) => b.pub_date - a.pub_date);
@@ -48,7 +48,7 @@ const ResearchPublicationsTab = () => {
 
   return (
     <div className={styles.researchPublicationsTab}>
-      <div className="relative">
+      <div className="relative overflow-scroll">
         <div className="flex space-x-4 mb-4 whitespace-nowrap">
           {pubTypes.map((subTab, index) => (
             <button

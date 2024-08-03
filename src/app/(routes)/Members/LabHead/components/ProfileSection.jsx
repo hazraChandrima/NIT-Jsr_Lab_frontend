@@ -20,7 +20,7 @@ const ProfilePage = () => {
   };
 
   return (
-    <div className="p-4 max-w-[1256px] ">
+    <div className="p-4">
       <div className="flex flex-col items-center text-center">
         <div className="relative group">
           <Image

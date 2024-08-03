@@ -29,9 +29,9 @@ const InfoTabs = () => {
   };
 
   return (
-    <div className="w-full max-w-[1256px] p-4">
-      <div className="w-[90vw] overflow-auto"> 
-        <div className="flex justify-center space-x-4 mb-4 ">
+    <div className="w-full px-5 p-4">
+      <div className="w-[90dvw] pr-5 overflow-scroll"> 
+        <div className="flex overflow-scroll space-x-4 mb-4 ">
           {TABS.map((tab, index) => (
             <button
               key={index}
