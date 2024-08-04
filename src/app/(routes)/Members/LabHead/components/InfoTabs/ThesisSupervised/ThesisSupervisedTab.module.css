@@ -1,6 +1,6 @@
-.thesisSupervisedTab {
+/* .thesisSupervisedTab {
   padding: 20px;
-}
+} */
 
 .subTabsHeader {
   display: flex;
@@ -26,9 +26,11 @@
 }
 
 .subTabsContent {
-  padding: 20px;
-  border: 1px solid #ddd;
+  padding-top: 20px;
+  width: auto;
+  /* border: 1px solid #ddd; */
   border-radius: 4px;
   background-color: #fff;
 }
+
 

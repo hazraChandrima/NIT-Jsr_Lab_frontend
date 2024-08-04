@@ -1,20 +1,25 @@
-.bachelorsTab {
-  padding: 20px;
-}
+/* .bachelorsTab {
+  padding: 10px;
+} */
 
 .bachelorsTab h3 {
-  font-size: 20px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 16px;
   margin-bottom: 10px;
 }
 
 .bachelorsTab table {
-  width: 100%;
+  margin: 0 auto;
+  width: fit-content;
   border-collapse: collapse;
 }
 
 .bachelorsTab table th, .bachelorsTab table td {
   border: 1px solid #ddd;
+  text-wrap: wrap;
   padding: 8px;
+  font-size: smaller;
   text-align: left;
 }
 
@@ -25,18 +30,21 @@
 .pagination {
   display: flex;
   justify-content: center;
+  /* flex-wrap: wrap; */
   padding: 1rem;
+  padding-top: 2rem;
   list-style: none;
 }
 
 .pagination li {
-  margin: 0 0.5rem;
+  margin: 0.5rem;
 }
 
 .pagination li a {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.7rem;
   border: 1px solid #ddd;
   cursor: pointer;
+  /* margin-top: 5px; */
 }
 
 .pagination li.active a {

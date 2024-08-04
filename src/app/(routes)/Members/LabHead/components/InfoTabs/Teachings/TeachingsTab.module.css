@@ -62,8 +62,7 @@
 }
 
 .semester {
-  background-color: #3288ea;
-  color: #fff;
+  color: rgb(41, 41, 41);
   padding: 0.2rem 0.5rem;
   border-radius: 3px;
   font-size: 0.9rem;
