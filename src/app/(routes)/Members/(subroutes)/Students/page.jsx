@@ -40,6 +40,7 @@ export default function page() {
                 name={member.name}
                 role={member.role}
                 imageUrl={member.photo}
+                rollNumber={member.rollNumber}
               />
             ))}
           </div>
@@ -61,6 +62,7 @@ export default function page() {
                 name={member.name}
                 role={member.role}
                 imageUrl={member.photo}
+                rollNumber={member.rollNumber}
               />
             ))}
           </div>
