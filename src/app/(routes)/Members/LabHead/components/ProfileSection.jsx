@@ -22,7 +22,7 @@ const ProfilePage = () => {
   return (
     <div className="p-5">
       <div className="flex flex-col items-center text-center">
-        <div className="relative group">
+        <div className="relative">
           <Image
             src={faculty.image}
             alt={`${faculty.name}'s profile picture`}

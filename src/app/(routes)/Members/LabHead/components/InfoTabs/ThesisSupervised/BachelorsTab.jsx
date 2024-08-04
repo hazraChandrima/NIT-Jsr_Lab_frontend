@@ -23,7 +23,7 @@ const BachelorsTab = ({data}) => {
   return (
     <div className={styles.bachelorsTab}>
       <h3>Bachelors Theses Supervised</h3>
-      <table>
+      <table className='table-auto max-w-fit'>
         <thead>
           <tr>
             <th>Research Topic</th>
@@ -42,13 +42,13 @@ const BachelorsTab = ({data}) => {
         </tbody>
       </table>
       <ReactPaginate
-        previousLabel={'Previous'}
-        nextLabel={'Next'}
+        previousLabel={'<'}
+        nextLabel={'>'}
         breakLabel={'...'}
         breakClassName={styles.breakMe}
         pageCount={Math.ceil(theses.length / itemsPerPage)}
         marginPagesDisplayed={2}
-        pageRangeDisplayed={5}
+        pageRangeDisplayed={3}
         onPageChange={handlePageChange}
         containerClassName={styles.pagination}
         activeClassName={styles.active}
