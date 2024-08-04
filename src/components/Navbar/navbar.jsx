@@ -2,7 +2,6 @@
 import Link from "next/link"
 import { easeInOut, motion } from "framer-motion"
 import React, { useState } from "react"
-import AboutHoverDropdown from "./components/AboutHoverDropdown"
 import AchievementsHoverDropdown from "./components/AchievementsHoverDropdown"
 import MembersHoverDropdown from "./components/MembersHoverDropdown"
 import ResearchHoverDropdown from "./components/ResearchHoverDropdown"
