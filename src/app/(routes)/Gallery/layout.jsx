@@ -2,7 +2,7 @@ import BreadCrumbs from "@/components/BreadCrumbs/BreadCrumbs";
 import ResearchHero from "../Research/_components/ResearchHero/ResearchHero";
 
 
-export default function AboutLayout({ children }) {
+export default function Gallery({ children }) {
     return (
         <div>
         <ResearchHero/>

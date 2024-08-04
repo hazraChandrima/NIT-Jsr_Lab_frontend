@@ -8,7 +8,7 @@ export default function MemberLayout({ children }) {
       <ResearchHero />
       <div className="text-sm sm:text-base bg-white">
         <BreadCrumbs />
-        {/* <Navigation/> */}
+        <Navigation/>
         {children}
       </div>
     </div>

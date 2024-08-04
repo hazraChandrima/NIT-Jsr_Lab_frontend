@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Squash as Hamburger } from "hamburger-react";
 import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion";
-import { researchSubroutes, membersSubroutes, achievementsSubroutes, aboutSubroutes } from '@/routes/navbarRoutes';
+import { researchSubroutes, membersSubroutes, achievementsSubroutes } from '@/routes/navbarRoutes';
 
 const subroutes = [
     {
@@ -17,10 +17,6 @@ const subroutes = [
     {
         name: 'Achievements',
         subroutes: achievementsSubroutes,
-    },
-    {
-        name: 'About',
-        subroutes: aboutSubroutes,
     },
 ];
 
@@ -105,6 +101,8 @@ export const MobileNavbar = () => {
 
                                 </motion.div>
                             ))}
+                            <h2 className='text-3xl text-sky-200 mb-5'><Link href="/Gallery" onClick={handleLinkClick}>Gallery</Link></h2>
+
 
                             <h2 className='text-3xl text-sky-200 mb-5'><Link href="/Information" onClick={handleLinkClick}>Information</Link></h2>
 
