@@ -11,9 +11,9 @@ export default function ResearchSection() {
         </h1>
         <h2 className="text-2xl font-sans text-slate-700 font-light text-right relative mb-20 right-3">
           {" "}
-          - research contents
+          - research projects
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1">
           {researchData.map((item) => (
             <TeamComponent
               key={item.id}

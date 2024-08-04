@@ -39,7 +39,7 @@ const members = [
   // Add more members as needed
 ];
 
-const Supervisors = () => {
+const PassOutStudents = () => {
   return (
     <main className="min-h-screen w-full flex flex-col items-center bg-white py-20 px-5">
       <div className="flex flex-col items-start max-w-[1256px]">
@@ -91,4 +91,4 @@ const Supervisors = () => {
   );
 };
 
-export default Supervisors;
+export default PassOutStudents;

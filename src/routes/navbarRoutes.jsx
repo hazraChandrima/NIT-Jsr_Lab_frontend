@@ -10,8 +10,8 @@ export const researchSubroutes = researchData.map(item => ({
 
 export const membersSubroutes = [
     {
-        name: "Supervisors",
-        href: "/Members/Supervisors"
+        name: "Lab Head",
+        href: "/Members/LabHead"
     },
     {
         name: "Students",
@@ -22,9 +22,10 @@ export const membersSubroutes = [
         href: "/Members/Collaborators"
     },
     {
-        name: "Lab Head",
-        href: "/Members/LabHead"
+        name: "Pass-out Students",
+        href: "/Members/Students"
     }
+   
 ]
 
 
@@ -43,3 +44,23 @@ export const achievementsSubroutes = [
     },
 ]
 
+export const gallerySubroutes = [
+    {
+        name:"Gallery",
+        href:"/Gallery",
+    },
+]
+
+export const informationSubroutes = [
+    {
+        name:"Information",
+        href:"/Information",
+    },
+]
+
+export const newsSubroutes = [
+    {
+        name:"News",
+        href:"/News",
+    },
+]

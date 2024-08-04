@@ -67,11 +67,33 @@ const BookChapters = ({ propData: publications }) => {
         />
       )}
 
-      <Modal open={open} onClose={handleClose} aria-labelledby="modal-title" aria-describedby="modal-description" closeAfterTransition>
-        <Box sx={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: 600, bgcolor: 'background.paper', boxShadow: 24, p: 4,borderRadius: '10px' }}>
+<Modal
+        open={open}
+        size="lg"
+        onClose={handleClose}
+        aria-labelledby="modal-title"
+        aria-describedby="modal-description"
+        closeAfterTransition>
+        <Box
+          sx={{
+            position: 'absolute',
+            width: { xs: '90%', sm: '80%', md: '70%', lg: '60%' },
+            padding:'10px',
+            maxHeight: '85vh',
+            overflow: 'auto',
+            textWrap:'wrap',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            bgcolor: 'background.paper',
+            boxShadow: 24,
+            p: { xs: 2, sm: 3, md: 4 },
+            borderRadius: '5px'
+          }}>
           <Typography id="modal-title" variant="h6" component="h2">
             {articleContent ? articleContent.type : '------------'}
           </Typography>
+          
           <Typography id="modal-description" sx={{ mt: 2 }}>
             {articleContent ? (
               <>
@@ -84,20 +106,20 @@ const BookChapters = ({ propData: publications }) => {
                 <b>{articleContent.volume ? 'Volume' : ''}</b> {articleContent.volume ? articleContent.volume : ''}
                 {articleContent.volume ? <br /> : ''}
                 <b>{articleContent.page_no ? 'Page No' : null}</b> {articleContent.page_no ? articleContent.page_no : null}
-                {articleContent.page_no ? <br />  : null}
+                {articleContent.page_no ? <br /> : null}
                 <b>Authors:</b> {articleContent.authors
                   ? articleContent.authors.split(',').map((author, index) => (
-                      <Typography key={index} variant="body2" component="span" sx={{ backgroundColor: '#6c757d', color: '#fff', padding: '2px 6px', borderRadius: '4px', marginRight: '4px' }}>
-                        {author}
-                      </Typography>
-                    ))
+                    <Typography key={index} variant="body2" component="span" sx={{textWrap:'nowrap',display:'flex',flexWrap:'wrap', width:'fit-content', backgroundColor: '#6c757d', color: '#fff', padding: '2px 6px', borderRadius: '4px', margin:'6px' }}>
+                      {author}
+                    </Typography>
+                  ))
                   : null}
                 <br />
                 <br />
                 {articleContent.link ? (
                   <a href={articleContent.link} rel="noopener noreferrer" target="_blank">
                     <b className='text-blue-500'>Link: </b>
-                    <span className='text-violet-500 underline'>{articleContent.link}</span>
+                    <span className='text-blue-500 underline'><OpenInNewRoundedIcon/></span>
                   </a>
                 ) : null}
                 <hr />

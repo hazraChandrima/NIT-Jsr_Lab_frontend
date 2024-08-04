@@ -3,21 +3,39 @@ import React, { useState } from 'react';
 import { Squash as Hamburger } from "hamburger-react";
 import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion";
-import { researchSubroutes, membersSubroutes, achievementsSubroutes } from '@/routes/navbarRoutes';
+import { researchSubroutes, membersSubroutes, achievementsSubroutes, gallerySubroutes, informationSubroutes, newsSubroutes } from '@/routes/navbarRoutes';
 
 const subroutes = [
     {
         name: 'Research',
+        href:'/Research',
         subroutes: researchSubroutes,
     },
     {
         name: 'Members',
+        href:'/',
         subroutes: membersSubroutes,
     },
     {
         name: 'Achievements',
+        href:'/Achievements',
         subroutes: achievementsSubroutes,
     },
+    {
+        name: 'Gallery',
+        href:'/Gallery',
+        subroutes: gallerySubroutes,
+    },
+    {
+        name: 'Information',
+        href:'/Information',
+        subroutes:informationSubroutes,
+    },
+    {
+        name: 'News',
+        href:'/News',
+        subroutes:newsSubroutes,
+    }
 ];
 
 
@@ -79,7 +97,7 @@ export const MobileNavbar = () => {
                                     className="mb-6"
                                     variants={itemVariants}>
 
-                                    <h2 className="text-3xl text-sky-200 mb-2 ">{section.name}</h2>
+                                    <h2 className="text-3xl text-sky-200 mb-2 "><Link  href={`/${section.href}`}>{section.name}</Link></h2>
                                     <hr className='h-[1px] w-56 bg-gray-300 mx-auto mb-5' />
                                     <ul className="list-none p-0">
 
@@ -101,12 +119,6 @@ export const MobileNavbar = () => {
 
                                 </motion.div>
                             ))}
-                            <h2 className='text-3xl text-sky-200 mb-5'><Link href="/Gallery" onClick={handleLinkClick}>Gallery</Link></h2>
-
-
-                            <h2 className='text-3xl text-sky-200 mb-5'><Link href="/Information" onClick={handleLinkClick}>Information</Link></h2>
-
-                            <h2 className='text-3xl text-sky-200 mb-2'><Link href="/News" onClick={handleLinkClick}>News</Link></h2>
 
                         </div>
                     </motion.div>
