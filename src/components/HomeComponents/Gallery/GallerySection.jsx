@@ -14,7 +14,7 @@ function Gallery() {
   const imageUrl2 =
     "https://pbs.twimg.com/media/GMFspXnasAAFGXs?format=jpg&name=large";
   return (
-    <div ref={ref} className="w-screen h-[125vw] bg-sky-50 relative">
+    <div ref={ref} className="w-screen h-[125vw] bg-white relative">
       <ImageCard height={35} width={24} left={20} top={12} imgSrc={imageUrl} />
       <ImageCard height={33} width={24} left={10} top={75} imgSrc={imageUrl} />
       <ImageCard height={50} width={35} left={60} top={50} imgSrc={imageUrl} />
