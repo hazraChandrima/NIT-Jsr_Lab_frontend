@@ -1,38 +1,39 @@
 /Members
-  /LabHead
-    /components
-      /InfoTabs
-        /ResearchArea
-          - ResearchAreaTab.js
-          - ResearchAreaTab.module.css
-          - SocietyList.js
-        /Teachings
-          - TeachingsTab.js
-          - TeachingsTab.module.css
-        /ResearchPublications
-          - ResearchPublicationsTab.js
-          - ResearchPublicationsTab.module.css
-          - InternationalJournal.js
-          - InternationalConference.js
-          - BookChapters.js
-          - Books.js
-        /Responsibilities
-          - ResponsibilitiesTab.js
-          - ResponsibilitiesTab.module.css
-        /ThesisSupervised
-          - ThesisSupervisedTab.js
-          - ThesisSupervisedTab.module.css
-          - PHDTab.js
-          - MastersTab.js
-          - BachelorsTab.js
-        /OtherAchievements
-          - OtherAchievementsTab.js
-          - OtherAchievementsTab.module.css
-        /Contact
-          - ContactTab.js
-          - ContactTab.module.css
-      - InfoTabs.js
-      - InfoTabs.module.css
-    - ProfileSection.js
-    - ProfileSection.module.css
-  - page.jsx
+  /(subroutes)
+    /LabHead
+      /components
+        /InfoTabs
+          /ResearchArea
+            - ResearchAreaTab.js
+            - ResearchAreaTab.module.css
+            - SocietyList.js
+          /Teachings
+            - TeachingsTab.js
+            - TeachingsTab.module.css
+          /ResearchPublications
+            - ResearchPublicationsTab.js
+            - ResearchPublicationsTab.module.css
+            - InternationalJournal.js
+            - InternationalConference.js
+            - BookChapters.js
+            - Books.js
+          /Responsibilities
+            - ResponsibilitiesTab.js
+            - ResponsibilitiesTab.module.css
+          /ThesisSupervised
+            - ThesisSupervisedTab.js
+            - ThesisSupervisedTab.module.css
+            - PHDTab.js
+            - MastersTab.js
+            - BachelorsTab.js
+          /OtherAchievements
+            - OtherAchievementsTab.js
+            - OtherAchievementsTab.module.css
+          /Contact
+            - ContactTab.js
+            - ContactTab.module.css
+        - InfoTabs.js
+        - InfoTabs.module.css
+      - ProfileSection.js
+      - ProfileSection.module.css
+    - page.jsx

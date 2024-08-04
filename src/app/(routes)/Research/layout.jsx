@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import ResearchHero from "./_components/ResearchHero/ResearchHero";
-import Breadcrumbs from "./_components/Breadcrumbs";
+// import ResearchHero from "./_components/ResearchHero/ResearchHero";
+// import Breadcrumbs from "./_components/Breadcrumbs";
 import useAnimationHook from "@/hooks/AnimationHooks/moveUp";
 
 const ResearchLayout = ({ children }) => {
@@ -9,7 +9,6 @@ const ResearchLayout = ({ children }) => {
 
   return (
     <div>
-      <Breadcrumbs />
       {children}
     </div>
   );

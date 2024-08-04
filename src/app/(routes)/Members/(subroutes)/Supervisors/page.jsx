@@ -39,7 +39,7 @@ const members = [
   // Add more members as needed
 ];
 
-const Members = () => {
+const Supervisors = () => {
   return (
     <main className="min-h-screen w-full flex flex-col items-center bg-white py-20 px-5">
       <div className="flex flex-col items-start max-w-[1256px]">
@@ -47,7 +47,7 @@ const Members = () => {
         <div className=" mb-20">
           {/* //heading */}
           <div className="mb-10">
-            <h1 className="text-3xl mb-5 text-sky-950">Faculty</h1>
+            <h1 className="text-3xl mb-5 text-sky-950">Supervisors</h1>
             <div className="w-full h-[2px] bg-slate-400">
               <div className="w-[15%] h-full bg-sky-500"></div>
             </div>
@@ -91,4 +91,4 @@ const Members = () => {
   );
 };
 
-export default Members;
+export default Supervisors;

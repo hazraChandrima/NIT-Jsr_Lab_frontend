@@ -15,12 +15,12 @@ function Navigation() {
         </div>
     <div className="grid grid-cols-2 md:grid-cols-4 gap-2 ">
       <Link
-      href={'/Members/Staff'}
+      href={'/Members/Supervisors'}
         className="transition duration-500 border-2 rounded-sm max-w-[300px] border-sky-500 ease-in-out bg-sky-500 text-white flex items-center justify-center hover:bg-white hover:text-sky-500 py-2 px-4 "
         style={{ opacity: "1", transform: "none", willChange: "auto" }}
       >
         
-          Staff
+          Supervisors
         
       </Link>
       <Link
@@ -33,12 +33,21 @@ function Navigation() {
         
       </Link>
       <Link
-      href={'/Members/AffiliatedResearchers'}
+      href={'/Members/Collaborators'}
         className="transition duration-500 border-2 rounded-sm max-w-[300px] border-sky-500 ease-in-out bg-sky-500 text-white flex items-center justify-center hover:bg-white hover:text-sky-500 py-2 px-4 "
         style={{ opacity: "1", transform: "none", willChange: "auto" }}
       >
         
-        Affiliated Researchers
+        Collaborative Researchers
+        
+      </Link>
+      <Link
+      href={'/Members/LabHead'}
+        className="transition duration-500 border-2 rounded-sm max-w-[300px] border-sky-500 ease-in-out bg-sky-500 text-white flex items-center justify-center hover:bg-white hover:text-sky-500 py-2 px-4 "
+        style={{ opacity: "1", transform: "none", willChange: "auto" }}
+      >
+        
+       Lab Head
         
       </Link>
           

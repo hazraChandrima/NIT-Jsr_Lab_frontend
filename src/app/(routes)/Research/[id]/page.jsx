@@ -6,6 +6,7 @@ import Theme from "../_components/Theme";
 import Content from "../_components/Content";
 import ResearchMembers from "../_components/ResearchMembersSection";
 import ResearchSummary from "../_components/ResearchSummary";
+import Breadcrumbs from "../_components/Breadcrumbs";
 import ResearchPapers from "../_components/ResearchPapers";
 
 const ResearchItem = ({ params }) => {
@@ -18,6 +19,7 @@ const ResearchItem = ({ params }) => {
         title={researchItem.title}
         subtitle={researchItem.subtitle}
       />
+      <Breadcrumbs />
       <Theme themes={researchItem.themes} heading={researchItem.heading} />
       <Content content={researchItem.content} />
       <ResearchPapers papers={researchItem.papers} />

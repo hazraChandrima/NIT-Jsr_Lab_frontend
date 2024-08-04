@@ -18,6 +18,10 @@
     transition: transform 0.25s ease-out;
 }
 
+.test::after{
+    background-color: #0f5e89 ; 
+}
+
  .test:hover .navbar-option::after{
     transform: scaleX(1);
     transform-origin: bottom center;
