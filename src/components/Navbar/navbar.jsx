@@ -152,23 +152,6 @@ export default function Navbar() {
       </div>
 
 
-
-      {/* Information  */}
-      <div className="relative px-4 flex items-center justify-center">
-        <span className="test p-4 " onMouseLeave={handleMouseLeave}>
-          <span className="test navbar-option font-semibold"><Link className="text-sky-800" href="/Information">INFORMATION</Link></span>
-        </span>
-
-      </div>
-
-
-      {/* News  */}
-      <div className="relative px-4 flex items-center justify-center">
-        <span className="test relative p-4 ">
-          <span className="test navbar-option font-semibold"><Link className="text-sky-800" href="/News">NEWS</Link></span>
-        </span>
-      </div>
-
     </div>
   )
 }
