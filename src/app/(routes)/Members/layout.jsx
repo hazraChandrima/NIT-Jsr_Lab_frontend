@@ -6,10 +6,12 @@ export default function MemberLayout({ children }) {
   return (
     <div>
       <ResearchHero />
-      <div className="text-sm sm:text-base bg-white">
-        <BreadCrumbs />
+      
+      <BreadCrumbs />
+      <div className="text-sm sm:text-base bg-white flex flex-col items-center">
+        
         <Navigation/>
-        {children}
+        {children} 
       </div>
     </div>
   );

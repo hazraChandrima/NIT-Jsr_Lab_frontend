@@ -1,4 +1,6 @@
 'use client'
+import Image from "next/image"
+import logo from "../../assets/images/logo.png"
 import Link from "next/link"
 import { easeInOut, motion } from "framer-motion"
 import React, { useState } from "react"
@@ -49,7 +51,15 @@ export default function Navbar() {
 
       <div className="relative flex items-center justify-center" >
         <span className="p-4 font-semibold text-xl">
-          <span><Link href="/">NIT Jsr Lab</Link></span>
+          <span><Link href="/">
+          <Image 
+          src={logo}
+          width={80}
+          height={80}
+          alt="logo"
+          />
+
+          </Link></span>
         </span>
       </div>
 
