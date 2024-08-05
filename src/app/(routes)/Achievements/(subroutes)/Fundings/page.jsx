@@ -94,10 +94,10 @@ export default function FundingsPage() {
       <h1 className='text-5xl font-sans font-light relative text-right right-6 text-sky-950'>RESEARCH FUNDINGS</h1>
    {
 
-     Object.keys(fundingData).map((year)=>(
+     Object.keys(fundingData).map((year,i)=>(
        
-      <div className="journals my-8 flex flex-col items-center">
-  <h1 className="text-3xl font-sans font-light text-sky-950 my-8 text-center">
+      <div className="journals my-8 flex flex-col items-center" key={i}>
+  <h1 className="text-3xl font-sans font-light text-sky-950 my-8 text-center" key={i}>
     Fiscal Year {year}
   </h1>
   {fundingData[year].map((data, index) => (
@@ -105,13 +105,13 @@ export default function FundingsPage() {
       key={index}
       className="relative mb-20 max-w-4xl flex flex-col items-center border-b-2 border-[#00a2ff] border-dotted pb-8 w-full"
     >
-      <div className="w-full text-center">
-        <p className="font-bold">{data.date}</p>
+      <div className="w-full text-center" key={index}>
+        <p className="font-bold" key={index}>{data.date}</p>
         <br/>
-        <p>{data.org}</p>
-        <p>{data.title}</p>
+        <p key={index}>{data.org}</p>
+        <p key={index}>{data.title}</p>
         <br/>
-        <p className="italic">{data.amount}</p>
+        <p className="italic" key={index}>{data.amount}</p>
         
       </div>
     </div>

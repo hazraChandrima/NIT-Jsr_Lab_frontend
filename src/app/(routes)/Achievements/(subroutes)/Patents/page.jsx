@@ -95,10 +95,10 @@ export default function PatentsPage() {
       <h1 className='text-5xl font-sans font-light relative text-right right-6 text-sky-950'>PATENTS</h1>
    {
 
-     Object.keys(patentData).map((year)=>(
+     Object.keys(patentData).map((year,i)=>(
        
-      <div className="journals my-8 flex flex-col items-center">
-  <h1 className="text-3xl font-sans font-light text-sky-950 my-8 text-center">
+      <div className="journals my-8 flex flex-col items-center" key={i}>
+  <h1 className="text-3xl font-sans font-light text-sky-950 my-8 text-center" key={i}>
     Fiscal Year {year}
   </h1>
   {patentData[year].map((data, index) => (
@@ -106,14 +106,14 @@ export default function PatentsPage() {
       key={index}
       className="relative mb-20 max-w-4xl flex flex-col items-center border-b-2 border-[#00a2ff] border-dotted pb-8 w-full"
     >
-      <div className="w-full text-center">
-        <p className="font-bold">Patent No: {data.PatentNo}</p>
+      <div className="w-full text-center" key={index}>
+        <p className="font-bold" key={index}>Patent No: {data.PatentNo}</p>
         <br/>
-        <p>{data.title}</p>
-        <p>Inventors: {data.Inventors.join(', ')}</p>
+        <p key={index}>{data.title}</p>
+        <p key={index}>Inventors: {data.Inventors.join(', ')}</p>
         <br/>
-        <p className="italic">Applicant: {data.Applicant}</p>
-        <p className="italic">Registration Date: {data.date}</p>
+        <p className="italic" key={index}>Applicant: {data.Applicant}</p>
+        <p className="italic" key={index}>Registration Date: {data.date}</p>
       </div>
     </div>
 ))}
