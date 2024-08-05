@@ -46,12 +46,13 @@ export default function JournalsPage() {
         <br/>
         <p className="italic text-center md:text-left">{data.journal}</p>
       </div>
-      <button
+      {(data.id!='ab246a5b-099a-49c1-b903-0b40ce1903d1')?
+     ( <button
         className="relative right-0 bg-[#00a2ff] text-white py-2 px-4 border border-[#00a2ff] hover:bg-white hover:text-[#00a2ff] transition-all duration-300 w-48"
         onClick={()=>{window.open(data.link)}}
       >
         Paper
-      </button>
+      </button>):(<></>)}
     </div>
   ))}
 </div>
