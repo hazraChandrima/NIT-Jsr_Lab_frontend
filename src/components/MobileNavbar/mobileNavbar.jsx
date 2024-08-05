@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import { Squash as Hamburger } from "hamburger-react";
 import Link from "next/link"
+import logo from "../../assets/images/logo.png"
+import Image from 'next/image';
 import { motion, AnimatePresence } from "framer-motion";
 import { researchSubroutes, membersSubroutes, achievementsSubroutes, gallerySubroutes, informationSubroutes, newsSubroutes } from '@/routes/navbarRoutes';
 
@@ -76,7 +78,14 @@ export const MobileNavbar = () => {
         <div className="lg:invisible xl:invisible sm:visible md:visible fixed flex flex-row justify-between top-0 left-0 h-20 z-50 w-screen bg-white bg-opacity-70">
 
             <span className="p-4 text-2xl font-semibold flex items-center ">
-                <Link href="/">NIT Jsr Lab</Link>
+                <Link href="/">
+                <Image
+                src={logo}
+                height={70}
+                width={70}
+                alt="logo"
+                />
+                </Link>
             </span>
             <span className="mx-3 flex items-center justify-center">
                 <Hamburger toggled={isOpen} size={40} toggle={setOpen} />
