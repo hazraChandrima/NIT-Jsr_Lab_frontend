@@ -27,16 +27,6 @@ const subroutes = [
         name: 'Gallery',
         href:'/Gallery',
         subroutes: gallerySubroutes,
-    },
-    {
-        name: 'Information',
-        href:'/Information',
-        subroutes:informationSubroutes,
-    },
-    {
-        name: 'News',
-        href:'/News',
-        subroutes:newsSubroutes,
     }
 ];
 
