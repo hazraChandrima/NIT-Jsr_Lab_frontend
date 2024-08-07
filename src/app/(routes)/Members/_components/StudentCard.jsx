@@ -19,14 +19,14 @@ const StaffCard = ({ name, role, imageUrl, rollNumber }) => {
         <div className="overflow-hidden flex items-center justify-center">
           <img src={imageUrl} alt={name} className="h-full w-auto" />
         </div>
-        <div className="p-3 bg-sky-500 w-[85%] relative bottom-4 text-white">
+        <div className="p-3 bg-sky-600 w-[85%] relative bottom-4 text-white">
           <p className="text-lg font-light truncate">{role}</p>
         </div>
         <div className="px-3">
           <hr className="bg-slate-500 h-[1px]" />
         </div>
         <div className="px-4 py-2">
-          <div className="border-l-4 border-sky-500 px-2">
+          <div className="border-l-4 border-sky-600 px-2">
             <p className="text-black font-sans text-left text-xl truncate">
               {name}
             </p>

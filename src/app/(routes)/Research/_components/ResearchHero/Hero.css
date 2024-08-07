@@ -1,7 +1,7 @@
 
 .img{
     height: 100%;
-    opacity: 0.3;
+    opacity: 0.2;
 }
 .heroText{
     position:absolute;
@@ -24,7 +24,7 @@
   }
   
   .subtext {
-    color: #666;
+    color: #073863d7;
   }
   
   .subtextSmall {

@@ -18,8 +18,8 @@ const Theme = ({ themes, heading }) => {
           <h2 className="mb-10">{heading}</h2>
           <hr className="mb-10 mx-auto w-[150px] border-box border-gray-800 border-t-[1px] "></hr>
         </div>
-        <h3 className="mb-3 text-lg font-bold opacity-65">THEME</h3>
-        <p className="text-blue-500 font-bold text-sm lg:text-base">
+        <h3 className="mb-3 text-lg font-bold  text-sky-900 opacity-80">THEME</h3>
+        <p className="text-slate-500 opacity-90 font-bold text-sm lg:text-base">
           {themes && themes.length > 0 ? (
             themes.map((theme, index) => (
               <React.Fragment key={index}>

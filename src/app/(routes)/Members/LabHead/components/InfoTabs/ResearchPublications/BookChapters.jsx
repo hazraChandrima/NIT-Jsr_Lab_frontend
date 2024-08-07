@@ -48,8 +48,8 @@ const BookChapters = ({ propData: publications }) => {
               key={index}
               onClick={() => handleOpen(value)}
             >
-              <Typography variant="body1" style={{ textAlign: 'justify' }}>
-                <b>{`${value.title}, `}</b>
+              <Typography variant="body1 font-sans" style={{ textAlign: 'left' }}>
+                <b className='text-sky-800'>{`${value.title}, `}</b>
                 {`${value.journal}  ${value.volume ? ` ${value.volume}` : ''} (${value.pub_date})  ${
                   value.page_no ? `,pp. ${value.page_no}` : ''
                 }, ${value.authors.split(',').map((item) => item)}`}
@@ -109,7 +109,7 @@ const BookChapters = ({ propData: publications }) => {
                 {articleContent.page_no ? <br /> : null}
                 <b>Authors:</b> {articleContent.authors
                   ? articleContent.authors.split(',').map((author, index) => (
-                    <Typography key={index} variant="body2" component="span" sx={{textWrap:'nowrap',display:'flex',flexWrap:'wrap', width:'fit-content', backgroundColor: '#6c757d', color: '#fff', padding: '2px 6px', borderRadius: '4px', margin:'6px' }}>
+                    <Typography key={index} variant="body2" component="span" sx={{textWrap:'nowrap',display:'flex',flexWrap:'wrap', width:'fit-content', backgroundColor: '#e5e7e9', color: '#000', padding: '2px 6px', borderRadius: '4px', margin:'6px' }}>
                       {author}
                     </Typography>
                   ))

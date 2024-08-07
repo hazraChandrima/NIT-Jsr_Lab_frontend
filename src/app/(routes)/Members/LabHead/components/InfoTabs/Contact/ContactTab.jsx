@@ -23,7 +23,7 @@ const ContactTab = () => {
     <div className={styles.contactTab}>{
       personLoaded?
       <>
-      <h2>Contact Information</h2>
+      <h2 className="text-sky-800">Contact Information</h2>
       <ul className="info-list">
         <li>
           <span className="font-weight-bold">E-mail: </span>
@@ -36,7 +36,7 @@ const ContactTab = () => {
             href={person.fb_id}
             target="_blank"
             rel="noreferrer"
-            className="ml-2 text-blue-500"
+            className="ml-2 text-sky-600"
           >
            Facebook
           </a>
@@ -47,13 +47,13 @@ const ContactTab = () => {
       <div className="block-box user-about">
         {person ? (
           <div className=" flex gap-4 w-full bg-slate-100 p-3 flex-wrap rounded-lg">
-            <div className="py-2 px-4 bg-slate-300 rounded-lg flex items-center justify-center w-max">
+            <div className="py-2 px-4 bg-slate-200 rounded-lg flex items-center justify-center w-max">
               <span>Google Scholar:</span>
               {person.scholar_link ? (
                 <a
                   href={person.scholar_link}
                   target="_blank"
-                  className="ml-2 text-blue-500"
+                  className="ml-2 text-sky-500"
                   rel="noreferrer"
                 >
                   View <i className="fad fa-external-link-alt"></i>
@@ -62,13 +62,13 @@ const ContactTab = () => {
                 "N/A"
               )}
             </div>
-            <div className="py-2 px-4 bg-slate-300 rounded-lg flex items-center justify-center w-max">
+            <div className="py-2 px-4 bg-slate-200 rounded-lg flex items-center justify-center w-max">
               <span>Website:</span>
               {person.pw_link ? (
                 <a
                   href={person.pw_link}
                   target="_blank"
-                  className="ml-2 text-blue-500"
+                  className="ml-2 text-sky-500"
                   rel="noreferrer"
                 >
                   View <i className="fad fa-external-link-alt"></i>
@@ -77,13 +77,13 @@ const ContactTab = () => {
                 "N/A"
               )}
             </div>
-            <div className="py-2 px-4 bg-slate-300 rounded-lg flex items-center justify-center w-max">
+            <div className="py-2 px-4 bg-slate-200 rounded-lg flex items-center justify-center w-max">
               <span>Publon:</span>
               {person.publon_id ? (
                 <a
                   href={person.publon_id}
                   target="_blank"
-                  className="ml-2 text-blue-500"
+                  className="ml-2 text-sky-500"
                   rel="noreferrer"
                 >
                   View <i className="fad fa-external-link-alt"></i>
@@ -92,13 +92,13 @@ const ContactTab = () => {
                 "N/A"
               )}
             </div>
-            <div className="py-2 px-4 bg-slate-300 rounded-lg flex items-center justify-center w-max">
+            <div className="py-2 px-4 bg-slate-200 rounded-lg flex items-center justify-center w-max">
               <span>Orcid:</span>
               {person.orcid_id ? (
                 <a
                   href={person.orcid_id}
                   target="_blank"
-                  className="ml-2 text-blue-500"
+                  className="ml-2 text-sky-500"
                   rel="noreferrer"
                 >
                   View <i className="fad fa-external-link-alt"></i>
@@ -108,7 +108,7 @@ const ContactTab = () => {
               )}
             </div>
 
-            <div className="py-2 px-4 bg-slate-300 rounded-lg flex items-center justify-center w-max">
+            <div className="py-2 px-4 bg-slate-200 rounded-lg flex items-center justify-center w-max">
               <span>Vidwan:</span>
               {person.vidwan_id && person.vidwan_id !== "#" ? (
                 <>
@@ -117,7 +117,7 @@ const ContactTab = () => {
                       <a
                         href={person.vidwan_id}
                         target="_blank"
-                        className="ml-2 text-blue-500"
+                        className="ml-2 text-sky-500"
                         rel="noreferrer"
                       >
                         View <i className="fad fa-external-link-alt"></i>
@@ -128,7 +128,7 @@ const ContactTab = () => {
                       <a
                         href={`https://vidwan.inflibnet.ac.in/profile/${person.vidwan_id?.trim()}`}
                         target="_blank"
-                        className="ml-2 text-blue-500"
+                        className="ml-2 text-sky-500"
                         rel="noreferrer"
                       >
                         View <i className="fad fa-external-link-alt"></i>

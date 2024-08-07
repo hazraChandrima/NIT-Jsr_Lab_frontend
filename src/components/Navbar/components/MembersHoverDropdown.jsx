@@ -9,7 +9,7 @@ function MembersHoverDropdown() {
         {membersSubroutes.map((route, index) => (
 
           <Link key={index} href={route.href}>
-            <div className=' research-item flex items-center hover:text-blue-400 transition duration-500 mx-5 my-5'>
+            <div className=' research-item flex items-center hover:text-sky-300 transition duration-300 mx-5 my-5'>
               <span className='flex-1'>{route.name}</span>
             </div>
           </Link>

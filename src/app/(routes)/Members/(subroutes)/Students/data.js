@@ -6,7 +6,7 @@ const students = [
     rollNumber: "2021001",
     name: "John Doe",
     photo:
-      "https://media.istockphoto.com/id/1371704692/photo/portrait-of-a-confident-male-scientist-standing-in-a-medical-laboratory.jpg?s=612x612&w=0&k=20&c=pLVHdK4RW-sLZZqm18c-MAP1RkELQGQbSqiUAYWnggI=",
+      "https://i.pinimg.com/736x/09/21/fc/0921fc87aa989330b8d403014bf4f340.jpg",
     about:
       "John Doe is a Computer Science major with a passion for software development and machine learning.",
     researches: [
@@ -23,7 +23,7 @@ const students = [
     rollNumber: "2021002",
     name: "Jane Smith",
     photo:
-      "https://media.istockphoto.com/id/1371704692/photo/portrait-of-a-confident-male-scientist-standing-in-a-medical-laboratory.jpg?s=612x612&w=0&k=20&c=pLVHdK4RW-sLZZqm18c-MAP1RkELQGQbSqiUAYWnggI=",
+      "https://i.pinimg.com/736x/09/21/fc/0921fc87aa989330b8d403014bf4f340.jpg",
     about:
       "Jane Smith is a Mathematics major specializing in data analysis and statistical modeling.",
     researches: [
@@ -40,7 +40,7 @@ const students = [
     rollNumber: "2021003",
     name: "Emily Johnson",
     photo:
-      "https://media.istockphoto.com/id/1371704692/photo/portrait-of-a-confident-male-scientist-standing-in-a-medical-laboratory.jpg?s=612x612&w=0&k=20&c=pLVHdK4RW-sLZZqm18c-MAP1RkELQGQbSqiUAYWnggI=",
+      "https://i.pinimg.com/736x/09/21/fc/0921fc87aa989330b8d403014bf4f340.jpg",
     about:
       "Emily Johnson is a Physics major focused on quantum mechanics and computational physics.",
     researches: [
@@ -57,7 +57,7 @@ const students = [
     rollNumber: "2021004",
     name: "Michael Brown",
     photo:
-      "https://media.istockphoto.com/id/1371704692/photo/portrait-of-a-confident-male-scientist-standing-in-a-medical-laboratory.jpg?s=612x612&w=0&k=20&c=pLVHdK4RW-sLZZqm18c-MAP1RkELQGQbSqiUAYWnggI=",
+      "https://i.pinimg.com/736x/09/21/fc/0921fc87aa989330b8d403014bf4f340.jpg",
     about:
       "Michael Brown is an Electrical Engineering major with interests in embedded systems and robotics.",
     researches: [
@@ -74,7 +74,7 @@ const students = [
     rollNumber: "2021005",
     name: "Olivia Davis",
     photo:
-      "https://media.istockphoto.com/id/1371704692/photo/portrait-of-a-confident-male-scientist-standing-in-a-medical-laboratory.jpg?s=612x612&w=0&k=20&c=pLVHdK4RW-sLZZqm18c-MAP1RkELQGQbSqiUAYWnggI=",
+      "https://i.pinimg.com/736x/09/21/fc/0921fc87aa989330b8d403014bf4f340.jpg",
     about:
       "Olivia Davis is a Chemical Engineering major with a focus on sustainable energy and materials science.",
     researches: [
@@ -91,7 +91,7 @@ const students = [
     rollNumber: "2021006",
     name: "William Wilson",
     photo:
-      "https://media.istockphoto.com/id/1371704692/photo/portrait-of-a-confident-male-scientist-standing-in-a-medical-laboratory.jpg?s=612x612&w=0&k=20&c=pLVHdK4RW-sLZZqm18c-MAP1RkELQGQbSqiUAYWnggI=",
+      "https://i.pinimg.com/736x/09/21/fc/0921fc87aa989330b8d403014bf4f340.jpg",
     about:
       "William Wilson is a Civil Engineering major specializing in structural analysis and environmental engineering.",
     researches: [
@@ -108,7 +108,7 @@ const students = [
     rollNumber: "2021007",
     name: "Sophia Lee",
     photo:
-      "https://media.istockphoto.com/id/1371704692/photo/portrait-of-a-confident-male-scientist-standing-in-a-medical-laboratory.jpg?s=612x612&w=0&k=20&c=pLVHdK4RW-sLZZqm18c-MAP1RkELQGQbSqiUAYWnggI=",
+      "https://i.pinimg.com/736x/09/21/fc/0921fc87aa989330b8d403014bf4f340.jpg",
     about:
       "Sophia Lee is a Biology major focused on genetics and molecular biology.",
     researches: [
@@ -125,7 +125,7 @@ const students = [
     rollNumber: "2021008",
     name: "James Martinez",
     photo:
-      "https://media.istockphoto.com/id/1371704692/photo/portrait-of-a-confident-male-scientist-standing-in-a-medical-laboratory.jpg?s=612x612&w=0&k=20&c=pLVHdK4RW-sLZZqm18c-MAP1RkELQGQbSqiUAYWnggI=",
+      "https://i.pinimg.com/736x/09/21/fc/0921fc87aa989330b8d403014bf4f340.jpg",
     about:
       "James Martinez is an Economics major with a focus on econometrics and financial analysis.",
     researches: [
@@ -142,7 +142,7 @@ const students = [
     rollNumber: "2021009",
     name: "Ava Anderson",
     photo:
-      "https://media.istockphoto.com/id/1371704692/photo/portrait-of-a-confident-male-scientist-standing-in-a-medical-laboratory.jpg?s=612x612&w=0&k=20&c=pLVHdK4RW-sLZZqm18c-MAP1RkELQGQbSqiUAYWnggI=",
+      "https://i.pinimg.com/736x/09/21/fc/0921fc87aa989330b8d403014bf4f340.jpg",
     about:
       "Ava Anderson is a Graphic Design major specializing in digital media and user experience design.",
     researches: [
@@ -159,7 +159,7 @@ const students = [
     rollNumber: "2021010",
     name: "Ethan Thomas",
     photo:
-      "https://media.istockphoto.com/id/1371704692/photo/portrait-of-a-confident-male-scientist-standing-in-a-medical-laboratory.jpg?s=612x612&w=0&k=20&c=pLVHdK4RW-sLZZqm18c-MAP1RkELQGQbSqiUAYWnggI=",
+      "https://i.pinimg.com/736x/09/21/fc/0921fc87aa989330b8d403014bf4f340.jpg",
     about:
       "Ethan Thomas is a Mechanical Engineering major with interests in thermal systems and fluid dynamics.",
     researches: [
