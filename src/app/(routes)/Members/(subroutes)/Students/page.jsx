@@ -10,7 +10,7 @@ export default function page() {
           <div className="mb-10">
             <h1 className="text-3xl mb-5 text-sky-950">Ph.D</h1>
             <div className="w-full h-[2px] bg-slate-400">
-              <div className="w-[15%] h-full bg-sky-500"></div>
+              <div className="w-[15%] h-full bg-cyan-500"></div>
             </div>
           </div>
           <div className=" w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -30,7 +30,7 @@ export default function page() {
           <div className="mb-10">
             <h1 className="text-3xl mb-5 text-sky-950">Part Time Ph.D</h1>
             <div className="w-full h-[2px] bg-slate-400">
-              <div className="w-[15%] h-full bg-sky-500"></div>
+              <div className="w-[15%] h-full bg-cyan-500"></div>
             </div>
           </div>
           <div className=" w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -50,7 +50,7 @@ export default function page() {
           <div className="mb-10">
             <h1 className="text-3xl mb-5 text-sky-950">Masters Program</h1>
             <div className="w-full h-[2px] bg-slate-400">
-              <div className="w-[15%] h-full bg-sky-500"></div>
+              <div className="w-[15%] h-full bg-cyan-500"></div>
             </div>
           </div>
           <div className=" w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -72,7 +72,7 @@ export default function page() {
               Undergraduate Program
             </h1>
             <div className="w-full h-[2px] bg-slate-400">
-              <div className="w-[15%] h-full bg-sky-500"></div>
+              <div className="w-[15%] h-full bg-cyan-500"></div>
             </div>
           </div>
           <div className=" w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">

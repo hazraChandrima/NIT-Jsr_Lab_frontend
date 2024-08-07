@@ -37,7 +37,7 @@ const InfoTabs = () => {
               key={index}
               className={`py-2 text-sm font-medium transition duration-300 border-b ${
                 activeTab === index
-                  ? 'text-blue-600 border-blue-300 border-b-[3px]'
+                  ? 'text-sky-600 border-blue-300 border-b-[3px]'
                   : 'text-gray-700 '
               } ${
                 hoveredTab === index

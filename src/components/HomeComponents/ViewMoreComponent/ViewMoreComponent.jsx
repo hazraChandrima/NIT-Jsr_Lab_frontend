@@ -21,7 +21,7 @@ const ViewMore = ({ width }) => {
       >
         
         <div
-          className={`absolute rounded-xl top-0 left-0 h-full transition-all duration-300 ${hovered ? 'w-full bg-blue-500' : 'w-1/5 bg-blue-500'}`}
+          className={`absolute rounded-xl top-0 left-0 h-full transition-all duration-300 ${hovered ? 'w-full bg-cyan-600' : 'w-1/5 bg-cyan-600'}`}
         ></div>
       </div>
       

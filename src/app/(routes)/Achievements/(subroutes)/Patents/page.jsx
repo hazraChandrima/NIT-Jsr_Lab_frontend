@@ -92,7 +92,7 @@ export default function PatentsPage() {
       <div className='flex flex-col bg-white py-5 min-h-dvh text-slate-600 items-center'>
        
       <BreadCrumbs/>
-      <h1 className='text-5xl font-sans font-light relative text-right right-6 text-sky-950'>PATENTS</h1>
+      <h1 className='text-5xl font-sans font-light relative text-center text-sky-900'>PATENTS</h1>
    {
 
      Object.keys(patentData).map((year,i)=>(

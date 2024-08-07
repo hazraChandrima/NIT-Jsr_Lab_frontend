@@ -24,8 +24,8 @@ const Content = ({ content }) => {
         </div>
       </div>
       <div className="flex-[1_1_330px] items-start text-white p-4 m-2 max-width-[600px] ">
-        <h3 className="font-serif pb-6 text-md text-gray-700  tracking-wide font-bold">
-          Research Content
+        <h3 className=" pb-6 text-xl text-blue-900 opacity-95 tracking-wide font-bold">
+          RESEARCH CONTENT
         </h3>
         <p className="text-sm text-gray-700 tracking-wider pb-6">{content}</p>
         <Button text={"Research Contents PDF"} href={"/"} />

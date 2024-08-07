@@ -18,13 +18,13 @@ export default function Home() {
         <div className="font-sans px-5 lg:text-8xl md:text-7xl text-5xl ">NIT JAMSHEDPUR</div>
       </Hero>
 
-      <div className="bg-sky-50 flex flex-col items-center w-full overflow-hidden">
+      <div className=" flex flex-col items-center w-full overflow-hidden">
 
         <div
-          className="w-full h-auto flex items-center justify-center bg-cover relative "
+          className="w-full h-auto flex items-center justify-center bg-cover bg-right relative "
           style={{
             backgroundImage:
-              "url('https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-08.jpg')"
+              "url('https://media.istockphoto.com/id/1497687876/photo/abstract-blur-inside-of-hospital-interior-background-for-design-display-ads-banner-concept.jpg?s=612x612&w=0&k=20&c=NeTuGOBnDLFikZesPLyyoxwDAOhc2iqHJHkq0eBc91k=')"
           }}
         >
           <div className="max-w-[1256px] w-full px-4">
@@ -35,10 +35,10 @@ export default function Home() {
         <ParallaxImageComponent />
         
         <div
-          className="w-full h-auto flex items-center justify-center bg-cover relative"
+          className="w-full h-auto flex items-center justify-center bg-right bg-cover relative"
           // style={{
           //   backgroundImage:
-          //     "url('https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-08.jpg')",
+          //     "url('https://media.istockphoto.com/id/1497687876/photo/abstract-blur-inside-of-hospital-interior-background-for-design-display-ads-banner-concept.jpg?s=612x612&w=0&k=20&c=NeTuGOBnDLFikZesPLyyoxwDAOhc2iqHJHkq0eBc91k=')",
           // }}
         >
           <div className="max-w-[1256px] w-full px-14 py-5">

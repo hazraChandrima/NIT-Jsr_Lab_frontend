@@ -68,7 +68,7 @@ const ThesisSupervisedTab = () => {
                   key={index}
                   className={`relative py-2 text-sm font-medium transition duration-300 border-b-2 ${
                     activeSubTab === index
-                      ? 'text-blue-600 border-blue-600'
+                      ? 'text-sky-600 border-blue-300'
                       : 'text-gray-700 border-transparent'
                   } ${
                     hoveredTab === index && activeSubTab !== index

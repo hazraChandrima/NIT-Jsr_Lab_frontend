@@ -305,7 +305,7 @@ function NewsPage() {
         <button
           key={i}
           onClick={() => handlePageChange(i)}
-          className={`px-4 py-2 rounded-md ${currentPage === i ? 'bg-sky-400' : 'bg-gray-300'} text-black`}
+          className={`px-4 py-2 rounded-md ${currentPage === i ? 'bg-cyan-500' : 'bg-gray-300'} text-black`}
         >
           {i}
         </button>
@@ -339,7 +339,7 @@ function NewsPage() {
       <div className="flex flex-wrap gap-2 justify-center space-x-2 mb-10">
         <button
           onClick={() => handlePageChange(currentPage - 1)}
-          className={`px-4 py-2 rounded-md ${currentPage === 1 ? 'bg-gray-100' : 'bg-sky-300'} text-black`}
+          className={`px-4 py-2 rounded-md ${currentPage === 1 ? 'bg-gray-100' : 'bg-cyan-500'} text-black`}
           disabled={currentPage === 1}
         >
           {`<<`}
@@ -347,7 +347,7 @@ function NewsPage() {
         {renderPageNumbers()}
         <button
           onClick={() => handlePageChange(currentPage + 1)}
-          className={`px-4 py-2 rounded-md ${currentPage === totalPages ? 'bg-gray-100' : 'bg-sky-300'} text-black`}
+          className={`px-4 py-2 rounded-md ${currentPage === totalPages ? 'bg-gray-100' : 'bg-cyan-500'} text-black`}
           disabled={currentPage === totalPages}
         >
            {`>>`}

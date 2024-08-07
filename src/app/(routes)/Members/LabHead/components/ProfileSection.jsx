@@ -42,7 +42,7 @@ const ProfilePage = () => {
                 src={getFileURL(people.profile)}
                 alt={`${people.fname} ${people.lname}'s profile picture`}
                 layout="fill"
-                className="rounded-full object-cover"
+                className="rounded-full object-left-top object-cover"
               />
               <div
                 className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer"
@@ -52,7 +52,7 @@ const ProfilePage = () => {
                 <span className="text-white ml-2">Preview</span>
               </div>
             </div>
-            <h1 className="mt-4 text-2xl font-bold">
+            <h1 className="mt-8 mb-6 text-2xl font-bold">
               {people.fname} {people.lname}
             </h1>
             <div className="px-4">

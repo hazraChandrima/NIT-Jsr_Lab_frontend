@@ -91,19 +91,19 @@ export default function FundingsPage() {
       <div className='flex flex-col bg-white py-5 min-h-dvh text-slate-600 items-center'>
        
       <BreadCrumbs/>
-      <h1 className='text-5xl font-sans font-light relative text-right right-6 text-sky-950'>RESEARCH FUNDINGS</h1>
+      <h1 className='text-5xl font-sans font-light relative text-center  text-sky-900'>RESEARCH FUNDINGS</h1>
    {
 
      Object.keys(fundingData).map((year,i)=>(
        
       <div className="journals my-8 flex flex-col items-center" key={i}>
-  <h1 className="text-3xl font-sans font-light text-sky-950 my-8 text-center" key={i}>
+  <h1 className="text-3xl font-sans font-light text-cyan-800 my-8 text-center" key={i}>
     Fiscal Year {year}
   </h1>
   {fundingData[year].map((data, index) => (
     <div
       key={index}
-      className="relative mb-20 max-w-4xl flex flex-col items-center border-b-2 border-[#00a2ff] border-dotted pb-8 w-full"
+      className="relative mb-20 max-w-4xl flex flex-col items-center border-b-2 border-[#008ccd] border-dotted pb-8 w-3/4"
     >
       <div className="w-full text-center" key={index}>
         <p className="font-bold" key={index}>{data.date}</p>
