@@ -48,7 +48,7 @@ export default function JournalsPage() {
       </div>
       {(data.id!='ab246a5b-099a-49c1-b903-0b40ce1903d1')?
      ( <button
-        className="relative right-0 mt-5 bg-cyan-600 text-white py-2 px-4 border border-cyan-600 hover:bg-white hover:text-cyan-600 transition-all duration-300 w-48"
+        className="relative right-0 mt-5 bg-cyan-600 text-white py-2 px-4 border border-cyan-600 hover:bg-transparent hover:text-cyan-600 transition-all duration-300 w-48"
         onClick={()=>{window.open(data.link)}} key={data.id}
       >
         Paper
