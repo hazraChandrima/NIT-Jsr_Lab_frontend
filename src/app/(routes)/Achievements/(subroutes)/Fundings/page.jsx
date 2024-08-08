@@ -29,7 +29,7 @@ export default function FundingsPage() {
       <h1 className='text-5xl font-sans font-light relative text-right right-6 text-sky-950'>RESEARCH FUNDINGS</h1>
    {
 
-     Object.keys(fundingData).map((year,i)=>(
+     Object.keys(fundingData).reverse().map((year,i)=>(
        
       <div className="journals my-8 flex flex-col items-center" key={i}>
   <h1 className="text-3xl font-sans font-light text-sky-950 my-8 text-center" key={i}>
