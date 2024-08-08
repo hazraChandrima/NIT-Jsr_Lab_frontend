@@ -18,14 +18,14 @@ export default function Hero({ title, subtitle }) {
   //   }, [index]);
 
   return (
-    <div style={{ height: "60vh", overflow: "clip", position: "relative" }}>
+    <div style={{ height: "82vh", overflow: "clip", position: "relative" }}>
       <motion.div
         ref={ref}
         initial={{ opacity: 0, y: 50 }} // Start slightly below with 0 opacity
         animate={controls}
-        className="textContainer heroText"
+        className="textContainer heroText mb-10"
       >
-        <div className="subtext">{title}</div>
+        <div className="subtext ">{title}</div>
 
         <div className="subtextSmall">{subtitle}</div>
       </motion.div>

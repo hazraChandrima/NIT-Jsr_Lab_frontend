@@ -38,8 +38,47 @@ function NewsPage() {
     router.push("/Updates/Details");
   };
 
+<<<<<<< HEAD
   const handlePageChange = (event, value) => {
     setCurrentPage(value);
+=======
+  const totalPages = Math.ceil(newsData.length / ITEMS_PER_PAGE);
+
+  const handlePageChange = (page) => {
+    if (page > 0 && page <= totalPages) {
+      setCurrentPage(page);
+    }
+  };
+
+  const getCurrentPageData = () => {
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    return newsData.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+  };
+
+  const renderPageNumbers = () => {
+    const pageNumbers = [];
+    const maxPagesToShow = 5;
+    let startPage = Math.max(1, currentPage - Math.floor(maxPagesToShow / 2));
+    let endPage = Math.min(totalPages, startPage + maxPagesToShow - 1);
+
+    if (endPage - startPage < maxPagesToShow - 1) {
+      startPage = Math.max(1, endPage - maxPagesToShow + 1);
+    }
+
+    for (let i = startPage; i <= endPage; i++) {
+      pageNumbers.push(
+        <button
+          key={i}
+          onClick={() => handlePageChange(i)}
+          className={`px-4 py-2 rounded-md ${currentPage === i ? 'bg-cyan-500' : 'bg-gray-300'} text-black`}
+        >
+          {i}
+        </button>
+      );
+    }
+
+    return pageNumbers;
+>>>>>>> origin/master
   };
 
   return (
@@ -71,6 +110,7 @@ function NewsPage() {
           )}
         </div>
       </div>
+<<<<<<< HEAD
       <div className="flex justify-center mb-10">
         <Stack spacing={2}>
           <Pagination
@@ -81,6 +121,24 @@ function NewsPage() {
             color="primary"
           />
         </Stack>
+=======
+      <div className="flex flex-wrap gap-2 justify-center space-x-2 mb-10">
+        <button
+          onClick={() => handlePageChange(currentPage - 1)}
+          className={`px-4 py-2 rounded-md ${currentPage === 1 ? 'bg-gray-100' : 'bg-cyan-500'} text-black`}
+          disabled={currentPage === 1}
+        >
+          {`<<`}
+        </button>
+        {renderPageNumbers()}
+        <button
+          onClick={() => handlePageChange(currentPage + 1)}
+          className={`px-4 py-2 rounded-md ${currentPage === totalPages ? 'bg-gray-100' : 'bg-cyan-500'} text-black`}
+          disabled={currentPage === totalPages}
+        >
+           {`>>`}
+        </button>
+>>>>>>> origin/master
       </div>
     </div>
   );

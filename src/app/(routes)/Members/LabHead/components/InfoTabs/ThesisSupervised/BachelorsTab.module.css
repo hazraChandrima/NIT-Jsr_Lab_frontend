@@ -48,9 +48,9 @@
 }
 
 .pagination li.active a {
-  background-color: #0070f3;
+  background-color: #0891b2;
   color: white;
-  border: 1px solid #0070f3;
+  border: 1px solid #0891b2;
 }
 
 .pagination li a:hover {

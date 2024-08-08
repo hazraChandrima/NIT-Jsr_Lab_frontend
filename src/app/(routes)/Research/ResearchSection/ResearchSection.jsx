@@ -5,7 +5,7 @@ const researchListItems = {};
 export default function ResearchSection() {
   return (
     <main className="min-h-screen w-full ">
-      <div className="min-h-dvh text-white px-7 py-5">
+      <div className="min-h-dvh text-white px-16 py-5">
         <h1 className="text-6xl font-sans text-sky-900 font-light text-right relative mb-5 mt-10 right-2">
           RESEARCH{" "}
         </h1>

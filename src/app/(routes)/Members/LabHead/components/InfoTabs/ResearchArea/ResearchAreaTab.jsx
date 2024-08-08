@@ -40,7 +40,7 @@ const ResearchAreaTab = () => {
         </>
       ) : (
         <>
-          <h2>Research Areas</h2>
+          <h2 className="text-sky-800">Research Areas</h2>
           <ul>
             {research.map((value, index) => (
               <li key={index}>{value.topic}</li>

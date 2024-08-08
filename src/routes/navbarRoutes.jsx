@@ -51,16 +51,16 @@ export const gallerySubroutes = [
     },
 ]
 
-export const informationSubroutes = [
-    {
-        name:"Information",
-        href:"/Information",
-    },
-]
+// export const informationSubroutes = [
+//     {
+//         name:"Information",
+//         href:"/Information",
+//     },
+// ]
 
-export const newsSubroutes = [
+export const updatesSubroutes = [
     {
-        name:"News",
-        href:"/News",
+        name:"Updates",
+        href:"/Updates",
     },
 ]

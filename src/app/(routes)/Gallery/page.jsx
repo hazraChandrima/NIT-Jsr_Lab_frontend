@@ -2,92 +2,92 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Head from 'next/head';
-import lab1 from '@/assets/images/lab1.png';
-import lab2 from '@/assets/images/lab2.png'
-import nit from '@/assets/images/nit_jsr.jpeg';
-import acad from '@/assets/images/old_acad.jpg';
+import placeholder from '@/assets/images/placeholder.png';
+// import lab2 from '@/assets/images/lab2.png'
+// import nit from '@/assets/images/nit_jsr.jpeg';
+// import acad from '@/assets/images/old_acad.jpg';
 const galleryData = {
   2024: {
     January: [
       {
-        link:lab1,
-        caption: 'New Year Celebration'
+        link:placeholder,
+        caption: 'caption'
       },
       {
-        link: nit,
-        caption: 'Winter Landscape'
+        link: placeholder,
+        caption: 'caption'
       }
     ],
     February: [
       {
-        link:lab2,
-        caption: 'Valentine’s Day Decorations'
+        link:placeholder,
+        caption: 'caption'
       },
       {
-        link: acad,
-        caption: 'Winter Sports'
+        link: placeholder,
+        caption: 'caption'
       }
     ],
     March: [
       {
-        link: lab1,
-        caption: 'Spring Blossoms'
+        link: placeholder,
+        caption: 'caption'
       }
     ]
   },
   2023: {
     December: [
       {
-        link: lab2,
-        caption: 'Holiday Lights'
+        link: placeholder,
+        caption: 'caption'
       },
       {
-        link:nit,
-        caption: 'Snowman Building'
+        link:placeholder,
+        caption: 'caption'
       }
     ],
     November: [
       {
-        link: acad,
-        caption: 'Autumn Leaves'
+        link: placeholder,
+        caption: 'caption'
       },
       {
-        link:nit,
-        caption: 'Thanksgiving Feast'
+        link:placeholder,
+        caption: 'caption'
       }
     ],
     October: [
       {
-        link:lab1,
-        caption: 'Halloween Party'
+        link:placeholder,
+        caption: 'caption'
       },
       {
-        link: lab2,
-        caption: 'Pumpkin Carving'
+        link: placeholder,
+        caption: 'caption'
       }
     ]
   },
   2022: {
     September: [
       {
-        link:nit,
-        caption: 'Back to School'
+        link:placeholder,
+        caption: 'caption'
       },
       {
-        link: acad,
-        caption: 'Fall Harvest'
+        link: placeholder,
+        caption: 'caption'
       }
     ],
     August: [
       {
-        link: lab1,
-        caption: 'Summer Beach'
+        link: placeholder,
+        caption: 'caption'
       }
     ],
     July: [
       {
-        link: acad,
-        caption: 'Summer Picnic'
+        link: placeholder,
+        caption: 'caption'
       }
     ]
   }
@@ -101,15 +101,15 @@ const GalleryPage = () => {
 
   return (
     <>
-      <h1 className='text-5xl font-sans font-light relative text-center right-6 text-sky-950'>GALLERY</h1>
+      <h1 className='text-5xl font-sans font-light relative text-center text-sky-950'>GALLERY</h1>
       <div className="p-8">
         {Object.entries(galleryData).map(([year, months]) => (
           <div key={year} className="mb-12">
-            <h1 className="text-4xl font-bold text-center mb-6">{year}</h1>
+            <h1 className="text-4xl font-bold text-center text-sky-700 mb-6">{year}</h1>
             {Object.entries(months).map(([month, images]) => (
               <div key={month} className="mb-8">
-                <h2 className="text-2xl font-semibold text-center mb-4">{month}</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <h2 className="text-2xl font-semibold text-center text-sky-900 mb-4">{month}</h2>
+                <div className="flex flex-row flex-wrap justify-center items-center">
                   {images.map((image, index) => (
                     <div key={index} className="relative group cursor-pointer">
                       <Image
@@ -117,7 +117,7 @@ const GalleryPage = () => {
                         alt={image.caption}
                         width={300}
                         height={200}
-                        className="object-cover"
+                        className="object-cover mx-7"
                         onClick={() => openModal(image.link)}
                       />
                       <p className="text-center mt-2">{image.caption}</p>

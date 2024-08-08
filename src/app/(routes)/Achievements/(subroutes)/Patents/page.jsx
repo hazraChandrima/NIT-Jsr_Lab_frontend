@@ -92,21 +92,21 @@ export default function PatentsPage() {
       <div className='flex flex-col bg-white py-5 min-h-dvh text-slate-600 items-center'>
        
       <BreadCrumbs/>
-      <h1 className='text-5xl font-sans font-light relative text-right right-6 text-sky-950'>PATENTS</h1>
+      <h1 className='text-5xl font-sans font-light relative text-center text-sky-900'>PATENTS</h1>
    {
 
      Object.keys(patentData).map((year,i)=>(
        
-      <div className="journals my-8 flex flex-col items-center" key={i}>
+      <div className="journals mt-8 flex flex-col items-center" key={i}>
   <h1 className="text-3xl font-sans font-light text-sky-950 my-8 text-center" key={i}>
     Fiscal Year {year}
   </h1>
   {patentData[year].map((data, index) => (
     <div
       key={index}
-      className="relative mb-20 max-w-4xl flex flex-col items-center border-b-2 border-[#00a2ff] border-dotted pb-8 w-full"
+      className="relative mb-10 w-4/5 flex flex-col items-center border-b-2 border-[#015fa7] border-dotted pb-8 "
     >
-      <div className="w-full text-center" key={index}>
+      <div className="w-4/5 text-center" key={index}>
         <p className="font-bold" key={index}>Patent No: {data.PatentNo}</p>
         <br/>
         <p key={index}>{data.title}</p>

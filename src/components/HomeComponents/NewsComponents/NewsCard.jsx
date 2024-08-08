@@ -22,6 +22,7 @@ function NewsCard({ date, title, description, viewMoreLink, galleryLink }) {
       <div className='flex flex-col sm:flex-row p-4 gap-4 items-start bg-transparent text-gray-600 rounded-lg shadow-md'>
         <div className='flex gap-4 items-center'>
           <div className='flex flex-col gap-2'>
+
           <p className='w-max pt-2'>{(date.split('T'))[0]}</p>
             <Link href={viewMoreLink} className="bg-transparent border text-xl text-center border-gray-500 px-4 py-2 rounded w-max">View More</Link>
             
@@ -29,7 +30,8 @@ function NewsCard({ date, title, description, viewMoreLink, galleryLink }) {
         </div>
         
         <div className='flex-grow hover:text-sky-500 transition duration-300 '>
-          <h2 className='text-3xl mb-4 text-sky-800 '>{title}</h2>
+          <h2 className='text-3xl mb-4 text-sky-800 font-thin'>{title}</h2>
+
           <p className='line-clamp-6 sm:line-clamp-4 overflow-hidden'>
             {description}
           </p>

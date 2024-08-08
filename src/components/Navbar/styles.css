@@ -19,7 +19,7 @@
 }
 
 .test::after{
-    background-color: #0f5e89 ; 
+    background-color: #0e4f75; 
 }
 
  .test:hover .navbar-option::after{

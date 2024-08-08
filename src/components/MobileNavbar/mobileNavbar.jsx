@@ -5,7 +5,7 @@ import Link from "next/link"
 import logo from "../../assets/images/logo.png"
 import Image from 'next/image';
 import { motion, AnimatePresence } from "framer-motion";
-import { researchSubroutes, membersSubroutes, achievementsSubroutes, gallerySubroutes, informationSubroutes, newsSubroutes } from '@/routes/navbarRoutes';
+import { researchSubroutes, membersSubroutes, achievementsSubroutes, gallerySubroutes, updatesSubroutes } from '@/routes/navbarRoutes';
 
 const subroutes = [
     {
@@ -27,6 +27,11 @@ const subroutes = [
         name: 'Gallery',
         href:'/Gallery',
         subroutes: gallerySubroutes,
+    },
+    {
+        name: 'Updates',
+        href:'/Updates',
+        subroutes: updatesSubroutes,
     }
 ];
 
@@ -96,7 +101,7 @@ export const MobileNavbar = () => {
                                     className="mb-6"
                                     variants={itemVariants}>
 
-                                    <h2 className="text-3xl text-sky-200 mb-2 "><Link  href={`/${section.href}`}>{section.name}</Link></h2>
+                                    <h2 className="text-3xl text-cyan-200 opacity-90 mb-2 "><Link  href={`/${section.href}`}>{section.name}</Link></h2>
                                     <hr className='h-[1px] w-56 bg-gray-300 mx-auto mb-5' />
                                     <ul className="list-none p-0">
 
@@ -106,7 +111,7 @@ export const MobileNavbar = () => {
                                                 variants={itemVariants}>
 
                                                 <Link href={route.href} onClick={handleLinkClick}>
-                                                    <div className="block p-1 text-xl hover:text-2xl hover:text-blue-400 rounded transition duration-200 ease-in-out transform hover:scale-105 font-light ">
+                                                    <div className="block p-1 text-xl hover:text-2xl hover:text-cyan-300 rounded transition duration-200 ease-in-out transform hover:scale-105 font-light ">
                                                         {route.name}
                                                     </div>
                                                 </Link>

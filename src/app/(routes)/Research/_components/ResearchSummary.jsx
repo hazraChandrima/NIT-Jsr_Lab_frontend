@@ -25,8 +25,8 @@ function ResearchSummary({ summary }) {
         </div>
       </div>
       <div className="flex-[1_1_330px] items-start text-white p-4 m-2 max-width-[600px] ">
-        <h3 className="font-serif pb-6 text-md text-gray-700  tracking-wide font-bold">
-          Research Summary and Aim
+      <h3 className="text-xl pb-6 text-md text-blue-900 tracking-wide opacity-95 font-bold">
+          RESEARCH SUMMARY AND AIM
         </h3>
         <p className="text-sm text-gray-700 tracking-wider pb-6">{summary}</p>
         <Button text={"Back to Research list"} href={"/Research"} />
