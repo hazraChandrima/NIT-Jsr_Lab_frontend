@@ -10,11 +10,9 @@ const PHDTab = ({ data }) => {
     { research_topic: 'NO Thesis Supervised', name_of_student: 'N/A', year: 0 },
   ];
 
-  // Calculate the offset and the current page's data
   const offset = currentPage * itemsPerPage;
   const currentData = theses.slice(offset, offset + itemsPerPage);
 
-  // Handle page change
   const handlePageChange = ({ selected }) => {
     setCurrentPage(selected);
   };
