@@ -36,10 +36,10 @@ const ThesisSupervisedTab = () => {
         result3.sort((x,y)=>y.completion_year - x.completion_year)
         setData3(result3);
 
-        setLoading(false); // Stop loading once data is fetched
+        setLoading(false); 
       } catch (error) {
         console.error('Error fetching data:', error);
-        setLoading(false); // Stop loading even if there's an error
+        setLoading(false);
       }
     };
 
