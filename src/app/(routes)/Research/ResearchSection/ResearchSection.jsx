@@ -1,8 +1,25 @@
-import TeamComponent from "@/components/HomeComponents/TeamSection/Cards";
-import researchData from "../data";
-const researchListItems = {};
+"use client";
+import { useEffect, useState } from "react";
+import TeamComponent from "@/components/HomeComponents/TeamSection/Cards"; // Import the utility function
+import { fetchData } from "@/utils/fetchData";
 
 export default function ResearchSection() {
+  const [researchData, setResearchData] = useState([]);
+  const apiUrl =
+    "https://cozy-captain-963d285ad5.strapiapp.com/api/research-sections";
+
+  useEffect(() => {
+    const getResearchData = async () => {
+      const data = await fetchData(apiUrl);
+      console.log(data);
+      if (data && data.data) {
+        setResearchData(data.data);
+      }
+    };
+
+    getResearchData();
+  }, []);
+
   return (
     <main className="min-h-screen w-full ">
       <div className="min-h-dvh text-white px-16 py-5">
@@ -17,10 +34,10 @@ export default function ResearchSection() {
           {researchData.map((item) => (
             <TeamComponent
               key={item.id}
-              title={item.title}
+              title={item.attributes.ResearchTitle}
               link={`/Research/${item.id}`}
-              description={item.description}
-              imageUrl={item.imageUrl}
+              description={item.attributes.ResearchTitle}
+              // imageUrl={item.attributes.imageUrl}
             />
           ))}
         </div>

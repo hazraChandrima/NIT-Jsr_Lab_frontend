@@ -15,7 +15,9 @@ function ResearchMembers({ membersList }) {
       className="w-full pt-4"
     >
       <div className="text-center w-[90vw] mx-auto border-2 border-transparent border-b-slate-200 ">
-        <h3 className="text-xl font-bold mb-6 opacity-80 text-sky-900">MEMBERS</h3>
+        <h3 className="text-xl font-bold mb-6 opacity-80 text-sky-900">
+          MEMBERS
+        </h3>
         <div className="mb-6">
           {membersList && membersList.length > 0 ? (
             membersList.map((member, index) => (
