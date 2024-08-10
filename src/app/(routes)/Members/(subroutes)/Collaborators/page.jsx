@@ -13,7 +13,7 @@ function Collaborators() {
     const getData = async () => {
       setLoading(true);
       const activitiesData = await fetch(
-        `https://cozy-captain-963d285ad5.strapiapp.com/api/members?populate=profilePhoto`
+        `https://cozy-captain-963d285ad5.strapiapp.com/api/members?filters[role][$eq]=Collaborator`
       );
       const res = await activitiesData.json();
       setCollaborators(res.data);
@@ -30,9 +30,7 @@ function Collaborators() {
           <div>Loading Data...</div>
         ) : (
           <>
-            {/* Faculty */}
             <div className="mb-20">
-              {/* Heading */}
               <div className="mb-10">
                 <h1 className="text-3xl mb-5 text-sky-950">
                   Collaborative Researchers
