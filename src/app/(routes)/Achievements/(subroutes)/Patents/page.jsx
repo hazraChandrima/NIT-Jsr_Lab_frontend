@@ -1,128 +1,71 @@
 "use client";
 import BreadCrumbs from "@/components/BreadCrumbs/BreadCrumbs";
+import { useEffect, useState } from "react";
+
 export default function PatentsPage() {
-  const patentData = {
-    2023: [
-      {
-        PatentNo: 'US7890123G',
-        Inventors: ['Kevin Scott', 'Laura King'],
-        Applicant: 'National Institute of Technology Jamshedpur',
-        date: '30th August 2023',
-        title: 'Advanced Quantum Computing Algorithm'
-      }
-    ],
-    2022: [
-      {
-        PatentNo: 'US6789012F',
-        Inventors: ['Isaac Lee', 'Judy Martinez'],
-        Applicant: 'National Institute of Technology Jamshedpur',
-        date: '9th April 2022',
-        title: 'Novel Energy Storage Solution'
-      },
-      {
-        PatentNo: 'US8901234H',
-        Inventors: ['Michael Young', 'Nina Green'],
-        Applicant: 'National Institute of Technology Jamshedpur',
-        date: '18th May 2022',
-        title: 'Self-Healing Materials for Construction'
-      }
-    ],
-    2021: [
-      {
-        PatentNo: 'US5678901E',
-        Inventors: ['George Clark', 'Helen Adams'],
-        Applicant: 'National Institute of Technology Jamshedpur',
-        date: '15th November 2021',
-        title: 'AI-Driven Healthcare Diagnostic System'
-      }
-    ],
-    2020: [
-      {
-        PatentNo: 'US4567890D',
-        Inventors: ['Edward Harris', 'Fiona Wilson'],
-        Applicant: 'National Institute of Technology Jamshedpur',
-        date: '8th January 2020',
-        title: 'Wireless Charging Technology for Electric Vehicles'
-      }
-    ],
-    2019: [
-      {
-        PatentNo: 'US3456789C',
-        Inventors: ['Charlie Davis', 'Diana Evans'],
-        Applicant: 'National Institute of Technology Jamshedpur',
-        date: '23rd July 2019',
-        title: 'Enhanced Data Encryption Methods'
-      }
-    ],
-    2018: [
-      {
-        PatentNo: 'US2345678B',
-        Inventors: ['Alice Johnson', 'Bob Brown'],
-        Applicant: 'National Institute of Technology Jamshedpur',
-        date: '5th March 2018',
-        title: 'Eco-Friendly Water Purification System'
-      },
-      {
-        PatentNo: 'US9012345I',
-        Inventors: ['Olivia Wright', 'Patrick Hill'],
-        Applicant: 'National Institute of Technology Jamshedpur',
-        date: '21st February 2018',
-        title: 'Augmented Reality for Education'
-      }
-    ],
-    2017: [
-      {
-        PatentNo: 'US1234567A',
-        Inventors: ['John Doe', 'Jane Smith'],
-        Applicant: 'National Institute of Technology Jamshedpur',
-        date: '12th October 2017',
-        title: 'High-Efficiency Solar Panel Design'
-      },
-      {
-        PatentNo: 'US0123456J',
-        Inventors: ['Quincy Jones', 'Rachel Taylor'],
-        Applicant: 'National Institute of Technology Jamshedpur',
-        date: '3rd December 2017',
-        title: 'Smart Wearable Health Monitor'
-      }
-    ]
-  };
-  
-    return (
-      <div className='flex flex-col bg-white py-5 min-h-dvh text-slate-600 items-center'>
-       
-      <BreadCrumbs/>
+
+
+  const [patentData, setPatentData] = useState({});
+  const [years, setYears] = useState([]);
+
+  useEffect(() => {
+    const getData = async () => {
+      const response = await fetch(`https://cozy-captain-963d285ad5.strapiapp.com/api/patents?populate[docs][fields][0]=*&populate[head][fields][0]=*&populate[collaborators][fields][0]=*`);
+      const data = await response.json();
+      
+
+      const sortedData = data.data.sort((a, b) => new Date(b.attributes.date_of_publication) - new Date(a.attributes.date_of_publication));
+
+      const groupedData = sortedData.reduce((acc, item) => {
+        const year = new Date(item.attributes.date_of_publication).getFullYear();
+        if (!acc[year]) {
+          acc[year] = [];
+        }
+        acc[year].push(item);
+        return acc;
+      }, {});
+      console.log("grouped datA",groupedData);
+      
+      setPatentData(groupedData);
+      setYears(Object.keys(groupedData).sort((a, b) => b - a)); 
+    };
+
+    getData();
+  }, []);
+
+  return (
+    <div className='flex flex-col bg-white py-5 min-h-dvh text-slate-600 items-center'>
+      <BreadCrumbs />
       <h1 className='text-5xl font-sans font-light relative text-center text-sky-900'>PATENTS</h1>
-   {
-
-     Object.keys(patentData).map((year,i)=>(
-       
-      <div className="journals mt-8 flex flex-col items-center" key={i}>
-  <h1 className="text-3xl font-sans font-light text-sky-950 my-8 text-center" key={i}>
-    Fiscal Year {year}
-  </h1>
-  {patentData[year].map((data, index) => (
-    <div
-      key={index}
-      className="relative mb-10 w-4/5 flex flex-col items-center border-b-2 border-[#015fa7] border-dotted pb-8 "
-    >
-      <div className="w-4/5 text-center" key={index}>
-        <p className="font-bold" key={index}>Patent No: {data.PatentNo}</p>
-        <br/>
-        <p key={index}>{data.title}</p>
-        <p key={index}>Inventors: {data.Inventors.join(', ')}</p>
-        <br/>
-        <p className="italic" key={index}>Applicant: {data.Applicant}</p>
-        <p className="italic" key={index}>Registration Date: {data.date}</p>
-      </div>
+      {years.map((year, i) => (
+        <div className="journals mt-8 flex flex-col items-center" key={i}>
+          <h1 className="text-3xl font-sans font-light text-sky-950 my-8 text-center">
+            Fiscal Year {year}
+          </h1>
+          {patentData[year].map((patent, index) => (
+            <div
+              key={index}
+              className="relative mb-10 w-4/5 flex flex-col items-center border-b-2 border-[#015fa7] border-dotted pb-8"
+            >
+              <div className="w-4/5 text-center">
+                <p className="font-bold">{patent.attributes.title}</p>
+                <p>{patent.attributes.description?patent.attributes.description:patent.attributes.description}</p>
+                <p>Inventors: {patent.attributes.collaborators.data.map(c => c.attributes.name).join(', ')}</p>
+                <p className="">Head: {patent.attributes.head.data.attributes.name}</p>
+                <p className="">Date of Publication: {patent.attributes.date_of_publication}</p>
+                {patent.attributes.docs.data.length > 0 && (
+                  <p className="">
+                    Links:{" "}
+                    <a href={patent.attributes.docs.data[0].attributes.url} target="_blank" rel="noopener noreferrer" className="text-blue-400">
+                      {patent.attributes.docs.data[0].attributes.name}
+                    </a>
+                  </p>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      ))}
     </div>
-))}
-</div>
-
-     
-     
-     ))
-   }
-   </div>
-    )
-  }
+  );
+}
