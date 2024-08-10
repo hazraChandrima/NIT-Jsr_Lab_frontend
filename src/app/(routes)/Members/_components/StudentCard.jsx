@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import useAnimationHook from "@/hooks/AnimationHooks/moveUp";
 import Link from "next/link";
 
-const StaffCard = ({ name, role, imageUrl, rollNumber }) => {
+const StudentCard = ({ name, role, imageUrl, rollNumber }) => {
   const { ref, controls } = useAnimationHook();
 
   return (
@@ -37,4 +37,4 @@ const StaffCard = ({ name, role, imageUrl, rollNumber }) => {
   );
 };
 
-export default StaffCard;
+export default StudentCard;
