@@ -1,16 +1,51 @@
 "use client";
-import students from "../data";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Button from "@/app/(routes)/Research/_components/Button";
 
 const StudentPage = ({ params }) => {
   const { rollNumber } = params;
+  const [student, setStudent] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  // Find the student data based on rollNumber
-  const student = students.find((s) => s.rollNumber === rollNumber);
+  useEffect(() => {
+    const fetchStudentData = async () => {
+      try {
+        const response = await fetch(
+          `https://cozy-captain-963d285ad5.strapiapp.com/api/Students?filters[roll][$eq]=${rollNumber}&populate=*`
+        );
+        const result = await response.json();
 
-  if (!student) {
-    return <p className="text-center text-red-500">Student not found</p>;
+        if (result.data && result.data.length > 0) {
+          const studentData = result.data[0].attributes;
+          setStudent({
+            name: studentData.name,
+            about: studentData.about,
+            photo: studentData.profilePhoto?.data?.attributes?.url,
+            researches: studentData.researchList.map((r) => r.research),
+            projects: studentData.projectList.map((p) => p.project),
+            resumeButton: studentData.resume?.data?.attributes?.url || "#", // Replace with a default or placeholder resume URL
+          });
+        } else {
+          setError("Student not found");
+        }
+      } catch (err) {
+        setError("Failed to fetch student data");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchStudentData();
+  }, [rollNumber]);
+
+  if (loading) {
+    return <p className="text-center">Loading...</p>;
+  }
+
+  if (error) {
+    return <p className="text-center text-red-500">{error}</p>;
   }
 
   return (
@@ -23,11 +58,16 @@ const StudentPage = ({ params }) => {
         <div className="text-center mb-4">
           <h1 className="text-3xl font-bold">{student.name}</h1>
         </div>
-        <img
-          src={student.photo}
-          alt={`${student.name}'s photo`}
-          className="mx-auto rounded-lg shadow-lg mb-4"
-        />
+        {student?.photo && (
+          <div className="flex justify-center mb-4">
+            <img
+              src={student.photo}
+              alt={`${student.name}'s photo`}
+              className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 rounded-full object-cover shadow-lg"
+            />
+          </div>
+        )}
+
         <div className="flex flex-col items-start max-w-[600px] mx-auto mb-6">
           <h3 className="font-serif text-md text-gray-700 tracking-wide font-bold mb-2">
             About
