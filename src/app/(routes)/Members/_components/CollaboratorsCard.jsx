@@ -5,11 +5,11 @@ import { motion } from "framer-motion";
 import useAnimationHook from "@/hooks/AnimationHooks/moveUp";
 import Link from "next/link";
 
-const StudentCard = ({ name, role, imageUrl, rollNumber }) => {
+const CollaboratorsCard = ({ name, role, imageUrl, id }) => {
   const { ref, controls } = useAnimationHook();
 
   return (
-    <Link href={`/Members/Students/${rollNumber}`}>
+    <Link href={`/Members/Collaborators/${id}`}>
       <motion.div
         ref={ref}
         initial={{ opacity: 0, y: 50 }}
@@ -37,4 +37,4 @@ const StudentCard = ({ name, role, imageUrl, rollNumber }) => {
   );
 };
 
-export default StudentCard;
+export default CollaboratorsCard;
