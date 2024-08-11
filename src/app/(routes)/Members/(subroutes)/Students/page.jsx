@@ -10,7 +10,7 @@ export default function Page() {
 
   useEffect(() => {
     const fetchStudents = async () => {
-      try {
+      try {  
         const response = await fetch(
           "https://cozy-captain-963d285ad5.strapiapp.com/api/Students"
         );
