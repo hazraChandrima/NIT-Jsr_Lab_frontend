@@ -95,7 +95,7 @@ export const MobileNavbar = () => {
                         exit="exit"
                         variants={containerVariants}
                     >
-                        <div className="overflow-y-scroll font-sans pt-10 mt-auto mb-10 pb-8 text-white text-center h-auto w-full max-w-3xl">
+                        <div className="overflow-y-scroll font-sans pt-10 mt-auto mb-10 pb-8 text-slate-200 text-center h-auto w-full max-w-3xl">
                             {subroutes.map((section, index) => (
                                 <motion.div key={index}
                                     className="mb-6"
