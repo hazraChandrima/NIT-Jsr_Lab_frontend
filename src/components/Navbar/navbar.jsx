@@ -60,7 +60,7 @@ export default function Navbar() {
 
   return (
 
-    <div className="lg:visible font-sans xl:visible invisible bg-white flex flex-row fixed h-20 w-full z-40 text-black bg-opacity-70">
+    <div className="lg:visible font-sans xl:visible invisible shadow-md bg-white flex flex-row fixed h-20 w-full z-40 text-black bg-opacity-70">
 
       <div className="relative flex items-center justify-center" >
         <span className="p-4 font-semibold text-xl">

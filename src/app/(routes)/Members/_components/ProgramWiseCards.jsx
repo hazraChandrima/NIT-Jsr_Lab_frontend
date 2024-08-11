@@ -18,7 +18,7 @@ function ProgramWiseCard() {
     ref={ref}
     initial={{ opacity: 0, y: 50 }} // Start slightly below with 0 opacity
     animate={controls}
-    className=' flex flex-col text-slate-500'>
+    className=' flex flex-col text-slate-500 hover:shadow-2xl shadow-lg '>
      
     <div className='flex flex-col gap-2'>
 

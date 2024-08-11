@@ -14,7 +14,7 @@ const StudentCard = ({ name, role, imageUrl, rollNumber }) => {
         ref={ref}
         initial={{ opacity: 0, y: 50 }}
         animate={controls}
-        className="bg-white rounded-sm shadow-lg overflow-hidden cursor-pointer"
+        className="bg-white rounded-sm hover:shadow-2xl shadow-lg overflow-hidden cursor-pointer"
       >
         <div className="overflow-hidden flex items-center justify-center">
           <img src={imageUrl} alt={name} className="h-full w-auto" />

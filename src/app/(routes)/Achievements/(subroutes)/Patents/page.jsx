@@ -34,25 +34,28 @@ export default function PatentsPage() {
   }, []);
 
   return (
-    <div className='flex flex-col bg-white py-5 min-h-dvh text-slate-600 items-center'>
+    <div className='flex flex-col bg-white py-5 min-h-dvh text-slate-600'>
       <BreadCrumbs />
-      <h1 className='text-5xl font-sans font-light relative text-center text-sky-900'>PATENTS</h1>
+      <h1 className='text-5xl font-sans font-light relative text-left ml-7 sm:ml-10 mt-14 mb-7 text-sky-900'>PATENTS</h1>
+      <div className=" h-[2px] bg-slate-300 mx-8">
+        {/* <div className="w-[25%] h-full bg-sky-600"></div> */}
+      </div>
       {years.map((year, i) => (
-        <div className="journals mt-8 flex flex-col items-center" key={i}>
-          <h1 className="text-3xl font-sans font-light text-sky-950 my-8 text-center">
+        <div className="journals mt-8 flex flex-col " key={i}>
+          <h1 className="text-3xl font-sans text-sky-950 font-thin mt-8 ml-4 sm:ml-7">
             Fiscal Year {year}
           </h1>
           {patentData[year].map((patent, index) => (
             <div
               key={index}
-              className="relative mb-10 w-4/5 flex flex-col items-center border-b-2 border-[#015fa7] border-dotted pb-8"
+              className="relative ml-4 sm:ml-7"
             >
-              <div className="w-4/5 text-center">
-                <p className="font-bold">{patent.attributes.title}</p>
+              <div className="w-4/5">
+                <p className="font-bold mt-8 text-sky-600">{patent.attributes.title}</p>
                 <p>{patent.attributes.description?patent.attributes.description:patent.attributes.description}</p>
-                <p>Inventors: {patent.attributes.collaborators.data.map(c => c.attributes.name).join(', ')}</p>
-                <p className="">Head: {patent.attributes.head.data.attributes.name}</p>
-                <p className="">Date of Publication: {patent.attributes.date_of_publication}</p>
+                <p className="font-semibold">Inventors: {patent.attributes.collaborators.data.map(c => c.attributes.name).join(', ')}</p>
+                <p className="font-semibold">Head: {patent.attributes.head.data.attributes.name}</p>
+                <p className="font-semibold">Date of Publication: {patent.attributes.date_of_publication}</p>
                 {patent.attributes.docs.data.length > 0 && (
                   <p className="">
                     Links:{" "}
