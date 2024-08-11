@@ -41,8 +41,8 @@ export default function JournalsPage() {
               Published on {year}
             </h1>
             {researchData[year].map((data) => (
-              <div className="mb-12 bg-slate-50 rounded-sm mx-auto px-8 flex flex-col items-center sm:items-center py-8 w-4/5 md:w-2/3">
-              <div key={data.id} className="  ">
+              <div className="mb-12 bg-slate-50 rounded-sm mx-auto px-8 flex flex-col items-center sm:items-center py-8 w-4/5 md:w-2/3" key={data.id}>
+              <div  className="  ">
                 <div className=" w-full relative " key={data.id}>
                   <span className="text-left absolute font-bold" key={data.id}>{data.attributes.Title}</span>
                   <span className="italic absolute right-4 text-right" key={data.id}>{data.attributes.Date}</span>
