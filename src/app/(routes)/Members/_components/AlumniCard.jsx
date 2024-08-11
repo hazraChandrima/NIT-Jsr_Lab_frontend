@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 import useAnimationHook from "@/hooks/AnimationHooks/moveUp";
@@ -14,10 +14,15 @@ const AlumniCard = ({ name, role, imageUrl, id }) => {
         ref={ref}
         initial={{ opacity: 0, y: 50 }}
         animate={controls}
-        className="bg-white rounded-sm hover:shadow-2xl shadow-lg overflow-hidden cursor-pointer"
+        className="bg-white  rounded-sm hover:shadow-2xl shadow-lg overflow-hidden cursor-pointer"
       >
         <div className="overflow-hidden flex items-center justify-center">
-          <img src={imageUrl} alt={name} className="h-full w-auto" />
+          <Image 
+          src={imageUrl} 
+          alt={name} 
+          width={300}
+          height={150}
+          className="h-52 w-80 object-cover" />
         </div>
         <div className="p-3 bg-sky-600 w-[85%] relative bottom-4 text-white">
           <p className="text-lg font-light truncate">{role}</p>

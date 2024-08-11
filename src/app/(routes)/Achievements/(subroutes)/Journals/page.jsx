@@ -55,8 +55,8 @@ export default function JournalsPage() {
                 </div>
               
               </div>
-              <div className="flex sm:flex-row sm:justify-between flex-wrap flex-col items-center w-full">
-                <button className="font-semibold px-3 py-1 sm:mr-3 rounded-sm bg-gray-200 text-left" key={data.id}>{data.attributes.author.data.attributes.name}</button>
+              <div className="flex sm:flex-row sm:justify-between flex-wrap flex-col w-full">
+                <button className="font-semibold px-3 py-1 sm:mr-3 w-fit rounded-sm bg-gray-200 text-left" key={data.id}>{data.attributes.author.data.attributes.name}</button>
                 <button
                   className=" right-0  bg-cyan-600 sm:ml-3 mt-5 sm:mt-0 text-white py-2 px-4 border-2 border-cyan-600 hover:bg-transparent hover:text-cyan-600 transition-all duration-300 w-48"
                   onClick={() => { window.open(data.attributes.Link) }} key={data.id}

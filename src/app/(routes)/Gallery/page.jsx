@@ -105,6 +105,7 @@ const GalleryPage = () => {
                         description={album.description}
                         imageUrl={album.coverImage}
                         id={album.id}
+                        className="mx-5"
                       />
                     </motion.div>
                   ))}
