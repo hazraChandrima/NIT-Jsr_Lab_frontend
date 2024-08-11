@@ -9,13 +9,13 @@ const GalleryPage = ({ params }) => {
 
     const { id } = params;
     const [images, setImages] = useState(null);
-    const [heading,setHeading]= useState(null);
+    const [heading, setHeading] = useState(null);
     const [desc, setDesc] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [selectedImage, setSelectedImage] = useState(null);
 
-    const{ref, controls}= useAnimationHook();
+    const { ref, controls } = useAnimationHook();
 
     useEffect(() => {
         const fetchImages = async () => {
@@ -27,7 +27,7 @@ const GalleryPage = ({ params }) => {
 
                 if (result.data) {
                     const albumHeading = result.data.attributes.name;
-                    const albumDesc= result.data.attributes.description;
+                    const albumDesc = result.data.attributes.description;
                     const imageData = result.data.attributes.images;
                     const formattedImages = imageData.map((img) => ({
                         title: img.title,
@@ -63,7 +63,8 @@ const GalleryPage = ({ params }) => {
     const closeModal = () => setSelectedImage(null);
 
     return (
-        <div>
+
+        <div className='px-10'>
 
             {selectedImage && (
                 <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
@@ -85,31 +86,36 @@ const GalleryPage = ({ params }) => {
                 </div>
             )}
 
-            <h2 className='text-center text-2xl font-semibold my-7'>{heading}</h2>
-            <p className='text-center text-gray-700 mb-10'>{desc}</p>
-            <div className=" mx-10 p-6 mb-7 flex flex-row justify-evenly flex-wrap">
+            <h2 className='text-right mr-8 text-2xl sm:text-3xl font-sans text-sky-800 font-semibold my-5'>{heading}</h2>
+            <p className='text-right mr-8 text-gray-700 mb-5'>{desc}</p>
+            <div className="w-full h-[1px] mb-10 bg-slate-300"></div>
+            <div className=" mr-8 mb-7 w-full flex flex-row justify-evenly flex-wrap">
                 {images.map((image, index) => (
                     <motion.div
                         key={index}
-                        className="mb-8 w-80"
+                        className="relative mb-8 group mx-5"
                         ref={ref}
                         initial={{ opacity: 0, y: 50 }}
                         animate={controls}
+                        onClick={() => openModal(image.url)}
                     >
                         <Image
                             src={image.url}
                             alt={image.title}
                             width={400}
                             height={200}
-                            className="object-cover hover:shadow-2xl transition transition-duration-200 mb-4"
+                            className="object-cover transition transition-duration-400 mb-4 group-hover:brightness-[40%] group-hover:shadow-2xl group-hover:cursor-pointer"
                             onClick={() => openModal(image.url)}
                         />
-                        <h2 className="text-xl font-semibold mb-2">{image.title}</h2>
-                        <p className="text-gray-700">{image.description}</p>
+                        <div className="absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h2 className="text-xl font-sans font-semibold mb-2 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">{image.title}</h2>
+                            <p className="text-gray-200 text-center mb-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">{image.description}</p>
+                        </div>
                     </motion.div>
                 ))}
             </div>
         </div>
+
     )
 }
 

@@ -13,25 +13,10 @@ const GalleryPage = () => {
   const { ref, controls } = useAnimationHook();
   const [albums, setAlbums] = useState([]);
   const [loading, setLoading] = useState(null);
-  // const imageUrl = "https://i.pinimg.com/736x/09/21/fc/0921fc87aa989330b8d403014bf4f340.jpg";
-  // const [coverImage, setCoverImage] = useState(null);
-
-
 
   useEffect(() => {
     const fetchAlbums = async () => {
       setLoading(true);
-      // const response = await fetch(
-      //   `https://cozy-captain-963d285ad5.strapiapp.com/api/galleries?populate=cover_image`
-      // )
-      // const result = await response.json();
-
-      //   const coverPhoto = result.data.attributes?.cover_image?.data?.attributes?.url;
-
-      // setCoverImage(coverPhoto);
-      // setAlbums(result.data);
-      // setLoading(false);
-
       try {
         const response = await fetch(
           `https://cozy-captain-963d285ad5.strapiapp.com/api/galleries?populate=cover_image`
@@ -57,32 +42,6 @@ const GalleryPage = () => {
 
   }, []);
 
-
-
-
-  // useEffect(() => {
-  //   const fetchAlbums = async () => {
-  //     setLoading(true);
-  //     const response = await fetch(
-  //       `https://cozy-captain-963d285ad5.strapiapp.com/api/galleries?populate=cover_image`
-  //     )
-  //     const result = await response.json();
-
-  //     if (result.data) {
-  //       const coverImage = result.data.attributes.cover_image?.data?.attributes?.url;
-  //       const formattedImages = imageData.map((img) => ({
-  //           title: img.title,
-  //           description: img.description,
-  //           url: img.media.data.attributes.url,
-  //       }));
-  //     setAlbums(formattedImages);
-  //     setCoverImage(coverImage);
-  //     setLoading(false);
-  //   };
-  // };
-  //   fetchAlbums();
-
-  // }, []);
 
 
   return (
@@ -132,22 +91,6 @@ const GalleryPage = () => {
                   </div>
                 </div>
                 <div className=" flex flex-row flex-wrap justify-evenly items-center">
-                  {/* {albums.map((album) => (
-                    <motion.div
-                      className="mb-8 w-80"
-                      ref={ref}
-                      initial={{ opacity: 0, y: 50 }}
-                      animate={controls}
-                    >
-                      <AlbumCard
-                        key={album.id}
-                        name={album.attributes.name}
-                        description={album.attributes.description}
-                        imageUrl={coverImage}
-                        id={album.id}
-                      />
-                    </motion.div>
-                  ))} */}
 
                   {albums.map(album => (
                     <motion.div
