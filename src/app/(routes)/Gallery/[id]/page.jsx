@@ -66,6 +66,37 @@ const GalleryPage = ({ params }) => {
 
         <div className='px-10'>
 
+            <h2 className='text-right mr-8 text-2xl sm:text-3xl font-sans text-sky-800 font-semibold my-3'>{heading}</h2>
+            <p className='text-right mr-8 text-gray-700 mb-5'>{desc}</p>
+            <div className="w-full h-[1px] mb-10 bg-slate-300"></div>
+            <motion.div 
+             ref={ref}
+             initial={{ opacity: 0, y: 50 }}
+             animate={controls}
+            className=" mr-8 mb-7 w-full flex flex-row justify-evenly flex-wrap">
+                {images.map((image, index) => (
+                    <div
+                        key={index}
+                        className="relative mb-8 group mx-3"
+                        onClick={() => openModal(image.url)}
+                    >
+                        <Image
+                            src={image.url}
+                            alt={image.title}
+                            width={400}
+                            height={200}
+                            className="object-cover transition h-44 w-80 sm:w-96 sm:h-72 transition-duration-400 mb-4 group-hover:brightness-[40%] group-hover:shadow-2xl group-hover:cursor-pointer"
+                            onClick={() => openModal(image.url)}
+                        />
+                        <div className="absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h2 className="text-xl font-sans font-semibold mb-2 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">{image.title}</h2>
+                            <p className="text-gray-200 text-center mb-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">{image.description}</p>
+                        </div>
+                    </div>
+                ))}
+            </motion.div>
+
+            
             {selectedImage && (
                 <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
                     <div className="relative max-w-4xl mx-4">
@@ -85,35 +116,6 @@ const GalleryPage = ({ params }) => {
                     </div>
                 </div>
             )}
-
-            <h2 className='text-right mr-8 text-2xl sm:text-3xl font-sans text-sky-800 font-semibold my-5'>{heading}</h2>
-            <p className='text-right mr-8 text-gray-700 mb-5'>{desc}</p>
-            <div className="w-full h-[1px] mb-10 bg-slate-300"></div>
-            <div className=" mr-8 mb-7 w-full flex flex-row justify-evenly flex-wrap">
-                {images.map((image, index) => (
-                    <motion.div
-                        key={index}
-                        className="relative mb-8 group mx-5"
-                        ref={ref}
-                        initial={{ opacity: 0, y: 50 }}
-                        animate={controls}
-                        onClick={() => openModal(image.url)}
-                    >
-                        <Image
-                            src={image.url}
-                            alt={image.title}
-                            width={400}
-                            height={200}
-                            className="object-cover transition w-96 h-72 transition-duration-400 mb-4 group-hover:brightness-[40%] group-hover:shadow-2xl group-hover:cursor-pointer"
-                            onClick={() => openModal(image.url)}
-                        />
-                        <div className="absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <h2 className="text-xl font-sans font-semibold mb-2 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">{image.title}</h2>
-                            <p className="text-gray-200 text-center mb-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">{image.description}</p>
-                        </div>
-                    </motion.div>
-                ))}
-            </div>
         </div>
 
     )

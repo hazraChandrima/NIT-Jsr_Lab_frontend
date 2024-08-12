@@ -9,7 +9,7 @@ const useAnimationHook = () => {
   const controls = useAnimation();
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.3,
+    threshold: 0.1,
   });
 
   useEffect(() => {
