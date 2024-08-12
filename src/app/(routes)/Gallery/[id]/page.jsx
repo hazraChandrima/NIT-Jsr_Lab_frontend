@@ -104,7 +104,7 @@ const GalleryPage = ({ params }) => {
                             alt={image.title}
                             width={400}
                             height={200}
-                            className="object-cover transition transition-duration-400 mb-4 group-hover:brightness-[40%] group-hover:shadow-2xl group-hover:cursor-pointer"
+                            className="object-cover transition w-96 h-72 transition-duration-400 mb-4 group-hover:brightness-[40%] group-hover:shadow-2xl group-hover:cursor-pointer"
                             onClick={() => openModal(image.url)}
                         />
                         <div className="absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
