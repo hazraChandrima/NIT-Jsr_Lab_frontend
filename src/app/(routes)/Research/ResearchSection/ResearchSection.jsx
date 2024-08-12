@@ -1,24 +1,36 @@
 "use client";
 import { useEffect, useState } from "react";
-import TeamComponent from "@/components/HomeComponents/TeamSection/Cards"; // Import the utility function
+import TeamComponent from "@/components/HomeComponents/TeamSection/Cards"; 
 import { fetchData } from "@/utils/fetchData";
 
 export default function ResearchSection() {
   const [researchData, setResearchData] = useState([]);
-  const apiUrl =
-    "https://cozy-captain-963d285ad5.strapiapp.com/api/research-sections";
+  const[loading,setLoading]=useState(true);
+  const apiURL =
+    "https://cozy-captain-963d285ad5.strapiapp.com/api/research-sections?populate[Thumbnail]=*";
 
   useEffect(() => {
-    const getResearchData = async () => {
-      const data = await fetchData(apiUrl);
-      console.log(data);
-      if (data && data.data) {
-        setResearchData(data.data);
+    const getResearchData= async() =>{
+      try{ 
+      const response = await fetch(apiURL);
+      const result= await response.json();
+      if(result.data){
+        setResearchData(result.data);
       }
+    }
+    catch(error) {
+      console.error("Error fetching thumbnail:", error);
+    }
+    finally{
+      setLoading(false);
+    }
     };
-
     getResearchData();
-  }, []);
+  },[]);
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
 
   return (
     <main className="min-h-screen w-full ">
@@ -37,7 +49,7 @@ export default function ResearchSection() {
               title={item.attributes.ResearchTitle}
               link={`/Research/${item.id}`}
               description={item.attributes.ResearchTitle}
-              // imageUrl={item.attributes.imageUrl}
+              imageUrl={item.attributes.Thumbnail?.data?.attributes?.url}
             />
           ))}
         </div>

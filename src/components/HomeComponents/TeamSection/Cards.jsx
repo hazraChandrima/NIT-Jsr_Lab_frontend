@@ -1,17 +1,19 @@
 "use client";
-
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import ViewMore from "../ViewMoreComponent/ViewMoreComponent";
 import Link from "next/link";
 
-const TeamComponent = ({ title, description, link }) => {
+const TeamComponent = ({ title, description, link, imageUrl}) => {
   const controls = useAnimation();
   const [ref, inView] = useInView({
-    triggerOnce: true, // Only trigger once
-    threshold: 0.3, // Trigger when 50% of the component is in view
+    triggerOnce: true, 
+    threshold: 0.3, 
   });
+
+  const [hovered, setHovered] = useState(false);
 
   useEffect(() => {
     if (inView) {
@@ -27,22 +29,27 @@ const TeamComponent = ({ title, description, link }) => {
     <Link href={link}>
       <motion.div
         ref={ref}
-        initial={{ opacity: 0, y: 50 }} // Start slightly below with 0 opacity
+        initial={{ opacity: 0, y: 50 }} 
         animate={controls}
-        className="relative h-[345px] w-full"
+        className="relative h-[345px] w-full "
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
       >
-        <img
-          src="https://www.mccmdclinic.org/wp-content/uploads/2020/01/Microscope.jpg"
+        <div className="filter grayscale hover:filter-none transition-all transition-duration-500 w-full h-full object-cover">
+        <Image
+          src={imageUrl}
           alt="Research Image"
-          className="h-full object-cover w-full filter grayscale hover:filter-none transition-all duration-400"
+          width={250}
+          height={500}
+          className="h-full object-cover w-full "
         />
 
         <div className="absolute top-2 left-0 p-4 text-slate-900">
-          <h2 className="text-3xl lg:text-2xl font-light font-sans">{title}</h2>
+          <h2 className="text-3xl lg:text-2xl font-light font-sans text-white">{title}</h2>
         </div>
         <div className="absolute bottom-0 right-3 ">
-          {/* <button className="bg-blue-500 text-white px-4 py-2 rounded">View More</button> */}
-          <ViewMore width={90} />
+          <ViewMore width={90} colour="white" hovering={hovered?"yes":"no"}/>
+        </div>
         </div>
       </motion.div>
     </Link>

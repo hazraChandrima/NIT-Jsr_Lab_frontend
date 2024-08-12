@@ -20,6 +20,12 @@ const nextConfig = {
         port: "",
         pathname: "/**",
       },
+      // {
+      //   protocol: "https",
+      //   hostname: "www.mccmdclinic.org",
+      //   port: "",
+      //   pathname: "/**",
+      // },
     ],
   },
 };
