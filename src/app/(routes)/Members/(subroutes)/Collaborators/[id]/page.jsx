@@ -54,15 +54,15 @@ const CollaboratorPage = ({ params }) => {
   }
 
   return (
-    <div className="max-w-3xl mx-auto p-6">
+    <div className="max-w-3xl mx-auto p-6 my-8">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
         <div className="text-center mb-4">
-          <h1 className="text-3xl font-bold">{collaborator.name}</h1>
-          <h2 className="text-xl font-semibold text-gray-600">
+          <h1 className="text-3xl font-sans font-bold">{collaborator.name}</h1>
+          <h2 className="text-xl font-sans font-semibold text-gray-600">
             {collaborator.role} - {collaborator.position}
           </h2>
         </div>
@@ -76,7 +76,7 @@ const CollaboratorPage = ({ params }) => {
           </div>
         )}
         <div className="flex flex-col items-start max-w-[600px] mx-auto mb-6">
-          <h3 className="font-serif text-md text-gray-700 tracking-wide font-bold mb-2">
+          <h3 className="font-sans text-lg text-gray-700 tracking-wide font-semibold mb-2">
             About
           </h3>
           <p className="text-sm text-gray-700 tracking-wider">
@@ -84,7 +84,7 @@ const CollaboratorPage = ({ params }) => {
           </p>
         </div>
         <div className="flex flex-col items-start max-w-[600px] mx-auto mb-6">
-          <h3 className="font-serif text-md text-gray-700 tracking-wide font-bold mb-2">
+          <h3 className="font-sans text-lg text-gray-700 tracking-wide font-semibold mb-2">
             Researches
           </h3>
           <ul className="list-disc pl-5 text-sm text-gray-700 tracking-wider">
@@ -96,7 +96,7 @@ const CollaboratorPage = ({ params }) => {
           </ul>
         </div>
         <div className="flex flex-col items-start max-w-[600px] mx-auto mb-6">
-          <h3 className="font-serif text-md text-gray-700 tracking-wide font-bold mb-2">
+          <h3 className="font-sans text-lg text-gray-700 tracking-wide font-semibold mb-2">
             Projects
           </h3>
           <ul className="list-disc pl-5 text-sm text-gray-700 tracking-wider">
@@ -108,7 +108,6 @@ const CollaboratorPage = ({ params }) => {
           </ul>
         </div>
         <Button text={"Contact"} href={`mailto:contact@example.com`} />{" "}
-        {/* Replace with actual contact link if available */}
       </motion.div>
     </div>
   );

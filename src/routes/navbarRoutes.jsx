@@ -23,7 +23,7 @@ export const membersSubroutes = [
     },
     {
         name: "Pass-out Students",
-        href: "/Members/Students"
+        href: "/Members/PassOutStudents"
     }
    
 ]
