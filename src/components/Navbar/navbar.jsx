@@ -43,24 +43,9 @@ export default function Navbar() {
     },
   };
 
-  // hidden: { opacity: 0 },
-  // visible: {
-  //     opacity: 1,
-  //     transition: {
-  //         staggerChildren: 0.1,
-  //     },
-  // },
-  // exit: {
-  //     opacity: 0,
-  //     transition: {
-  //         delay: 0.3,
-  //         duration: 0.5
-  //     },
-  // }
-
   return (
 
-    <div className="lg:visible font-sans xl:visible invisible shadow-md bg-white flex flex-row fixed h-20 w-full z-40 text-black bg-opacity-70">
+    <div className="lg:visible font-sans xl:visible invisible shadow-md bg-white flex flex-row fixed h-20 w-full z-40 text-black bg-opacity-80">
 
       <div className="relative flex items-center justify-center" >
         <span className="p-4 font-semibold text-xl">

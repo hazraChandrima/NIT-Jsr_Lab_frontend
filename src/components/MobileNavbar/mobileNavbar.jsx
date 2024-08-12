@@ -70,7 +70,7 @@ export const MobileNavbar = () => {
 
     return (
 
-        <div className="lg:invisible xl:invisible sm:visible md:visible fixed flex flex-row justify-between top-0 left-0 h-20 z-50 w-screen bg-white shadow-md bg-opacity-70">
+        <div className="lg:invisible xl:invisible sm:visible md:visible fixed flex flex-row justify-between top-0 left-0 h-20 z-50 w-screen bg-white shadow-md bg-opacity-80">
 
             <span className="p-4 text-2xl font-semibold flex items-center ">
                 <Link href="/">
