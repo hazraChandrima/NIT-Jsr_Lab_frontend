@@ -79,7 +79,7 @@ function NewsSection() {
       </div>
       <div className="relative right-3 mb-32">
         <Link href={'/Updates'}>
-          <ViewMore width={200} colour="black"/>
+          <ViewMore width={200} colour="black" hovering={"no"}/>
         </Link>
       </div>
     </div>
