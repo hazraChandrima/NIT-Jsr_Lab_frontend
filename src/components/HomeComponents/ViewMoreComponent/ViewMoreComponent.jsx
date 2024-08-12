@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 
-const ViewMore = ({ width }) => {
+const ViewMore = ({ width, colour }) => {
   const [hovered, setHovered] = useState(false);
 
   return (
@@ -12,11 +12,11 @@ const ViewMore = ({ width }) => {
       onMouseLeave={() => setHovered(false)}
     >
       <div className="relative font-sans text-xl mt-5 font-light text-right">
-        <span className="mr-2 text-white ">View More</span>
-        <span className="text-2xl text-white">{hovered ? '-' : '+'}</span>
+        <span className="mr-2" style={{color:colour}}>View More</span>
+        <span className="text-2xl" style={{color:colour}}>{hovered ? '-' : '+'}</span>
       </div>
       <div
-        className="relative h-[2px] rounded-xl overflow-hidden bg-slate-200 mt-4 mb-7 lg:mb-3 "
+        className="relative h-[2px] rounded-xl overflow-hidden bg-slate-50 mt-4 mb-7 lg:mb-3 "
         style={{ width: `${width}px` }}
       >
         

@@ -1,3 +1,5 @@
+"use client";
+import { useEffect, useState } from "react";
 import MovingCardsSection from "@/components/HomeComponents/MovingImageSection/Section";
 import NewsSection from "@/components/HomeComponents/NewsComponents/NewsSection";
 import ParallaxImageComponent from "@/components/HomeComponents/ParallaxSection/ParallaxImageComponent";
@@ -11,6 +13,31 @@ import researchData from "./(routes)/Research/data";
 
 
 export default function Home() {
+
+  const [researchData, setResearchData] = useState([]);
+  const[loading,setLoading]=useState(true);
+  const apiURL =
+    "https://cozy-captain-963d285ad5.strapiapp.com/api/research-sections?populate[Thumbnail]=*";
+
+  useEffect(() => {
+    const getResearchData= async() =>{
+      try{ 
+      const response = await fetch(apiURL);
+      const result= await response.json();
+      if(result.data){
+        setResearchData(result.data);
+      }
+    }
+    catch(error) {
+      console.error("Error fetching thumbnail:", error);
+    }
+    finally{
+      setLoading(false);
+    }
+    };
+    getResearchData();
+  },[]);
+
   return (
     <div className="w-full overflow-hidden">
 
@@ -50,13 +77,13 @@ export default function Home() {
           - research projects
         </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1">
-          {researchData.map((item) => (
+            {researchData.map((item) => (
             <TeamComponent
               key={item.id}
-              title={item.title}
+              title={item.attributes.ResearchTitle}
               link={`/Research/${item.id}`}
-              description={item.description}
-              imageUrl={item.imageUrl}
+              description={item.attributes.ResearchTitle}
+              imageUrl={item.attributes.Thumbnail?.data?.attributes?.url}
             />
           ))}
           </div>

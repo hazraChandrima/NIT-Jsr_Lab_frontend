@@ -29,10 +29,6 @@ function ResearchHoverDropdown() {
     getResearchData();
   },[]);
 
-  if (loading) {
-    return <p>Loading...</p>;
-  }
-
   return (
 
     <div className='research-dropdown text-white bg-black h-auto w-screen fixed left-0 p-4 px-5 pb-20 z-50'>

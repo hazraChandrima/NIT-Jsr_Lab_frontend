@@ -1,5 +1,5 @@
 "use client";
-// import Image from "next/image";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -29,13 +29,15 @@ const TeamComponent = ({ title, description, link, imageUrl}) => {
         ref={ref}
         initial={{ opacity: 0, y: 50 }} // Start slightly below with 0 opacity
         animate={controls}
-        className="relative h-[345px] w-full filter grayscale hover:filter-none transition-all transition-duration-500"
+        className="relative h-[345px] w-full "
+        // onMouseEnter={handleMouseEnter()}
       >
-        <img
+        <div className="filter grayscale hover:filter-none transition-all transition-duration-500 w-full h-full object-cover">
+        <Image
           src={imageUrl}
           alt="Research Image"
-          // width={250}
-          // height={500}
+          width={250}
+          height={500}
           className="h-full object-cover w-full "
         />
 
@@ -44,7 +46,8 @@ const TeamComponent = ({ title, description, link, imageUrl}) => {
         </div>
         <div className="absolute bottom-0 right-3 ">
           {/* <button className="bg-blue-500 text-white px-4 py-2 rounded">View More</button> */}
-          <ViewMore width={90} />
+          <ViewMore width={90} colour="white" />
+        </div>
         </div>
       </motion.div>
     </Link>
