@@ -5,38 +5,41 @@ import Link from "next/link"
 import logo from "../../assets/images/logo.png"
 import Image from 'next/image';
 import { motion, AnimatePresence } from "framer-motion";
-import { researchSubroutes, membersSubroutes, achievementsSubroutes, gallerySubroutes, updatesSubroutes } from '@/routes/navbarRoutes';
-
-const subroutes = [
-    {
-        name: 'Research',
-        href:'/Research',
-        subroutes: researchSubroutes,
-    },
-    {
-        name: 'Members',
-        href:'/',
-        subroutes: membersSubroutes,
-    },
-    {
-        name: 'Achievements',
-        href:'/Achievements',
-        subroutes: achievementsSubroutes,
-    },
-    {
-        name: 'Gallery',
-        href:'/Gallery',
-        subroutes: gallerySubroutes,
-    },
-    {
-        name: 'Updates',
-        href:'/Updates',
-        subroutes: updatesSubroutes,
-    }
-];
+import { useResearchSubroutes, membersSubroutes, achievementsSubroutes, gallerySubroutes, updatesSubroutes } from '@/routes/navbarRoutes';
 
 
 export const MobileNavbar = () => {
+
+    const {researchSubroutes, loading}= useResearchSubroutes();
+
+    const subroutes = [
+        {
+            name: 'Research',
+            href:'/Research',
+            subroutes: researchSubroutes,
+        },
+        {
+            name: 'Members',
+            href:'/',
+            subroutes: membersSubroutes,
+        },
+        {
+            name: 'Achievements',
+            href:'/Achievements',
+            subroutes: achievementsSubroutes,
+        },
+        {
+            name: 'Gallery',
+            href:'/Gallery',
+            subroutes: gallerySubroutes,
+        },
+        {
+            name: 'Updates',
+            href:'/Updates',
+            subroutes: updatesSubroutes,
+        }
+    ];
+    
 
     const containerVariants = {
         hidden: { opacity: 0 },

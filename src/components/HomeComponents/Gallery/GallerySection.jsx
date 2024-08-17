@@ -58,7 +58,7 @@ function Gallery() {
         </motion.div>
 
       </div>
-      <div className="h-fit w-full bg-contain md:mb-36 mb-16 ">
+      <div className="h-fit w-full bg-contain ">
         <div className="w-dvw h-vh relative">
           <Image
             src={groupPhoto}

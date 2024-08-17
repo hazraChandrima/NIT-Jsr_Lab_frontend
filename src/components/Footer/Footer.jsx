@@ -8,7 +8,7 @@ import PinDropOutlinedIcon from '@mui/icons-material/PinDropOutlined';
 function Footer() {
   return (
 
-    <div className="bg-sky-50 w-full h-full font-sans z-30 mt-20">
+    <div className="bg-sky-50 w-full h-full font-sans z-30 mt-24">
       <div className="max-w-7xl relative mx-10 py-12  px-5 sm:px-10 lg:px-8">
         <div className="flex flex-col lg:flex-row items-start justify-evenly mb-14 mt-9 lg:mb-20">
           <div className="flex items-start space-x-4 mb-10 lg:mb-0">
@@ -30,7 +30,7 @@ function Footer() {
               <p className="text-gray-600 pl-8 ">
                 +91 9102197734
                 <br />
-                <a href="mailto:koushendra.cse@nitjsr.ac.in" className="text-cyan-600">koushendra.cse@nitjsr.ac.in</a>
+                <a href="mailto:koushendra.cse@nitjsr.ac.in" className="text-cyan-600">koushlendra.cse@nitjsr.ac.in</a>
                 <br />
                 <a href="mailto:mai2022@nitjsr.ac.in" className="text-cyan-600">mai2022@nitjsr.ac.in</a>
               </p>
