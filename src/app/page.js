@@ -7,6 +7,7 @@ import Hero from "@/components/Hero/hero";
 import img1 from "../assets/images/lab1.png";
 import img2 from "../assets/images/lab2.png";
 import ResearchSection from "./(routes)/Research/ResearchSection/ResearchSection";
+import bg from '@/assets/images/bg.jpg'
 
 
 export default function Home() {
@@ -21,13 +22,12 @@ export default function Home() {
       <div className=" flex flex-col items-center w-full overflow-hidden">
 
         <div
-          className="w-full h-auto flex items-center justify-center bg-cover bg-right relative "
+          className="w-full h-auto flex items-center justify-center bg-cover relative "
           style={{
-            backgroundImage:
-              "url('https://media.istockphoto.com/id/1497687876/photo/abstract-blur-inside-of-hospital-interior-background-for-design-display-ads-banner-concept.jpg?s=612x612&w=0&k=20&c=NeTuGOBnDLFikZesPLyyoxwDAOhc2iqHJHkq0eBc91k=')"
+            backgroundImage:`url(${bg.src})`
           }}
         >
-          <div className="max-w-[1256px] w-full px-4">
+          <div className="max-w-[1256px] w-full px-4 ">
             <NewsSection />
           </div>
         </div>
