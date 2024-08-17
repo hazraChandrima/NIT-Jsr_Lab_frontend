@@ -7,14 +7,14 @@ import Link from 'next/link';
 
 function NewsCard({ date, title, description, viewMoreLink, galleryLink }) {
   const { ref, controls } = useAnimationHook();
-  console.log("View mor elink",viewMoreLink);
+  console.log("View more link",viewMoreLink);
   
 
   return (
 
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 50 }} // Start slightly below with 0 opacity
+      initial={{ opacity: 0, y: 50 }} 
       animate={controls}
       className='px-5 py-5 text-xl font-sans font-light'
     >
@@ -29,7 +29,7 @@ function NewsCard({ date, title, description, viewMoreLink, galleryLink }) {
           </div>
         </div>
         
-        <div className='flex-grow hover:text-sky-500 transition duration-300 '>
+        <div className='flex-grow hover:text-cyan-600 transition duration-300 '>
           <h2 className='text-3xl mb-4 text-sky-800 font-thin'>{title}</h2>
 
           <p className='line-clamp-6 sm:line-clamp-4 overflow-hidden'>
