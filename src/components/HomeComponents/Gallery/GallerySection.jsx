@@ -37,21 +37,21 @@ function Gallery() {
               height={15}
               width={20}
               left={0}
-              top={10}
+              top={-40}
               imgSrc={imageUrl2}
             />
             <ImageCard
               height={13}
               width={27}
               left={70}
-              top={2}
+              top={-35}
               imgSrc={imageUrl2}
             />
             <ImageCard
               height={30}
               width={29}
               left={45}
-              top={25}
+              top={-10}
               imgSrc={imageUrl2}
             />
           </div>
