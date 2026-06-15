@@ -5,30 +5,32 @@ import Link from 'next/link'
 import { useResearchSubroutes } from '@/routes/navbarRoutes'
 
 function ResearchHoverDropdown() {
-
-  const {researchSubroutes, loading}= useResearchSubroutes();
+  const { researchSubroutes, loading } = useResearchSubroutes();
 
   return (
-
-    <div className='research-dropdown text-white bg-black h-auto w-screen fixed left-0 p-4 px-5 pb-20 z-50'>
-
-      <div className='grid grid-cols-1 mt-10 md:grid-cols-3 lg:grid-cols-5 gap-5'>
-
-        {researchSubroutes.map((route, index) => (
+    <div className='bg-white shadow-lg rounded-md border border-gray-100 text-slate-700 w-72 flex flex-col py-2'>
+      {loading ? (
+        <div className="px-4 py-3 text-sm text-gray-400">Loading...</div>
+      ) : researchSubroutes.length > 0 ? (
+        researchSubroutes.map((route, index) => (
           <Link key={index} href={route.href}>
-            <div className='grayscale hover:grayscale-0 research-item flex items-center hover:text-sky-300 transition duration-300 mx-5 my-5'>
-              <Image
-              src={route.image} 
-              alt={route.name} 
-              width={100}
-              height={100}
-              className='h-24 w-24 object-cover mr-4' />
-              <span className='flex-1'>{route.name}</span>
+            <div className='flex items-center px-4 py-2 hover:bg-gray-100 transition duration-200 text-sm font-medium'>
+              {route.image && (
+                <Image
+                  src={route.image} 
+                  alt={route.name} 
+                  width={32}
+                  height={32}
+                  className='h-8 w-8 object-cover rounded-md mr-3' 
+                />
+              )}
+              <span className='line-clamp-2'>{route.name}</span>
             </div>
           </Link>
-        ))}
-
-      </div>
+        ))
+      ) : (
+        <div className="px-4 py-3 text-sm text-gray-400">No areas found</div>
+      )}
     </div>
   )
 }

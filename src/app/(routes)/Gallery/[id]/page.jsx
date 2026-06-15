@@ -19,7 +19,7 @@ const GalleryPage = ({ params }) => {
         const fetchImages = async () => {
             try {
                 const response = await fetch(
-                    `https://refreshing-benefit-91aab22e0f.strapiapp.com/api/galleries/${id}?populate[1]=images.media`
+                    `/api/gallery/${id}`
                 );
                 const result = await response.json();
 

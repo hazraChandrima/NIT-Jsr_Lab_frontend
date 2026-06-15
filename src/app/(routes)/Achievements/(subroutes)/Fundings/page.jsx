@@ -11,7 +11,7 @@ export default function FundingsPage() {
 
   useEffect(() => {
 
-    fetch("https://refreshing-benefit-91aab22e0f.strapiapp.com/api/fundings")
+    fetch("/api/funding")
       .then(res => res.json())
       .then((obj) => {
         let fd = {};
@@ -30,7 +30,7 @@ export default function FundingsPage() {
   return (
     <div className='flex flex-col bg-white py-5 min-h-dvh text-slate-600'>
 
-      <BreadCrumbs />
+      <BreadCrumbs title="Fundings"/>
       <h1 className='text-5xl font-sans font-light relative text-left ml-7 sm:ml-10 mt-14 mb-7 text-sky-900'>RESEARCH FUNDINGS</h1>
       <div className=" h-[2px] bg-slate-300 mx-8">
         {/* <div className="w-[25%] h-full bg-sky-600"></div> */}

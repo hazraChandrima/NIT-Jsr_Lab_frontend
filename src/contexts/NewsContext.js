@@ -1,5 +1,4 @@
 "use client"
-
 import { createContext, useContext, useState } from 'react';
 
 const NewsContext = createContext();

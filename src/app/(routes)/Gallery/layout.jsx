@@ -8,16 +8,12 @@ export default function Gallery({ children }) {
     const { id } = useParams();
 
     return (
-        <div>
-        <ResearchHero
-            title={"Gallery"}
-            subtitle={id}
-            imageUrl={img}
-        />
+      <div>
+        <ResearchHero title={"Gallery"} subtitle={id} imageUrl={img} />
         <div className="text-sm sm:text-base bg-white">
-        <BreadCrumbs/>
-        {children}
+          <BreadCrumbs title="Gallery" />
+          {children}
         </div>
-    </div>
-    )
+      </div>
+    );
 }

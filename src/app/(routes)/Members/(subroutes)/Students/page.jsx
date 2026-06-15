@@ -10,7 +10,7 @@ export default function Page() {
     const fetchStudents = async () => {
       try {  
         const response = await fetch(
-          `https://refreshing-benefit-91aab22e0f.strapiapp.com/api/Students?populate[profilePhoto]=*`
+          `/api/students?populate[profilePhoto]=*`
         );
         const data = await response.json();
         setStudents(data.data);

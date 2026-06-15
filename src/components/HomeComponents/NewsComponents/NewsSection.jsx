@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import NewsCard from "@/components/HomeComponents/NewsComponents/NewsCard";
-import { useNews } from "@/contexts/NewsContext";
 import ViewMore from "../ViewMoreComponent/ViewMoreComponent";
 import Link from "next/link";
 
@@ -10,11 +9,9 @@ function NewsSection() {
   const [newsData, setNewsData] = useState([]);
   const [loading, setLoading] = useState(false);
   const router = useRouter();
-  const { setNews } = useNews();
 
   const handleCardClick = (newsItem) => {
-    setNews(newsItem);
-    router.push("/News/Details");
+    router.push(`/Updates/${newsItem.id}`);
   };
 
   useEffect(() => {
@@ -23,7 +20,7 @@ function NewsSection() {
 
       try {
         const response = await fetch(
-            `https://refreshing-benefit-91aab22e0f.strapiapp.com/api/notices`
+            `/api/notices`
         );
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
@@ -47,22 +44,16 @@ function NewsSection() {
         <h1 className="text-6xl font-sans text-sky-950 font-light relative my-10 right-3">
           UPDATES
         </h1>
-        <div className="py-6 text-left flex flex-col items-center">
+        <div className="py-6 text-left flex flex-col items-center cursor-pointer w-full px-4 sm:px-6 lg:px-8 max-w-[1256px] mx-auto">
           {loading ? (
               <p>Loading...</p>
           ) : newsData.length > 0 ? (
               newsData.slice(-5).map((newsItem, index) => (
-                  <div key={index} onClick={() => handleCardClick(newsItem)}>
+                  <div key={index} onClick={() => handleCardClick(newsItem)} className="w-full">
                     <NewsCard
                         date={newsItem.attributes?.publishedAt || "Unknown Date"}
                         title={newsItem.attributes?.Title || "No Title"}
                         description={newsItem.attributes?.Description || "No Description"}
-                        viewMoreLink={
-                            newsItem.attributes?.Pdf?.data?.attributes?.url || "#"
-                        }
-                        galleryLink={
-                            newsItem.attributes?.Pdf?.data?.attributes?.url || "#"
-                        }
                     />
                   </div>
               ))

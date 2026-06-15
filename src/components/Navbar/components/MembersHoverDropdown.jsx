@@ -4,20 +4,16 @@ import { membersSubroutes } from '@/routes/navbarRoutes';
 
 function MembersHoverDropdown() {
   return (
-    <div className='text-white bg-black h-52 w-screen fixed left-0 z-50'>
-      <div className='grid grid-cols-1 text-xl text-center mt-14 lg:grid-cols-4 gap-7'>
-        {membersSubroutes.map((route, index) => (
-
-          <Link key={index} href={route.href}>
-            <div className=' research-item flex items-center hover:text-sky-300 transition duration-300 mx-5 my-5'>
-              <span className='flex-1'>{route.name}</span>
-            </div>
-          </Link>
-        ))}
-      </div>
+    <div className='bg-white shadow-lg rounded-md border border-gray-100 text-slate-700 w-56 flex flex-col py-2'>
+      {membersSubroutes.map((route, index) => (
+        <Link key={index} href={route.href}>
+          <div className='flex items-center px-4 py-2 hover:bg-gray-100 transition duration-200 text-sm font-medium'>
+            <span>{route.name}</span>
+          </div>
+        </Link>
+      ))}
     </div>
   )
 }
 
 export default MembersHoverDropdown
-

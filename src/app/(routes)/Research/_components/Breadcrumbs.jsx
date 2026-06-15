@@ -1,42 +1,36 @@
 "use client";
-import { usePathname } from "next/navigation";
 import Link from "next/link";
 
-const Breadcrumbs = () => {
-  const pathname = usePathname();
-  const crumbs = pathname.split("/").filter(Boolean);
-
+const BreadCrumbs = ({ title }) => {
   return (
-    <nav aria-label="breadcrumbs" className="p-4 backdrop-blur-md bg-white/80 rounded-lg shadow-sm max-w-[1256px] mx-auto">
-      <ol className="flex flex-wrap items-center space-x-2">
-        <li>
+    <nav className="px-4 py-2 w-fit my-5 bg-white rounded-md">
+      <ol className="flex flex-wrap items-center">
+        <li className="mr-2">
           <Link href="/">
-            <span className="text-gray-600 hover:text-sky-600 text-sm md:text-base transition-colors duration-200">
-              Home
+            <span className="text-gray-600 hover:text-gray-900">Home /</span>
+          </Link>
+        </li>
+
+        <li className="mr-2">
+          <Link href="/research">
+            <span className="text-gray-600 hover:text-gray-900">
+              Research /
             </span>
           </Link>
         </li>
 
-        {crumbs.map((crumb, index) => (
-          <li key={index} className="flex items-center">
-            <span className="text-gray-400 mx-2">/</span>
-
-            {index === crumbs.length - 1 ? (
-              <span className="text-sky-600 font-semibold text-sm md:text-base">
-                {crumb}
-              </span>
+        <li className="mr-2">
+          <span className="text-cyan-600 font-semibold">
+            {title ? (
+              title
             ) : (
-              <Link href={`/${crumbs.slice(0, index + 1).join("/")}`}>
-                <span className="text-gray-600 hover:text-sky-600 text-sm md:text-base transition-colors duration-200">
-                  {crumb}
-                </span>
-              </Link>
+              <span className="animate-pulse text-gray-400">Loading...</span>
             )}
-          </li>
-        ))}
+          </span>
+        </li>
       </ol>
     </nav>
   );
 };
 
-export default Breadcrumbs;
+export default BreadCrumbs;

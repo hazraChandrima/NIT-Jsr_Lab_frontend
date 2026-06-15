@@ -11,7 +11,7 @@ function Collaborators() {
     const getData = async () => {
       setLoading(true);
       const activitiesData = await fetch(
-        `https://refreshing-benefit-91aab22e0f.strapiapp.com/api/members?filters[role][$eq]=Collaborator&populate=*`
+        `/api/members?filters[role][$eq]=Collaborative Researchers&populate=*`
       );
       const res = await activitiesData.json();
       setCollaborators(res.data);

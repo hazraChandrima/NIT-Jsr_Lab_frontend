@@ -8,7 +8,7 @@ export default function ResearchSection() {
   const [loading, setLoading] = useState(true);
 
   const apiURL =
-    "https://refreshing-benefit-91aab22e0f.strapiapp.com/api/research-sections?populate[Thumbnail]=*";
+    "/api/research-sections?populate[Thumbnail]=*";
 
   useEffect(() => {
     const getResearchData = async () => {

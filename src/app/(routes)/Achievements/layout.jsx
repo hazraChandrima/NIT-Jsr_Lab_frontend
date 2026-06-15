@@ -12,7 +12,6 @@ export default function AchievementsLayout({ children }) {
         <div>
             <ResearchHero
                 title={"Achievements"}
-                subtitle={subtitle}
                 imageUrl={img}
             />
             {children}

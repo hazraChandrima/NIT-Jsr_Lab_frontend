@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import NewsCard from "@/components/HomeComponents/NewsComponents/NewsCard";
-import { useNews } from "@/contexts/NewsContext";
 import BreadCrumbs from "@/components/BreadCrumbs/BreadCrumbs";
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
@@ -16,7 +15,6 @@ function NewsPage() {
   const [totalPages, setTotalPages] = useState(1);
 
   const router = useRouter();
-  const { setNews } = useNews();
 
   useEffect(() => {
     const getData = async () => {
@@ -24,7 +22,7 @@ function NewsPage() {
 
       try {
         const response = await fetch(
-          `https://refreshing-benefit-91aab22e0f.strapiapp.com/api/notices?populate=Pdf&pagination[page]=${currentPage}&pagination[pageSize]=${ITEMS_PER_PAGE}`
+          `/api/notices?populate=Pdf&pagination[page]=${currentPage}&pagination[pageSize]=${ITEMS_PER_PAGE}`
         );
 
         if (!response.ok) {
@@ -50,8 +48,7 @@ function NewsPage() {
   }, [currentPage]);
 
   const handleCardClick = (newsItem) => {
-    setNews(newsItem);
-    router.push("/Updates/Details");
+    router.push(`/Updates/${newsItem.id}`);
   };
 
   const handlePageChange = (event, value) => {
@@ -61,7 +58,9 @@ function NewsPage() {
   return (
     <div className="flex flex-col bg-gray-50 py-5 min-h-dvh text-slate-600 text-right items-center">
       <div className="pt-6 text-left flex justify-start max-w-[1256px] w-full px-4 sm:px-6 lg:px-8">
-        <BreadCrumbs />
+        <BreadCrumbs
+          title="News"
+        />
       </div>
 
       <div className="w-full max-w-[1256px] px-4 sm:px-6 lg:px-8">
@@ -77,8 +76,6 @@ function NewsPage() {
           </div>
         ) : (
           notices.map((newsItem) => {
-            const viewMoreLink = newsItem.attributes.Pdf?.data?.attributes?.url || "#";
-            const galleryLink = newsItem.attributes.Pdf?.data?.attributes?.url || "#";
             return (
               <div
                 key={newsItem.id}
@@ -89,8 +86,6 @@ function NewsPage() {
                   date={newsItem.attributes.publishedAt}
                   title={newsItem.attributes.Title}
                   description={newsItem.attributes.Description}
-                  viewMoreLink={viewMoreLink}
-                  galleryLink={galleryLink}
                 />
               </div>
             );

@@ -1,8 +1,10 @@
 "use client";
+import { useRouter } from "next/navigation";
 import BreadCrumbs from "@/components/BreadCrumbs/BreadCrumbs";
 import { useEffect, useState } from "react";
 
 export default function PatentsPage() {
+  const router = useRouter();
 
 
   const [patentData, setPatentData] = useState({});
@@ -10,7 +12,7 @@ export default function PatentsPage() {
 
   useEffect(() => {
     const getData = async () => {
-      const response = await fetch(`https://refreshing-benefit-91aab22e0f.strapiapp.com/api/patents?populate[docs][fields][0]=*&populate[head][fields][0]=*&populate[collaborators][fields][0]=*`);
+      const response = await fetch(`/api/patent?populate[docs][fields][0]=*&populate[head][fields][0]=*&populate[collaborators][fields][0]=*`);
       const data = await response.json();
       
 
@@ -35,7 +37,7 @@ export default function PatentsPage() {
 
   return (
     <div className='flex flex-col bg-white py-5 min-h-dvh text-slate-600'>
-      <BreadCrumbs />
+      <BreadCrumbs title="Patents"/>
       <h1 className='text-5xl font-sans font-light relative text-left ml-7 sm:ml-10 mt-14 mb-7 text-sky-900'>PATENTS</h1>
       <div className=" h-[2px] bg-slate-300 mx-8">
         {/* <div className="w-[25%] h-full bg-sky-600"></div> */}
@@ -45,28 +47,35 @@ export default function PatentsPage() {
           <h1 className="text-3xl font-sans text-sky-950 font-thin mt-8 ml-4 sm:ml-7">
             Fiscal Year {year}
           </h1>
-          {patentData[year].map((patent, index) => (
-            <div
-              key={index}
-              className="relative ml-4 sm:ml-7"
-            >
-              <div className="w-4/5">
-                <p className="font-bold mt-8 text-sky-600">{patent.attributes.title}</p>
-                <p>{patent.attributes.description?patent.attributes.description:patent.attributes.description}</p>
-                <p className="font-semibold">Inventors: {patent.attributes.collaborators.data.map(c => c.attributes.name).join(', ')}</p>
-                <p className="font-semibold">Head: {patent.attributes.head.data.attributes.name}</p>
-                <p className="font-semibold">Date of Publication: {patent.attributes.date_of_publication}</p>
-                {patent.attributes.docs.data.length > 0 && (
-                  <p className="">
-                    Links:{" "}
-                    <a href={patent.attributes.docs.data[0].attributes.url} target="_blank" rel="noopener noreferrer" className="text-blue-400">
-                      {patent.attributes.docs.data[0].attributes.name}
-                    </a>
-                  </p>
-                )}
+          {patentData[year].map((patent, index) => {
+            const collaborators = patent.attributes.collaborators?.data || [];
+            const headName = patent.attributes.head?.data?.attributes?.name || 'Unknown head';
+            const docs = patent.attributes.docs?.data || [];
+
+            return (
+              <div
+                key={index}
+                className="relative ml-4 sm:ml-7 mb-8 p-6 bg-slate-50 rounded-lg border border-slate-200 cursor-pointer hover:shadow-md hover:border-sky-300 transition-all duration-300"
+                onClick={() => router.push(`/Achievements/Patents/${patent.id}`)}
+              >
+                <div className="w-4/5">
+                  <p className="font-bold mt-0 text-sky-600 hover:text-sky-800 transition-colors">{patent.attributes.title}</p>
+                  <p>{patent.attributes.description || 'No description provided.'}</p>
+                  <p className="font-semibold">Inventors: {collaborators.length > 0 ? collaborators.map((c) => c.attributes?.name || 'Unknown').join(', ') : 'N/A'}</p>
+                  <p className="font-semibold">Head: {headName}</p>
+                  <p className="font-semibold">Date of Publication: {patent.attributes.date_of_publication || 'Unknown'}</p>
+                  {docs.length > 0 && docs[0]?.attributes?.url && (
+                    <p className="">
+                      Links:{' '}
+                      <a href={docs[0].attributes.url} target="_blank" rel="noopener noreferrer" className="text-blue-400">
+                        {docs[0].attributes.name || docs[0].attributes.url}
+                      </a>
+                    </p>
+                  )}
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       ))}
     </div>

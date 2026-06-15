@@ -31,11 +31,8 @@ function ResearchPapers({ papers }) {
               className="mb-6"
             >
               <p className="text-sm sm:text-base text-slate-600 opacity-90">
-                <span className="font-semibold">{paper.title}</span> -{" "}
-                {paper.authors?.join(", ")} ({paper.year})
-                <br />
-                <span className="text-sky-600">Published in:</span>{" "}
-                {paper.publishedIn}
+                <span className="font-semibold">{paper.title}</span>
+                {paper.description && ` - ${paper.description}`}
               </p>
               {index !== papers.length - 1 && (
                 <hr className="my-4 border-gray-200" />

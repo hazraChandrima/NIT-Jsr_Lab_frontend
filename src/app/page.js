@@ -8,10 +8,12 @@ import img1 from "../assets/images/lab1.png";
 import img2 from "../assets/images/lab2.png";
 import ResearchSection from "@/app/(routes)/Research/_components/ResearchSection/ResearchSection";
 import bg from '@/assets/images/bg.jpg';
-
+import Navbar from "@/components/Navbar/navbar";
 export default function Home() {
   return (
     <div className="w-full overflow-hidden">
+      
+      <Navbar/>
       <Hero images={[img1, img2]} transition={true} height="100vh">
         <div className="font-sans px-5 lg:text-8xl md:text-7xl text-5xl text-white backdrop-blur-sm bg-black/20 p-4 rounded-lg">
           NIT JAMSHEDPUR

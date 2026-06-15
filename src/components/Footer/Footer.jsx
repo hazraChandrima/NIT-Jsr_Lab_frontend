@@ -1,9 +1,10 @@
+"use client"
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import logo from '@/assets/images/logo.png';
-import PhoneOutlinedIcon from '@mui/icons-material/PhoneOutlined';
-import PinDropOutlinedIcon from '@mui/icons-material/PinDropOutlined';
+import { Phone, MapPin } from "lucide-react";
+
 
 function Footer() {
   return (
@@ -23,13 +24,14 @@ function Footer() {
           </div>
 
           <div className="flex flex-col lg:flex-row sm:ml-3 ml-3 lg:space-x-24">
-
             <div className="flex flex-col items-start mb-8 lg:mb-0">
               <div className="flex items-center space-x-2 mb-2">
                 <span className="text-cyan-600">
-                  <PhoneOutlinedIcon />
+                  <Phone size={20} />
                 </span>
-                <h2 className="text-xl font-semibold text-gray-800">Get in Touch</h2>
+                <h2 className="text-xl font-semibold text-gray-800">
+                  Get in Touch
+                </h2>
               </div>
               <p className="text-gray-600 pl-8">
                 +91 9102197734
@@ -53,7 +55,7 @@ function Footer() {
             <div className="flex flex-col items-start mb-6 lg:mb-0">
               <div className="flex items-center space-x-2 mb-2">
                 <span className="text-cyan-600">
-                  <PinDropOutlinedIcon />
+                  <MapPin size={20} />
                 </span>
                 <h2 className="text-xl font-semibold text-gray-800">Address</h2>
               </div>

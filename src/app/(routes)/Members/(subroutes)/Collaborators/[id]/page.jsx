@@ -13,7 +13,7 @@ const CollaboratorPage = ({ params }) => {
     const fetchCollaboratorData = async () => {
       try {
         const response = await fetch(
-          `https://refreshing-benefit-91aab22e0f.strapiapp.com/api/members/${id}?populate=*`
+          `/api/members/${id}?populate=*`
         );
         const result = await response.json();
 

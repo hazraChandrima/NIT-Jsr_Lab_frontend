@@ -16,7 +16,7 @@ const Theme = ({ themes, heading }) => {
     >
       <div className="w-11/12 max-w-screen-xl mx-auto my-5 text-center backdrop-blur-md bg-white/80 rounded-lg shadow-lg p-6 md:p-8">
         <div className="font-serif text-xl">
-          <h2 className="mb-6 text-2xl md:text-3xl font-light text-sky-950">
+          <h2 className="mb-6 text-xl md:text-xl font-light text-sky-950">
             {heading}
           </h2>
           <hr className="mb-6 mx-auto w-24 border-t-2 border-sky-500" />
